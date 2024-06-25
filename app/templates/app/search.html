@@ -1,0 +1,63 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block search %}
+<h5>Result search for "{{ searched }}"</h5>
+
+<form class="timkiem">
+    <ul>
+        {% for baihat in baihats %}
+        <li>
+            <div class="timkiem box-left-album">
+                <a href="{% url 'nghe' %}?theloai={{ baihat.theloai }}">
+                    <div class="timkiem bg_action_info">
+                        <span class="timkiem icon_play"></span>
+                    </div>
+                    <span class="avatar"><img class="timkiem" src="{{ baihat.image.url }}"></span>
+                </a>
+            </div>
+            <div class="timkiem info_album">
+                <h3 class="timkiem h3seo"><a href="{% url 'nghe' %}">{{ baihat.theloai }}</a></h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for album in albums %}
+        <li>
+            <div class="timkiem box-left-album">
+                <a href="{% url 'nghe' %}?album={{ album.id }}">
+                    <div class="timkiem bg_action_info">
+                        <span class="timkiem icon_play"></span>
+                    </div>
+                    <span class="avatar"><img class="timkiem" src="{{ album.image.url }}"></span>
+                </a>
+            </div>
+            <div class="timkiem info_album">
+                <h3 class="timkiem h3seo"><a href="{% url 'nghe' %}">{{ album.name }}</a></h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for theloai in theloais %}
+        <li>
+            <div class="timkiem box-left-album">
+                <a href="{% url 'nghe' %}?theloai={{ theloai.id }}">
+                    <div class="timkiem bg_action_info">
+                        <span class="timkiem icon_play"></span>
+                    </div>
+                    <span class="avatar"><img class="timkiem" src="{{ theloai.image.url }}"></span>
+                </a>
+            </div>
+            <div class="timkiem info_album">
+                <h3 class="timkiem h3seo"><a href="{% url 'nghe' %}">{{ theloai.name }}</a></h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</form>
+
+{% endblock search %}

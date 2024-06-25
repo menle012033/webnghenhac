@@ -1,0 +1,455 @@
+body.nghe {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #9a1d86, #1595be);
+  font-weight: bold;
+}
+
+.player {
+  display: block;
+  margin-bottom: 20px;
+}
+.hidden {
+  display: none;
+}
+#song-list {
+  margin-bottom: 20px;
+}
+.song {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.song img {
+  vertical-align: middle;
+}
+.song div {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.wrapper.nghe {
+  border: 1px solid transparent;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #ddd;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 500px; 
+  height: 650px;
+  margin: 0 auto;
+}
+
+.details.nghe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-art.nghe {
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  border: 2px solid #FFFAFA;
+  background-size: cover;
+  background-position: center;
+  -moz-box-shadow: 0px 6px 5px black;
+  -webkit-box-shadow: 0px 6px 5px black;
+  box-shadow: 0px 6px 5px black;
+}
+
+.now-playing.nghe {
+  font-size: 1rem;
+}
+
+.track-name.nghe {
+  font-size: 2.5rem;
+}
+
+.track-artist.nghe {
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
+.buttons.nghe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.active.nghe {
+  color: black;
+}
+
+.repeat-track.nghe,
+.random-track.nghe,
+.playpause-track.nghe,
+.prev-track.nghe,
+.next-track.nghe {
+  padding: 25px;
+  opacity: 0.8;
+  transition: opacity .2s;
+}
+
+.repeat-track.nghe:hover,
+.random-track.nghe:hover,
+.playpause-track.nghe:hover,
+.prev-track.nghe:hover,
+.next-track.nghe:hover {
+  opacity: 1.0;
+}
+
+.slider_container.nghe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider.nghe, .volume_slider.nghe {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #83A9FF;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.seek_slider.nghe::-webkit-slider-thumb,
+.volume_slider.nghe::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 3px solid #3774FF;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+.seek_slider.nghe:hover,
+.volume_slider.nghe:hover {
+  opacity: 1.0;
+}
+
+.seek_slider.nghe {
+  width: 60%;
+}
+
+.volume_slider.nghe {
+  width: 30%;
+}
+
+.current-time.nghe,
+.total-duration.nghe {
+  padding: 10px;
+}
+
+i.fa-volume-down.nghe,
+i.fa-volume-up.nghe {
+  padding: 10px;
+}
+
+i.nghe,
+i.fa-play-circle.nghe,
+i.fa-pause-circle.nghe,
+i.fa-step-forward.nghe,
+i.fa-step-backward.nghe,
+p.nghe {
+  cursor: pointer;
+}
+
+.randomActive.nghe {
+  color: black;
+}
+
+.rotate.nghe {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.loader.nghe {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.nghe .stroke.nghe {
+  background: #f1f1f1;
+  height: 150%;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    height: 20%;
+    background: #4286f4;
+  }
+  100% {
+    background: #4286f4;
+    height: 100%;
+  }
+}
+
+.stroke.nghe:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stroke.nghe:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.stroke.nghe:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.stroke.nghe:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.stroke.nghe:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.stroke.nghe:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.stroke.nghe:nth-child(7) {
+  animation-delay: 0s;
+}
+
+
+
+.player {
+  display: block;
+  margin-bottom: 20px;
+}
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.ui-bookmark {
+  --icon-size: 24px;
+  --icon-secondary-color: rgb(77, 77, 77);
+  --icon-hover-color: rgb(97, 97, 97);
+  --icon-primary-color: rgb(252, 54, 54);
+  --icon-circle-border: 1px solid var(--icon-primary-color);
+  --icon-circle-size: 35px;
+  --icon-anmt-duration: 0.3s;
+}
+
+.ui-bookmark input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.ui-bookmark .bookmark {
+  width: var(--icon-size);
+  height: auto;
+  fill: var(--icon-secondary-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+
+.bookmark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+    30px 0 0 -4px var(--icon-primary-color),
+    0 -30px 0 -4px var(--icon-primary-color),
+    -30px 0 0 -4px var(--icon-primary-color),
+    -22px 22px 0 -4px var(--icon-primary-color),
+    -22px -22px 0 -4px var(--icon-primary-color),
+    22px -22px 0 -4px var(--icon-primary-color),
+    22px 22px 0 -4px var(--icon-primary-color);
+  box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+    30px 0 0 -4px var(--icon-primary-color),
+    0 -30px 0 -4px var(--icon-primary-color),
+    -30px 0 0 -4px var(--icon-primary-color),
+    -22px 22px 0 -4px var(--icon-primary-color),
+    -22px -22px 0 -4px var(--icon-primary-color),
+    22px -22px 0 -4px var(--icon-primary-color),
+    22px 22px 0 -4px var(--icon-primary-color);
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  padding: 1px;
+}
+
+.bookmark::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: var(--icon-circle-border);
+  opacity: 0;
+}
+
+/* actions */
+
+.ui-bookmark:hover .bookmark {
+  fill: var(--icon-hover-color);
+}
+
+.ui-bookmark input:checked + .bookmark::after {
+  -webkit-animation: circles var(--icon-anmt-duration)
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: circles var(--icon-anmt-duration)
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: var(--icon-anmt-duration);
+  animation-delay: var(--icon-anmt-duration);
+}
+
+.ui-bookmark input:checked + .bookmark {
+  fill: var(--icon-primary-color);
+  -webkit-animation: bookmark var(--icon-anmt-duration) forwards;
+  animation: bookmark var(--icon-anmt-duration) forwards;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.ui-bookmark input:checked + .bookmark::before {
+  -webkit-animation: circle var(--icon-anmt-duration)
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: circle var(--icon-anmt-duration)
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: var(--icon-anmt-duration);
+  animation-delay: var(--icon-anmt-duration);
+}
+
+@-webkit-keyframes bookmark {
+  50% {
+    -webkit-transform: scaleY(0.6);
+    transform: scaleY(0.6);
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes bookmark {
+  50% {
+    -webkit-transform: scaleY(0.6);
+    transform: scaleY(0.6);
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes circle {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  90% {
+    width: var(--icon-circle-size);
+    height: var(--icon-circle-size);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  90% {
+    width: var(--icon-circle-size);
+    height: var(--icon-circle-size);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes circles {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes circles {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}

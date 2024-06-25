@@ -1,0 +1,3394 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block nghe1_content %}
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title></title>
+<style>
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, th, td {
+	margin: 0;
+	padding: 0;
+}
+.box-content {
+	float: left;
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+.box-content {
+	margin-top: 70px !important;
+}
+body {
+	margin: 0;
+	background-color: #ffffff;
+	color: #333;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13px;
+	font-family: "NhacCuaTui",sans-serif;
+	line-height: 1.4;
+	min-width: 1018px;
+	min-width: 1009px;
+}
+body {
+	overflow-y: scroll;
+}
+body {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+html {
+	color: #000;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	font-stretch: condensed;
+	-webkit-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+.wrap {
+	position: relative;
+}
+body .wrap .content-wrap {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 10px;
+}
+.box-content .box-left {
+	padding: 0px 0;
+	width: 840px;
+	float: left;
+}
+.box-content .box-right {
+	float: right;
+	width: 300px;
+	height: auto;
+	overflow: hidden;
+}
+.box_music_recommended {
+	float: left;
+	width: 300px;
+	padding: 0 0 10px 0;
+	margin: 0 0 20px 0;
+}
+.box_music_recommended {
+	margin: 0 !important;
+}
+.box-right .adv_home_300_250 {
+	float: left;
+	width: 300px;
+	margin-bottom: 20px;
+}
+.clr {
+	clear: both;
+}
+.loadingAdss {
+	width: 298px;
+	height: 128px;
+	padding-top: 110px;
+	color: #ccc;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	text-align: center;
+	vertical-align: middle;
+}
+.tile_box_key {
+	width: 100%;
+	float: left;
+}
+.box_music_recommended .list_item_music {
+	float: left;
+	width: 300px;
+}
+.btn_more_item {
+	float: right;
+	padding: 0px 0px;
+	width: 300px;
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	overflow: hidden;
+}
+.box_music_recommended .list_item_music .btn_more_item {
+	margin-top: 10px;
+}
+a, a:hover, a:active, a:focus {
+	outline: 0;
+}
+a {
+	color: rgba(0, 0, 0, 0.88);
+	text-decoration: none;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.hide {
+	display: none !important;
+}
+.alert {
+	float: left;
+	width: 100%;
+	padding: 20px 0px 15px 0px;
+	margin: 5px 0;
+}
+.alert {
+	padding-bottom: 10px;
+}
+.alert {
+	padding: 15px 0px 10px 0px;
+}
+.auto-box {
+	float: right;
+	text-align: center;
+	width: 135px;
+	height: 18px;
+	color: #9a9a9a;
+	margin: 8px 0 0 0;
+	line-height: 20px;
+	font-size: 14px;
+}
+.hide {
+	display: none !important;
+}
+.btn_more_item a {
+	padding: 0;
+	font-size: 14px;
+	text-align: center;
+	width: 148px;
+	border: #a2a2a2 solid 1px;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+}
+li {
+	list-style: none;
+}
+.box_music_recommended .list_item_music li {
+	float: left;
+	width: 300px;
+	margin: 0px 0 13px 0;
+	border-bottom: #f3f3f3 solid 1px;
+	padding: 0 0 10px 0;
+}
+.box_music_recommended .list_item_music li .info_data {
+	float: left;
+	width: 172px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+.info_data h4 {
+	width: 100%;
+	overflow: hidden;
+}
+.name_singer {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+.box_music_recommended .list_item_music li .info_data .name_singer {
+	font-size: 12px;
+	color: #a2a2a2;
+	line-height: 16px;
+}
+.box_music_recommended .list_item_music li .info_data .name_song {
+	font-size: 14px;
+	display: block;
+	line-height: 18px;
+	overflow: hidden;
+	display: block;
+	margin: 0 0 4px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.box_music_recommended .list_item_music li .icon-music {
+	float: left;
+	width: 32px;
+	color: #7a7a7a;
+	height: 32px;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) left -692px no-repeat;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+.tile_box_key h1, .tile_box_key h2, .tile_box_key h3 {
+	float: left;
+	display: block;
+	width: auto;
+	color: #212121;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 36px;
+	margin: 0 0 10px 0;
+	color: #23262d;
+}
+.tile_box_key h3 {
+	color: #2daaed;
+}
+.auto-box > div:first-of-type {
+	width: 39px;
+	height: 17px;
+	position: relative;
+	float: right;
+	top: 3px;
+}
+.auto-box .icon-info-auto {
+	width: 14px;
+	height: 14px;
+	text-align: center;
+	background: #808080;
+	font-size: 13px;
+	float: right;
+	margin: 5px 5px 0 0;
+	color: #ffffff;
+	line-height: 14px;
+	cursor: pointer;
+	font-weight: 500;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+.auto-box .icon-info-auto {
+	margin: 2px 5px 0 0;
+}
+.hideShowCase {
+	visibility: hidden !important;
+	opacity: 0 !important;
+	z-index: 1;
+	-webkit-transition: opacity 0.1s linear, visibility 0.1s linear, height 0.1s linear;
+	-moz-transition: opacity 0.1s linear, visibility 0.1s linear, height 0.1s linear;
+	transition: opacity 0.1s linear, visibility 0.1s linear, height 0.1s linear;
+}
+.auto-box .show-info-auto {
+	position: absolute;
+	background: #ffffff;
+	border: 1px solid #d9d9d9;
+	padding: 10px;
+	right: 0px;
+	font-size: 13px;
+	line-height: 18px;
+	-moz-box-shadow: 0 3px 8px rgba(3, 3, 3, 0.26);
+	-webkit-box-shadow: 0 3px 8px rgba(3, 3, 3, 0.26);
+	box-shadow: 0px 3px 8px rgba(3,3,3,0.26);
+	position: absolute;
+	z-index: 100;
+	width: 190px;
+	display: block;
+	color: #212121;
+	margin: 10px 10px 0 0;
+	z-index: 1000000;
+}
+.auto-box .show-info-auto {
+	margin: 5px 10px 0 0;
+}
+input, button, textarea, select, optgroup, option {
+	font-style: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+button, input {
+	*overflow:visible: ;
+	line-height: normal;
+	border-radius: 0;
+}
+button, input, select, textarea {
+	margin: 0;
+	font-size: 100%;
+	vertical-align: middle;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+input, select, textarea {
+	font-family: "NhacCuaTui",sans-serif;
+}
+label, select, button, input[type='button'], input[type='reset'], input[type='submit'], input[type='radio'], input[type='checkbox'] {
+	cursor: pointer;
+}
+.auto-box > div:first-of-type input {
+	opacity: 0;
+}
+.auto-box > div:first-of-type label {
+	position: absolute;
+	background: #c0c0c0;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	border-radius: 3.125rem;
+	-webkit-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+	width: 37px;
+}
+.auto-box > div:first-of-type label {
+	top: -3px;
+}
+.auto-box > div:first-of-type label::after {
+	content: "";
+	display: block;
+	width: 13px;
+	height: 13px;
+	border-radius: 8px;
+	cursor: pointer;
+	position: absolute;
+	top: 2px;
+	z-index: 1;
+	left: 3px;
+	background-color: #FFFFFD;
+	-webkit-transition: left .2s ease-in-out;
+	transition: left .2s ease-in-out;
+}
+.auto-box > div:first-of-type input[type=checkbox]:checked ~ label {
+	background: #2daaed url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) left -2404px no-repeat;
+}
+.auto-box > div:first-of-type input[type=checkbox]:checked ~ label::after {
+	left: 21px;
+}
+.tile_box_key h1 a, .tile_box_key h2 a, .tile_box_key h3 a {
+	color: #2daaed;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) right -155px no-repeat;
+	text-transform: uppercase;
+	padding: 0 20px 0 0;
+	font-weight: 300 !important;
+}
+.tile_box_key h1 a.nomore, .tile_box_key h2 a.nomore, .tile_box_key h3 a.nomore {
+	padding: 0 5px 0 0;
+	background: none;
+}
+.tile_box_key h1 a.fontsmall, .tile_box_key h2 a.fontsmall, .tile_box_key h3 a.fontsmall {
+	font-size: 22px;
+}
+.box-content .box_playing {
+	padding: 0px 0;
+	width: 840px;
+	float: left;
+	position: relative;
+}
+.box_menu_player {
+	float: left;
+	width: 840px;
+	border-bottom: #ececec solid 1px;
+	border-top: solid 1px #ececec;
+	padding: 12px 0 12px 0;
+	margin: 10px 0 0 0;
+}
+.box_menu_player.new {
+	border-top: none;
+	border-bottom: none;
+	padding: 18px 0 7px 0;
+	margin-top: 0px;
+}
+.boxOptionNowplaying {
+	position: relative;
+	float: left;
+	height: auto;
+}
+.box-content-player {
+	float: left;
+	padding: 0px 0;
+	border: #dddddd solid 0px;
+	padding: 10px 0;
+	border-top: 0px;
+}
+.box_report_error {
+	float: left;
+	padding: 10px;
+	width: 818px;
+	border: #e3e3e3 solid 1px;
+	margin-bottom: 8px;
+	margin-top: 2px;
+}
+.box_download_music {
+	float: left;
+	width: 840px;
+	padding: 0px;
+	margin-bottom: 0px;
+}
+.box_add_playlist_detail {
+	float: left;
+	width: 840px;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+.boxshowcase {
+	opacity: 1;
+	visibility: visible;
+	display: block;
+	-webkit-transition: opacity 0.1s linear, visibility 0.1s linear;
+	-moz-transition: opacity 0.1s linear, visibility 0.1s linear;
+	transition: opacity 0.1s linear, visibility 0.1s linear;
+}
+.hideShowCaseNoneHeight {
+	visibility: hidden !important;
+	opacity: 0 !important;
+	z-index: 1;
+	height: 0px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	overflow: hidden;
+	-webkit-transition: opacity 0.1s linear, visibility 0.1s linear;
+	-moz-transition: opacity 0.1s linear, visibility 0.1s linear;
+	transition: opacity 0.1s linear, visibility 0.1s linear;
+}
+.box-content-player.new {
+	border-top: #ececec solid 1px;
+	padding: 15px 0;
+}
+/* @media screen and (min-width:1191px) */
+#S_Comment {
+	width: 840px !important;
+}
+.lyric {
+	position: relative;
+	width: 798px;
+	float: left;
+	padding: 5px 0px;
+	border: #e3e3e3 solid 1px;
+	padding: 10px 20px;
+	margin: 0px 0 20px 0;
+}
+.lyric {
+	padding: 20px 20px;
+}
+.box-content .list_album {
+	width: 840px;
+	float: left;
+	margin-bottom: 10px;
+}
+.box-content .list_video {
+	width: 840px;
+	float: left;
+	margin-bottom: 20px;
+	margin-bottom: 0px;
+}
+.box-content .list_music_full {
+	width: 840px;
+	float: left;
+	margin: 20px 0px 0 0;
+}
+ul.list_item_music {
+	width: 840px;
+	float: left;
+	margin-top: 0px;
+}
+ul.list_item_music li {
+	width: 840px;
+	float: left;
+	height: 56px;
+	line-height: 56px;
+	display: block;
+	border-top: #ececec solid 1px;
+}
+ul.list_item_music li .item_content {
+	font-size: 12px;
+	float: left;
+	width: 460px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #a2a2a2;
+	margin-right: 20px;
+}
+.list_mark {
+	float: left;
+	width: 150px;
+	height: 100%;
+	margin-right: 20px;
+}
+ul.list_item_music li .button_new_window {
+	width: 14px;
+	height: 14px;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) left top no-repeat;
+	display: block;
+	float: right;
+	margin: 20px 15px 0px 0px;
+}
+ul.list_item_music li .fright_button_add_playlist {
+	float: right;
+	width: 16px;
+	height: 14px;
+	display: block;
+	margin: 20px 10px 0px 0px;
+}
+ul.list_item_music li .button_playing {
+	width: 10px;
+	height: 14px;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -30px top no-repeat;
+	display: block;
+	float: right;
+	margin: 20px 10px 0px 0px;
+}
+ul.list_item_music li .fright_button_add_playlist .button_add_playlist {
+	width: 16px;
+	height: 14px;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -44px top no-repeat;
+	display: block;
+	float: left;
+	margin: 0px 12px 0px 0px;
+}
+ul.list_item_music li .item_content .name_song {
+	font-size: 14px;
+}
+ul.list_item_music li .item_content .name_singer {
+	font-size: 12px;
+	margin-left: 3px;
+	color: #9a9a9a;
+}
+.list_mark .icon-tag-lossless {
+	padding: 1px 8px;
+	font-size: 11px;
+	text-transform: uppercase;
+	background: #e74c3c;
+	color: rgba(255, 255, 255, 1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 5px 0 0;
+}
+.list_mark .icon-tag-hd {
+	padding: 1px 8px;
+	font-size: 11px;
+	text-transform: uppercase;
+	background: #00adef;
+	color: rgba(255, 255, 255, 1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 5px 0 0;
+}
+.box-content .list_video .fram_select {
+	width: 840px;
+	float: left;
+	overflow: hidden;
+}
+.box-content .list_video .fram_select ul {
+	width: 860px;
+	float: left;
+}
+.box-content .list_video .fram_select ul li {
+	width: 195px;
+	float: left;
+	margin: 0 20px 20px 0;
+	padding: 0px 0px;
+	margin-bottom: 0px;
+	height: 185px;
+}
+.box-content .list_video .fram_select ul li .box_absolute {
+	position: relative;
+	width: 195px;
+	height: 109px;
+	background: #000;
+}
+.box-content .list_video .fram_select ul li a.name_song {
+	font-size: 14px;
+	float: left;
+	line-height: 18px;
+	width: 195px;
+	margin: 3px 0 5px 0;
+	max-height: 45px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: text-bottom;
+}
+.box-content .list_video .fram_select ul li p, .box-content .list_video .fram_select ul li h4 {
+	width: 195px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	color: #acacac;
+	font-size: 12px;
+}
+.box-content .list_video .fram_select ul li a.name_singer {
+	color: #9a9a9a !important;
+	font-size: 12px;
+}
+.box-content .list_video .fram_select ul li .box_absolute .icon_time_video {
+	background: transparent url(https://stc-id.nixcdn.com/v11/images/transparent.png) repeat;
+	font-weight: bold;
+	color: #ffffff;
+	bottom: 0px;
+	right: 0px;
+	font-size: 11px;
+	padding: 0px 5px;
+	height: 16px;
+	line-height: 16px;
+	position: absolute;
+	z-index: 100;
+}
+.box-content .list_video .fram_select ul li .box_absolute .view_mv {
+	position: absolute;
+	color: #c7c7c7;
+	right: 0px;
+	z-index: 101;
+	font-size: 12px;
+	background: url(https://stc-id.nixcdn.com/v11/images/bg_view_listen.png) left top;
+	padding: 0 5px 0 15px;
+	line-height: 24px;
+	display: block;
+}
+.icon_play {
+	opacity: 0;
+	visibility: visible;
+	display: block !important;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
+}
+.box-content .list_video .fram_select ul li .box_absolute .icon_play {
+	position: absolute;
+	z-index: 101;
+	top: 50%;
+	left: 50%;
+	margin: -24px 0 0 -24px;
+	width: 48px;
+	height: 48px;
+	display: block;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) left -28px no-repeat;
+}
+fieldset, img {
+	border: 0;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+.box-content .list_video .fram_select ul li img {
+	float: left;
+	width: 195px;
+	margin-bottom: 5px;
+	height: 109px;
+}
+.box-content .list_album ul li .box-left-album .box_absolute .avatar img {
+	float: left;
+	width: 152px;
+}
+.box-content .list_album ul li .box-left-album .box_absolute .avatar img {
+	width: 212px;
+}
+.box_video_recommended .list_item_music li .box_absolute_video .thum-video img, .box-content .list_album ul li .box-left-album .box_absolute .avatar img, .box-content .list_video .fram_select ul li .box_absolute img {
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
+}
+.box-content .list_video .fram_select ul li .box_absolute .view_mv .icon_view {
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 0px -237px no-repeat;
+	width: 14px;
+	height: 14px;
+	float: left;
+	margin: 8px 3px 0 0;
+}
+.box-content .list_album .fram_select {
+	width: 840px;
+	float: left;
+	overflow: hidden;
+}
+.box-content .list_album .fram_select ul {
+	width: 860px;
+	float: left;
+}
+.box-content .list_album ul li {
+	width: 152px;
+	float: left;
+	margin-right: 20px;
+	padding: 0px 0px;
+	height: 230px;
+	margin-bottom: 10px;
+}
+.box-content .list_album ul li .box-left-album {
+	float: left;
+	margin-bottom: 8px;
+	width: 152px;
+	height: 152px;
+	overflow: hidden;
+}
+.box-content .list_album ul li .box-left-album {
+	background: #000;
+}
+.box-content .list_album ul li .info_album {
+	float: left;
+	z-index: 10;
+	font-size: 15px;
+	color: #ffffff;
+	width: 152px;
+	bottom: 0px;
+	line-height: 19px;
+}
+.box-content .list_album ul li .info_album a.name_song {
+	font-size: 14px;
+	margin: 0 0 5px 0;
+	float: left;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 152px;
+	padding-bottom: 0px;
+}
+.box-content .list_album ul li .info_album p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	width: 152px;
+	margin-bottom: 5px;
+	color: #acacac;
+	font-size: 12px;
+}
+.box-content .list_album ul li .info_album p .name_singer {
+	font-size: 12px;
+	color: #9a9a9a;
+}
+.box-content .list_album ul li .box-left-album .box_absolute {
+	position: relative;
+	width: 152px;
+	height: 152px;
+}
+.box-content .list_album ul li .box-left-album .box_absolute .bg_action_info {
+	position: absolute;
+	width: 152px;
+	height: 152px;
+	z-index: 2;
+}
+.box-content .list_album ul li .box-left-album .box_absolute .avatar {
+	position: absolute;
+	z-index: 1;
+	width: 152px;
+	height: 152px;
+}
+.box-content .list_album ul li .box-left-album .box_absolute .avatar {
+	overflow: hidden;
+}
+.box-content .list_album ul li .box-left-album .box_absolute .bg_action_info .icon_play {
+	position: absolute;
+	z-index: 1001;
+	top: 50%;
+	left: 50%;
+	margin: -24px 0 0 -24px;
+	width: 48px;
+	height: 48px;
+	display: none;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) left -28px no-repeat;
+}
+.lyric .pd_name_lyric {
+	width: 798px;
+	float: left;
+	border-bottom: #dbdbdb solid 1px;
+	padding: 0px 0px 5px 0px;
+	margin-bottom: 8px;
+}
+.lyric .pd_name_lyric {
+	position: relative;
+	padding-bottom: 11px;
+}
+.trans {
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: 0.5s;
+	-webkit-backface-visibility: hidden;
+}
+.lyric .pd_lyric {
+	float: left;
+	line-height: 28px;
+	background: transparent url(https://stc-id.nixcdn.com/v11/images/line_lyric.png) left -5px;
+	max-height: 250px;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 300;
+	color: #333;
+	width: 100%;
+}
+.lyric .pd_lyric {
+	max-height: none;
+}
+.more-add-lyric {
+	width: 100%;
+	float: left;
+	padding: 5px 0px;
+}
+.btn {
+	border: none;
+	background: #2daaed;
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+	padding: 8px 32px 8px 32px;
+}
+.btn_add_cannel, .btn_add_cannel:hover {
+	padding: 8px 20px;
+	float: left;
+	margin: 0 10px 0 0;
+	background: #7a7a7a !important;
+}
+.btn_add_action {
+	padding: 8px 20px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+.input_data {
+	height: 22px;
+	float: left;
+	padding: 8px 5px;
+	line-height: 25px;
+	width: 100%;
+	font-size: 15px;
+}
+textarea, input[type='text'], input[type='password'], input[type='datetime'], input[type='datetime-local'], input[type='date'], input[type='month'], input[type='time'], input[type='week'], input[type='number'], input[type='email'], input[type='url'], input[type='search'], input[type='tel'], input[type='color'], .uneditable-input {
+	border: 1px solid #c7c7c7;
+	color: #333333;
+	font-size: 12px;
+	padding: 5px 5px;
+	text-indent: 6px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: border .25s linear, color .25s linear;
+	-moz-transition: border .25s linear, color .25s linear;
+	-o-transition: border .25s linear, color .25s linear;
+	transition: border .25s linear, color .25s linear;
+	-webkit-backface-visibility: hidden;
+}
+.lyric .more_add {
+	width: 100%;
+	float: left;
+	padding: 5px 0px;
+}
+.lyric .more_add .btn_view_more {
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) -15px -409px no-repeat;
+	padding: 0px 0 10px 18px;
+	color: #2daaed;
+	height: 25px;
+	float: left;
+	line-height: 25px;
+}
+.lyric .more_add .btn_view_hide {
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) -13px -438px no-repeat;
+	padding: 0px 0 10px 18px;
+	color: #2daaed;
+	height: 25px;
+	float: left;
+	line-height: 25px;
+}
+.pd_name_lyric .box_btn_lyric {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.lyric .pd_name_lyric .name_lyric {
+	float: left;
+	font-size: 18px;
+	width: 798px;
+	margin: 0px;
+	font-weight: 500;
+}
+.lyric .pd_name_lyric .name_post {
+	float: left;
+	font-size: 14px;
+	width: 798px;
+	margin: 2px 0px 0px 0px;
+	color: #9a9a9a;
+}
+.lyric .pd_name_lyric .name_post a {
+	color: #2daaed;
+}
+#copyLyricBox {
+	position: relative;
+	display: inline-block;
+}
+.btn_lyric {
+	width: 104px;
+	height: 32px;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+	border: none;
+	outline: 0;
+	font-size: 14px;
+	margin-left: 8px;
+	color: #333333;
+}
+.btn_lyric img {
+	margin-right: 4px;
+}
+a.close-big {
+	width: 18px;
+	height: 18px;
+	display: block;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) left -76px no-repeat;
+	margin: 0px 5px 0px 0px;
+	float: right;
+}
+.box-content-player .album_info {
+	width: 816px;
+	float: left;
+}
+.box-content-player .album_info .detail_info_playing_now {
+	font-size: 12px;
+	color: #5c5c5c;
+	padding-left: 10px;
+	width: 100%;
+	min-height: 30px;
+	line-height: 1.6;
+}
+.box-content-player.new .album_info .detail_info_playing_now {
+	width: 99%;
+}
+.box-content-player .album_info .detail_info_playing_now a {
+	font-weight: 700;
+	color: #0689ba;
+}
+.box-content-player .album_info .detail_info_playing_now a {
+	color: #5c5c5c !important;
+}
+#divUserPlaylistNowplaying {
+	border-top: #ececec solid 1px;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+.lyricSEO {
+	display: none;
+}
+#divBoxChart {
+	background: #FAFAFA;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-top: #e3e3e3 solid 1px;
+	position: relative;
+}
+.alert.success {
+	background: #41cc76;
+	border-top: #2882bc solid 0px;
+}
+.alert.error {
+	background: #e64e4e;
+	border-top: #bb2727 solid 0px;
+}
+.box_add_playlist_detail p {
+	float: left;
+	width: 840px;
+	line-height: 32px;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+.box_add_playlist_detail .box_show_playlist {
+	width: 828px;
+	background: #f1f1f1;
+	padding: 5px;
+	float: left;
+	border: #dbdbdb solid 1px;
+	margin-bottom: 10px;
+}
+.box_add_playlist_detail .input_data {
+	height: 25px;
+	float: left;
+	padding: 3px 5px;
+	line-height: 25px;
+	width: 705px;
+	font-size: 14px;
+	margin-top: 0px;
+	height: 27px;
+}
+.box_add_playlist_detail .btn_create_playlist {
+	float: left;
+	padding: 8px 12px;
+	margin-left: 5px;
+}
+#idScrllListPlaylist {
+	min-height: 100px;
+}
+.loader-inner {
+	z-index: 1000001;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-top: -15px;
+	margin-left: -20px;
+	width: 40px;
+}
+#idScrllListPlaylist .loader-inner {
+	position: absolute;
+	color: #3590cb;
+}
+.line-scale-pulse-out > div {
+	background-color: #2daaed;
+	width: 4px;
+	height: 35px;
+	border-radius: 2px;
+	margin: 2px;
+	display: inline-block;
+	-webkit-animation: line-scale-pulse-out .9s 0s infinite cubic-bezier(.85, .25, .37, .85);
+	animation: line-scale-pulse-out .9s 0s infinite cubic-bezier(.85,.25,.37,.85);
+}
+.line-scale-pulse-out > div:nth-child(1), .line-scale-pulse-out > div:nth-child(5) {
+	-webkit-animation-delay: .4s !important;
+	animation-delay: 0.4s !important;
+}
+.line-scale-pulse-out > div:nth-child(2), .line-scale-pulse-out > div:nth-child(4) {
+	-webkit-animation-delay: .2s !important;
+	animation-delay: 0.2s !important;
+}
+#idScrllListPlaylist .loader-inner div {
+	background-color: #3590cb;
+}
+.alert.error span.icon {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -233px -40px no-repeat;
+	margin: 2px 10px 5px 15px;
+	float: left;
+}
+.alert .content_alert {
+	float: left;
+	width: 750px;
+	line-height: 18px;
+	font-size: 15px;
+	color: #ffffff;
+}
+a.close {
+	width: 13px;
+	height: 13px;
+	display: block;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -306px -40px no-repeat;
+	margin: 3px 10px 0px 0px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	float: right;
+}
+.alert.success span.icon {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -217px -40px no-repeat;
+	margin: 2px 10px 5px 15px;
+	float: left;
+}
+.box_download_music ul {
+	float: left;
+}
+.box_download_music ul li {
+	float: left;
+	width: 230px;
+	margin: 10px 0 10px 30px;
+	text-align: center;
+}
+.losslessdeny {
+	background-color: #ccc !important;
+}
+.box_download_music ul li a {
+	float: left;
+	padding: 10px 12px 10px 80px;
+	background: #2daaed url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 50px -530px no-repeat;
+	font-weight: 500;
+	width: 150px;
+	text-align: left;
+}
+#divBoxReport .loader-inner, #contentBoxPlaylist .loader-inner {
+	position: absolute;
+	color: #3590cb;
+}
+#contentBoxPlaylist .loader-inner div, #divBoxReport .loader-inner div {
+	background-color: #3590cb;
+}
+.sub_other_menu {
+	margin-top: 0px !important;
+}
+.box_menu_player ul {
+	float: left;
+	line-height: 20px;
+}
+.box_menu_player.new ul {
+	float: right;
+	margin-top: 10px;
+}
+.tooltip_p {
+	position: relative;
+}
+.sub_other > li {
+	float: left !important;
+	color: #000000;
+	margin: 10px 0px;
+	padding: 0px;
+	margin-left: 0px !important;
+}
+.sub_other_menu > li {
+	margin-left: 0px !important;
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 1px solid #dddddd;
+	margin-right: -15px !important;
+}
+.box_menu_player ul li {
+	float: left;
+	margin-right: 20px;
+}
+.sub_other_menu > li:last-child {
+	border-bottom: none;
+}
+.box_menu_player.new ul li {
+	margin-right: 0px;
+	margin-left: 20px;
+}
+.box_menu_player.new ul li:last-child {
+	position: relative;
+}
+.more-main-menu {
+	color: #e74c3c !important;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 26px -4094px no-repeat;
+	padding-right: 22px !important;
+	padding-top: 10px !important;
+}
+.sub_other_menu li a {
+	display: block;
+	padding: 0 !important;
+}
+.sub_other_menu > li > a {
+	font-size: 12px !important;
+}
+.box_menu_player ul li a {
+	color: #212121;
+	padding: 5px 0 5px 0;
+	font-size: 14px;
+}
+.more-main-menu.new_header {
+	position: relative;
+}
+.more-main-menu.new_header::before {
+	content: "";
+	background: url('https://stc-id.nixcdn.com/v11/images/header_new/ic_more_new.png');
+	width: 21px;
+	height: 4px;
+	position: absolute;
+	top: 19px;
+	left: 0px;
+}
+.box_menu_player.new ul li .submenu {
+	width: 100px;
+	position: absolute;
+	top: 20px;
+	z-index: 9999999;
+	background: #fff;
+	left: -110px;
+	border: 1px solid #d9d9d9;
+	-moz-box-shadow: 0 3px 8px rgba(3, 3, 3, 0.26);
+	-webkit-box-shadow: 0 3px 8px rgba(3, 3, 3, 0.26);
+	box-shadow: 0px 3px 8px rgba(3,3,3,0.26);
+	padding: 0 15px;
+}
+.icon_info_autone_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_analytics_20.png') no-repeat;
+}
+.icon_report_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_noti.png') no-repeat;
+}
+.iconicon_statistics_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_analytics.png') no-repeat;
+}
+.icon_ringtone_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_ringtone.png') no-repeat;
+}
+.icon_share_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_share.png') no-repeat;
+}
+.icon_download_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_download.png') no-repeat;
+}
+.icon_add_to_heart_new {
+	float: left;
+	height: 20px;
+	width: 24px;
+	background: url('https://stc-id.nixcdn.com/v11/images/ic_heart.png') no-repeat;
+}
+.adsZoneMp3 {
+	position: absolute;
+	top: 82px;
+	width: 300px;
+	height: 250px;
+	left: 12px;
+	z-index: 9999;
+	overflow: hidden;
+}
+.adsZoneMp3 {
+	display: none !important;
+}
+.ads_80_120 {
+	position: absolute;
+	right: 346px;
+	top: 12px;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	z-index: 9995;
+}
+.info_name_songmv.qc_outstream-remove {
+	margin: 0 !important;
+}
+.box-content .box_playing .info_name_songmv {
+	float: left;
+	padding-bottom: 5px;
+	margin: 0 0 328px 0;
+	height: 60px;
+}
+.box-content .box_playing .info_name_songmv {
+	float: none;
+}
+.box-content .box_playing .info_name_songmv.playerwapper-song {
+	margin: 0 !important;
+}
+.box-content .box_playing .info_name_songmv.playerwapper-song {
+	margin: 0 !important;
+}
+.box-content .box_playing .info_name_songmv.playerwapper-song {
+	margin: 0 !important;
+}
+.autoPlayPlayerButtonBox {
+	position: absolute;
+	top: 288px;
+	width: 40px;
+	height: 25px;
+	z-index: 9999;
+	left: 625px;
+}
+.autoPlayPlayerButtonBox {
+	top: 308px;
+}
+.autoPlayPlayerButtonBox {
+	left: 657px;
+}
+.autoPlayPlayerButtonBox {
+	top: 74px !important;
+}
+.box-content .box_playing .playing_absolute {
+	height: 155px !important;
+}
+.box-content .box_playing .playing_absolute {
+	height: 155px !important;
+}
+.nctPlayer {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	background: #000;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-transition: height 0.5s linear;
+	-moz-transition: height 0.5s linear;
+	transition: height 0.5s linear;
+	position: relative;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	overflow: hidden;
+}
+.nctPlayer .playerDiv {
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	z-index: 6000;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.nctPlayer .mainScreen {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	z-index: 1006;
+	vertical-align: middle;
+}
+.nctPlayer .controlbar {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 40px;
+	width: 100%;
+	background: #000;
+	-webkit-transform-style: preserve-3d;
+	z-index: 100600;
+}
+.nctPlayer .mp3LyricBox {
+	height: 70px;
+	width: 520px;
+	bottom: 55px;
+	position: absolute;
+	z-index: 1023;
+	text-align: center;
+	right: 0px;
+	color: #fff;
+	font-size: 20px;
+	overflow: hidden;
+}
+.nctPlayer .mp3LyricBox {
+	width: 685px !important;
+}
+.nctPlayer .mp3LyricBox {
+	bottom: 62px !important;
+}
+#S_HotCorner, #PL_HotCorner {
+	position: absolute;
+	right: 5px;
+	bottom: 48px;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	z-index: 9995;
+}
+.mp3Kara {
+	display: inline-block;
+	margin: 0 auto;
+	height: 28px;
+	font-size: 22px;
+	overflow: hidden;
+	text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+.mp3Kara2 {
+	margin-top: 10px;
+}
+.nctPlayer .controlbar .playButton {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-top: 10px;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/nowplaying_icon_play.png) center no-repeat;
+	-webkit-transition: background 0.2s linear;
+	margin-left: 13px;
+	margin-right: 13px;
+	-moz-transition: background 0.2s linear;
+	transition: background 0.2s linear;
+	background-size: 15px 20px;
+}
+.nctPlayer .controlbar .nextButtonAutoplay {
+	cursor: pointer;
+	width: 20px;
+	height: 34px;
+	float: left;
+	margin-top: 3px;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/nowplaying_icon_next3.png) center no-repeat;
+	-webkit-transition: background 0.2s linear;
+	-moz-transition: background 0.2s linear;
+	transition: background 0.2s linear;
+	background-size: 18px 13px;
+	margin-right: 6px;
+	margin-left: 6px;
+}
+.nctPlayer .controlbar .volume {
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/volumn.png) 5px 3px no-repeat;
+	background-size: 34px 21px;
+	margin-top: 7px;
+	cursor: pointer;
+	width: 35px;
+	height: 33px;
+	float: right;
+	position: relative;
+	z-index: 1020;
+	margin-right: 15px;
+	margin-left: 0px;
+}
+.nctPlayer .controlbar .timeCounter {
+	display: block;
+	opacity: 0;
+	float: left;
+	margin-top: 13px;
+	width: 100px;
+	height: 18px;
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	color: #ccc;
+}
+.nctPlayer .controlbar .timeCounter.complete {
+	-webkit-transition: opacity 0.5s linear;
+	-moz-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+	opacity: 1;
+}
+.nctPlayer .controlbar .logoNCT {
+	float: right;
+	display: none;
+	margin-right: 5px;
+	margin-top: 8px;
+	margin-left: 7px;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/logo3.png) left center no-repeat;
+	background-size: auto 24px;
+	width: 46px;
+	height: 24px;
+	cursor: pointer;
+}
+.nctPlayer .controlbar .timeSlider {
+	width: 98%;
+	height: 16px;
+	position: absolute;
+	top: 0px;
+	left: 1%;
+	margin-top: -11px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.nctPlayer .controlbar .switchQuality {
+	position: relative;
+	z-index: 1021;
+	float: right;
+	width: 72px;
+	height: 34px;
+	margin-right: 13px;
+	margin-top: 6px;
+}
+.nctPlayer .controlbar .switchQuality {
+	display: block !important;
+}
+.nctPlayer .controlbar .repeatButton {
+	cursor: pointer;
+	width: 30px;
+	height: 34px;
+	float: right;
+	margin-top: 4px;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/no_repeat.png) center no-repeat;
+	-webkit-transition: background 0.2s linear;
+	-moz-transition: background 0.2s linear;
+	transition: background 0.2s linear;
+	margin-right: 14px;
+	background-size: 16px 14px;
+	z-index: 1022;
+	position: relative;
+}
+.boxTooltip {
+	color: #fff !important;
+}
+.nctPlayer .controlbar .boxTooltip {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear, visibility 0.3s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.3s linear;
+	transition: opacity 0.2s linear, visibility 0.3s linear;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/tooltip.png) no-repeat top center;
+	margin-top: -25px;
+	width: auto;
+	height: 20px;
+	z-index: 1020;
+	color: #ccc;
+	padding: 5px 5px 6px 5px;
+	text-align: center;
+	font-size: 12px;
+}
+.nctPlayer .controlbar .boxTooltip {
+	background: rgba(0,0,0,0.7);
+	margin-top: -48px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.nctPlayer .controlbar .repeatButton .boxTooltipRepeat {
+	width: 100px;
+	margin-left: -40px;
+}
+.nctPlayer .controlbar .switchQuality .switchQualityText {
+	width: 65px;
+	height: 15px;
+	margin-top: 3px;
+	border: 1px solid #FFF;
+	color: #fff;
+	font-size: 13px;
+	border-radius: 5px;
+	padding: 1px 2px 4px 3px;
+	text-align: center;
+	cursor: pointer;
+	font-family: "Roboto",Helvetica,Arial,sans-serif;
+}
+.nctPlayer .controlbar .switchQuality .boxSwitchQuality {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s linear, visibility 0.6s linear;
+	-moz-transition: opacity 0.5s linear, visibility 0.6s linear;
+	transition: opacity 0.5s linear, visibility 0.6s linear;
+	width: 110px;
+	height: auto;
+	position: absolute;
+	left: -20px;
+	bottom: 49px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: #ccc;
+	background: rgba(0,0,0,0.7);
+	font-size: 11px;
+	padding: 4px 0px;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 0px;
+}
+.nctPlayer .controlbar .switchQuality .boxSwitchQuality .SwitchQualityText {
+	font-size: 13px;
+	width: 110px;
+	height: 25px;
+	text-align: center;
+	position: relative;
+	font-family: Tahoma, Geneva, sans-serif;
+	padding-top: 4px;
+	padding-right: 0px;
+	top: 0px !important;
+	border-bottom: 1px solid #585858;
+	margin-bottom: 4px;
+	color: #fff;
+	font-weight: 300;
+}
+.nctPlayer .controlbar .switchQuality .boxSwitchQuality .switchQualityCode {
+	width: 110px;
+	height: 32px;
+	text-align: right;
+	color: #fff;
+	font-size: 13px;
+	padding-top: 8px;
+	padding-right: 0px;
+	position: relative;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-align: center;
+	font-weight: 300;
+}
+.nctPlayer .controlbar .switchQuality .boxSwitchQuality .switchQualityCode.active {
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/check.png) 10px 12px no-repeat !important;
+}
+.nctPlayer .controlbar .switchQuality .iconhd {
+	font-size: 8px;
+	color: red;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	text-align: center;
+	padding: 0 1px 0 0;
+	position: absolute;
+	display: none;
+	right: 2px;
+	top: 5px;
+	font-weight: bold;
+}
+.nctPlayer .controlbar .switchQuality .boxSwitchQuality .iconhd {
+	font-size: 8px;
+	color: red;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	text-align: center;
+	padding: 0 2px 0 1px;
+	position: absolute;
+	display: block;
+	right: 5px;
+	top: 5px;
+	font-weight: bold;
+}
+.nctPlayer .controlbar .timeSlider .timeSliderBuffer {
+	width: 100%;
+	margin-left: 0px;
+	height: 4px;
+	position: absolute;
+	bottom: 4px;
+	left: 0px;
+	background: #424242;
+	z-index: 1;
+	-webkit-transition: height 0.2s linear;
+	-moz-transition: height 0.2s linear;
+	transition: height 0.2s linear;
+}
+.nctPlayer .controlbar .timeSlider .timeSliderCurrent {
+	width: 1px;
+	height: 4px;
+	position: absolute;
+	bottom: 4px;
+	left: 0px;
+	background: #2E9AFE;
+	z-index: 2;
+	-webkit-transition: height 0.2s linear;
+	-moz-transition: height 0.2s linear;
+	transition: height 0.2s linear;
+	background: -webkit-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: -moz-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: -o-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: -ms-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+}
+.nctPlayer .controlbar .timeSlider .timeSliderHolder {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	bottom: 4px;
+	left: 0px;
+	background: #fff;
+	z-index: 3;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	margin-bottom: -3px;
+	overflow: hidden;
+	margin-left: -7px;
+	-webkit-transition: opacity 0.2s linear, height 0.2s linear, margin-bottom 0.2s linear;
+	-moz-transition: opacity 0.2s linear, height 0.2s linear, margin-bottom 0.2s linear;
+	transition: opacity 0.2s linear, height 0.2s linear, margin-bottom 0.2s linear;
+	opacity: 0;
+	background: -webkit-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: -o-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: -ms-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+}
+.nctPlayer .controlbar .timeSlider .timeSliderHolder .timeSliderHolderInside {
+	position: absolute;
+	display: block;
+	width: 7px;
+	height: 7px;
+	top: 4px;
+	left: 4px;
+	background: #BDBDBD;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.nctPlayer .controlbar .timeSlider .timeSliderBuffer .timeSliderBufferInside {
+	display: block;
+	height: 100%;
+	background: #5E5E5E;
+	left: 0px;
+	top: 0px;
+}
+.nctPlayer .controlbar .logoNCT a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.nctPlayer .controlbar .timeCounter .utCurrentTime {
+	cursor: default;
+	display: block;
+	float: left;
+	width: 50px;
+	height: 18px;
+	text-align: right;
+}
+.nctPlayer .controlbar .timeCounter .timeCounterSlash {
+	cursor: default;
+	display: block;
+	float: left;
+	width: 10px;
+	height: 18px;
+	text-align: center;
+	color: #848484;
+}
+.nctPlayer .controlbar .timeCounter .utTotalTime {
+	cursor: default;
+	display: block;
+	float: left;
+	width: 40px;
+	height: 18px;
+	text-align: left;
+	color: #848484;
+}
+.nctPlayer .controlbar .volume .muteButton {
+	width: 35px;
+	height: 33px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10000;
+}
+.nctPlayer .controlbar .volume .volumeCurrent {
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
+	height: 22px;
+	width: 20px;
+}
+.nctPlayer .controlbar .volume .volumeSlider {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s linear, visibility 0.6s linear;
+	-moz-transition: opacity 0.5s linear, visibility 0.6s linear;
+	transition: opacity 0.5s linear, visibility 0.6s linear;
+	background: rgba(0,0,0,0.7);
+	margin-top: -119px;
+	border: 1px solid #000;
+	width: 20px;
+	height: 101px;
+	z-index: 1020;
+	margin-left: 5px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: default;
+}
+.nctPlayer .controlbar .volume .volumeSlider .volumeSliderCurrent {
+	width: 6px;
+	margin: 7px;
+	height: 80px;
+	background: #424242;
+	cursor: pointer;
+	position: relative;
+	margin-bottom: -5px;
+	margin-top: 11px;
+}
+.nctPlayer .controlbar .volume .volumeSlider .volumeSliderCurrent .volumeSliderCurrentInside {
+	background: #2E9AFE;
+	background: -webkit-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: -moz-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: -o-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: -ms-linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	background: linear-gradient(top, #2E9AFE 0%, #1F7DD5 100%);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.nctPlayer .controlbar .volume .volumeSlider .volumeSliderHolder {
+	position: absolute;
+	left: -3px;
+	bottom: 100%;
+	background: #fff;
+	background: -webkit-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: -o-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: -ms-linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	background: linear-gradient(top, #FFFFFF 0%, #ECECEC 100%);
+	width: 12px;
+	height: 12px;
+	margin-bottom: -8px;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	cursor: pointer;
+}
+.nctPlayer .controlbar .volume .volumeSlider .volumeSliderHolder .volumeSliderHolderInside {
+	position: absolute;
+	display: block;
+	width: 6px;
+	height: 6px;
+	top: 3px;
+	left: 3px;
+	background: #BDBDBD;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.nctPlayer .controlbar .volume .volumeCurrent .volumeCurrentInside {
+	position: absolute;
+	left: -1px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	background-size: 22px;
+}
+.nctPlayer .controlbar .volume .volumeCurrent .volumeCurrentInside.v3 {
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v3.png) left no-repeat;
+	background-size: 20px;
+}
+.nctPlayer .mainScreen .coverImage {
+	background: url('https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/default_inner_player_80.png') center center no-repeat;
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	top: 12px;
+	left: 12px;
+	z-index: 20;
+	-webkit-transform-style: preserve-3d;
+	text-align: center;
+	vertical-align: middle;
+}
+.nctPlayer .mainScreen .coverImage {
+	width: 80px !important;
+	height: 80px !important;
+	top: 16px !important;
+	left: 16px !important;
+}
+.nctPlayer .mainScreen .coverSinger {
+	opacity: 0.1;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+	width: 67%;
+	height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.nctPlayer .mainScreen .coverSinger {
+	display: none;
+}
+.avatarSinger {
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	position: absolute;
+	top: 30px;
+	right: 225px;
+	z-index: 11;
+}
+.avatarSinger {
+	display: none !important;
+}
+.arrowUp {
+	width: 14px;
+	height: 7px;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/btn-song-arrowUp.png) no-repeat;
+	position: absolute;
+	left: 575px;
+	top: 157px;
+}
+.arrowUp {
+	display: none;
+}
+.shadowSinger {
+	position: absolute;
+	left: 565px;
+	top: 54px;
+	width: 92px;
+	height: 86px;
+	z-index: 10;
+	background: url(https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/shadow_singer.png)  0 0 repeat;
+}
+.nctPlayer .shadowSinger {
+	display: none;
+}
+.nameSinger {
+	width: 455px;
+	height: 70px;
+	overflow: hidden;
+	position: absolute;
+	top: 110px;
+	right: 30px;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	z-index: 10000000;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.nctPlayer .nameSinger {
+	display: none;
+}
+audio, canvas, video {
+	display: inline-block;
+	*display:inline: ;
+	*zoom:1: ;
+}
+.nameSinger a {
+	color: #fff;
+}
+.linkAvatarSinger {
+	position: absolute;
+	display: block;
+	width: 70px;
+	height: 70px;
+	top: 0px;
+	left: 0px;
+}
+.autoPlayPlayerButtonBox .boxTooltip {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear, visibility 0.3s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.3s linear;
+	transition: opacity 0.2s linear, visibility 0.3s linear;
+	background: url(https://stc-id.nixcdn.com/v11/images/tooltip.png) no-repeat top center;
+	background-size: 130px 31px;
+	margin-top: -31px;
+	width: 130px;
+	height: 20px;
+	z-index: 1020;
+	color: #ccc;
+	padding: 5px 5px 6px 5px;
+	text-align: center;
+	font-size: 12px;
+	margin-left: -50px;
+}
+.autoPlayPlayerButtonBox .boxTooltip {
+	float: left;
+}
+.autoPlayPlayerButtonBox .boxTooltip {
+	margin-bottom: 18px;
+	margin-top: 0px;
+	background: rgba(0,0,0,0.7);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	width: 130px;
+}
+#autoplayLabelnctPlayer {
+	top: 3px;
+}
+.box_playing .info_name_songmv .topbreadCrumb {
+	float: left;
+	padding: 3px 0px;
+	width: 840px;
+	color: #999999;
+}
+.box-content .box_playing .topbreadCrumb {
+	float: left;
+	padding: 3px 0px;
+	width: 840px;
+	color: #999999;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.box_playing .info_name_songmv .name_title {
+	float: left;
+	width: auto;
+	max-width: 650px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.box-content .box_playing .box-link-songmv {
+	display: inline;
+	margin: 7px 0 0 0px;
+}
+.box_playing .info_name_songmv h1 {
+	display: inline;
+	width: auto;
+	font-size: 22px;
+	color: #000;
+	line-height: 24px;
+	font-weight: 500;
+	font-style: normal;
+}
+.box_playing .info_name_songmv .name-singer {
+	font-weight: 300;
+	font-style: normal;
+	display: inline;
+	font-size: 22px;
+}
+.name_title h2 a {
+	color: #000 !important;
+}
+.box_playing .info_name_songmv .topbreadCrumb a {
+	color: #999999;
+	font-size: 13px;
+	line-height: 18px;
+}
+.box-content .box_playing .topbreadCrumb a {
+	color: #999999;
+	font-size: 11px;
+	line-height: 18px;
+}
+#banner-qc_outstream {
+	position: relative;
+}
+.wpage {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 10px;
+}
+</style>
+</head>
+<body><div class="box-content">
+    <div class="box_content">
+    <div class="wpage" style="padding: 0px;">
+        <div class="nqc-zone" id="S_Mashead" style="margin: 0px auto; width: 970px; overflow: hidden; padding-top: 0px; padding-bottom: 20px; display: none;"></div>
+        <div class="nqc-zone" id="S_Top" style="width: 100%; overflow: hidden; padding-top: 0px; padding-bottom: 20px; display: none;"></div>
+        <div class="nqc-zone" id="S_Expand" style="width: 100%; overflow: hidden; padding-top: 0px; padding-bottom: 20px; display: none;"></div>
+    </div>
+    </div>
+    <div class="wrap">
+        <div class="content-wrap">
+            <div class="box-left" itemtype="http://schema.org/MusicRecording" itemscope="" itemprop="track">
+                <meta content="https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html" itemprop="url">
+                <meta content="PT4M31S" itemprop="duration">
+                <meta content="Nhạc Trẻ" itemprop="genre">
+                
+                
+                <!--begin box playing-->
+                <div class="box_playing" id="box_playing_out_stream" style="display: none;">
+                    <div class="info_name_songmv qc_outstream-remove">
+                        
+                        <div class="topbreadCrumb" xmlns:v="http://rdf.data-vocabulary.org/">
+                            <span typeof="v:Breadcrumb"><a title="nghe nhạc" href="http://www.nhaccuatui.com/" rel="v:url" property="v:title" alt="nghe nhac">Nghe nhạc</a></span>
+                            › <span typeof="v:Breadcrumb"><a title="Bài hát Nhạc Trẻ" href="https://www.nhaccuatui.com/bai-hat/nhac-tre-moi.html" target="_blank" rel="v:url" property="v:title" alt="Bài hát nhac tre">Bài hát Nhạc Trẻ</a></span>
+                            › <span typeof="v:Breadcrumb"><a title="Hồ Quang Hiếu" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank" rel="v:url" property="v:title" alt="ho quang hieu">Hồ Quang Hiếu</a>, <a title="Huỳnh Văn" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank" rel="v:url" property="v:title" alt="huynh van">Huỳnh Văn</a></span>
+                        </div>
+                        
+                        <div class="name_title"><h1 itemprop="name">Cô Phòng</h1><span style="font-size: 22px;"> - </span><h2 class="name-singer" style="color: rgb(0, 0, 0);"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Huỳnh Văn trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank">Huỳnh Văn</a></h2></div>
+                        <div class="box-link-songmv song"></div>
+                        <!--<div class="show_listen"><span id="nowPlayingListenCount">0</span></div>-->
+                        
+                        <!--<div class="show_listen"><span id="NCTCounter_sg_14382919">0</span></div>-->
+                        
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div id="banner-qc_outstream"></div>
+                </div>
+                <div class="box_playing" id="box_playing_id"><div class="adsZoneMp3"><div class="nqc-zone" id="S_Inner"></div></div><div class="ads_80_120 nqc-zone" id="S_Corner" style="display: none;"></div>
+                    <div class="info_name_songmv playerwapper-song" style="display: block;">
+                        
+                        <div class="topbreadCrumb" xmlns:v="http://rdf.data-vocabulary.org/">
+                            <span typeof="v:Breadcrumb"><a title="nghe nhạc" href="http://www.nhaccuatui.com/" rel="v:url" property="v:title" alt="nghe nhac">Nghe nhạc</a></span>
+                            › <span typeof="v:Breadcrumb"><a title="Bài hát Nhạc Trẻ" href="https://www.nhaccuatui.com/bai-hat/nhac-tre-moi.html" target="_blank" rel="v:url" property="v:title" alt="Bài hát nhac tre">Bài hát Nhạc Trẻ</a></span>
+                            › <span typeof="v:Breadcrumb"><a title="Hồ Quang Hiếu" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank" rel="v:url" property="v:title" alt="ho quang hieu">Hồ Quang Hiếu</a>, <a title="Huỳnh Văn" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank" rel="v:url" property="v:title" alt="huynh van">Huỳnh Văn</a></span>
+                        </div>
+                        
+                        <div class="name_title"><h1 itemprop="name">Cô Phòng</h1><span style="font-size: 22px;"> - </span><h2 class="name-singer" style="color: rgb(0, 0, 0);"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Huỳnh Văn trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank">Huỳnh Văn</a></h2></div>
+                        <div class="box-link-songmv song"></div>
+                        <!--<div class="show_listen"><span id="nowPlayingListenCount">0</span></div>-->
+                        
+                        <!--<div class="show_listen"><span id="NCTCounter_sg_14382919">0</span></div>-->
+                        
+                    </div>
+
+                    <div style="height: 155px; position: relative;">
+                        
+                        <div class="autoPlayPlayerButtonBox" id="autoPlayPlayerButtonBox">
+                            <div class="boxTooltip">Tự động chuyển bài</div>
+                            <div class="auto-box showtooltipautoplay hide" style="margin: -3px 0px 0px; width: 40px;">
+                                <div>
+                                    <input id="autoplayInputnctPlayer" type="checkbox" checked="checked">
+                                    <label id="autoplayLabelnctPlayer" for="autoplayInputnctPlayer"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="playing_absolute" style="margin: 0px; height: 318px;">
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <script type="text/javascript">
+                                var arrListCSSFilePlayer = [{k: "playermp3", v: "html5/nct-player-mp3/css/style_mp3.0.7.css"}];
+                                loadScript("css", arrListCSSFilePlayer, "html5/nct-player-mp3/");
+                                var arrListFilePlayer = [{k: "playermp3", v: "html5/nct-player-mp3/version/0.68.js"}];
+                                loadScript("js", arrListFilePlayer, "");
+                            </script>
+                            <script src="https://stc-id.nixcdn.com/v11/js/lib/nct.player.audio.1.6.js" type="text/javascript"></script>
+                            <script src="https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/ads/audio_ads_vast.0.4.js" type="text/javascript"></script>
+                            <script src="https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/ads/audio_ads_210416.js" type="text/javascript"></script>
+                            <script src="https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/utils/vast-client.js" type="text/javascript"></script>
+                            <script src="https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/utils/IMAUtils.0.1.js" type="text/javascript"></script>
+                            <script src="https://s0.2mdn.net/instream/video/client.js" type="text/javascript" async=""></script>
+                            <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js" type="text/javascript"></script>
+                            <div class="flash_playing nctPlayer" id="flashPlayer" style="width: 840px; height: 100%;"><div class="playerDiv" id="playerMp3flashPlayer"><div class="mainScreen" id="mainScreenflashPlayer"><div class="coverImage" id="coverImageflashPlayer" style='background: url("https://avatar-ex-swe.nixcdn.com/song/2024/04/16/4/7/c/b/1713253101033_500.jpg") no-repeat left / contain;'></div><div class="coverSinger" id="coverSingerflashPlayer" style='background: url("https://avatar-ex-swe.nixcdn.com/singer/avatar/2018/05/07/7/c/e/5/1525673879571_600.jpg") no-repeat top / cover;'></div><div class="avatarSinger" id="avatarSingerflashPlayer" style='background: url("https://avatar-ex-swe.nixcdn.com/song/2024/04/16/4/7/c/b/1713253101033.jpg") no-repeat center / cover;'><a class="linkAvatarSinger" id="linkAvatarSingerflashPlayer" href="&#10;        https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html&#10;    "></a></div><div class="arrowUp" id="arrowUpflashPlayer"></div><div class="shadowSinger" id="shadowSingerflashPlayer"></div><div class="nameSinger" id="nameSingerflashPlayer"><h2><a href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">
+        Hồ Quang Hiếu, Huỳnh Văn
+    </a></h2></div><audio class="mp3Tag" id="mp3flashPlayer" preload="auto" playsinline="" -webkit-playsinline=""></audio></div><div class="controlbar" id="controlbarflashPlayer"><div class="playButton" id="playButtonflashPlayer"></div><div class="nextButtonAutoplay" id="nextAutoPlayButtonflashPlayer"></div><div class="volume" id="volumeControlflashPlayer"><div class="muteButton" id="volumeflashPlayer"></div><div class="volumeCurrent" id="volumeCurrentflashPlayer"><div class="volumeCurrentInside v3" id="volumeCurrentInsideflashPlayer"></div></div><div class="volumeSlider" id="volumeSliderflashPlayer"><div class="volumeSliderCurrent" id="volumeSliderClickflashPlayer"><div class="volumeSliderCurrentInside" id="volumeSliderCurrentflashPlayer"></div><div class="volumeSliderHolder" id="volumeSliderHolderflashPlayer"><div class="volumeSliderHolderInside"></div></div></div></div></div><div class="timeCounter complete" id="timeCounterflashPlayer"><div class="utCurrentTime" id="utCurrentTimeflashPlayer">00:01</div><div class="timeCounterSlash">/</div><div class="utTotalTime" id="utTotalTimeflashPlayer">04:32</div></div><div class="logoNCT" id="logoflashPlayer"><a href="https://www.nhaccuatui.com" target="_blank"></a></div><div class="timeSlider" id="timeSliderflashPlayer"><div class="timeSliderBuffer"><div class="timeSliderBufferInside" id="timeSliderBufferflashPlayer" style="width: 100%;"></div></div><div class="timeSliderCurrent" id="timeSliderCurrentflashPlayer" style="width: 0.3%;"></div><div class="timeSliderHolder" id="timeSliderHolderflashPlayer" style="left: 0.3%;"><div class="timeSliderHolderInside"></div></div></div><div class="switchQuality" id="switchQualityflashPlayer"><div class="switchQualityText" id="switchQualityTextflashPlayer" style="cursor: pointer;"><span id="txtQLTflashPlayer">128kbps</span><span class="iconhd">VIP</span></div><div class="boxSwitchQuality" id="boxSwitchQualityflashPlayer"><div class="SwitchQualityText" id="SwitchQualityTextflashPlayer">Chất lượng</div><div class="switchQualityCode" id="SwitchQualityHighflashPlayer">320kbps<span class="iconhd">VIP</span></div><div class="switchQualityCode hide" id="SwitchQualityPUflashPlayer" style="color: rgb(88, 88, 88);">320kbps<span class="iconhd" style="color: rgb(88, 88, 88);">VIP</span></div><div class="switchQualityCode active" id="SwitchQualityDefaultflashPlayer">128kbps</div></div></div><div class="repeatButton hide" id="repeatButtonflashPlayer"><div class="boxTooltipRepeat boxTooltip" id="repeatTooltipflashPlayer">Lặp 1 bài</div></div></div><div class="mp3LyricBox" id="lyricBoxflashPlayer"><div class="mp3Kara" id="mp3Kara1flashPlayer"></div><div class="clr"></div><div class="mp3Kara mp3Kara2" id="mp3Kara2flashPlayer"></div></div><div class="nqc-zone" id="S_HotCorner" style="display: none;"></div></div></div>
+                            <script type="text/javascript">
+                                var dataSong = {key: '9fu0THzHzAXw', type: 'song'};
+                                $("#box_playing_id").prepend('<div class="adsZoneMp3"><div id="S_Inner" class="nqc-zone"></div></div><div id="S_Corner" class="ads_80_120 nqc-zone" style="display:none;"></div></div>');
+                                var player = new NCTPlayer();
+                                $(document).ready(function(){
+                                    //player.adsMp3.link = "https://apinas.nct.vn/v4/delivery?zl=S_Inner";
+                                    player.adsMp3.openAudioAds = true;
+                                    player.peConfig.xmlURL = "https://www.nhaccuatui.com/flash/xml?html5=true&key1=b6246ce3f0a15a795be2ab5e49c833d2";
+                                    player.peConfig.defaultIndex = "0";
+                                    player.peConfig.pushGAPercent = [];
+                                    player.peConfig.pushGASecond = [];
+                                    
+                                    
+                                    player.load("flashPlayer");
+                                    NCTNowPlaying.type = "song";
+                                    var onOffCookieValCheck = common.getCookie(NCTAdv.onOffAdvCookie);
+                                    if (typeof onOffCookieValCheck == "undefined" || onOffCookieValCheck == null || onOffCookieValCheck == "") {
+                                        $("#playerMp3flashPlayer").append('<div id="S_HotCorner" class="nqc-zone" style="display:none;"></div>');
+                                    }
+                                });
+                            </script>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--begin box playing-->
+                
+                <!--begin box menu player-->
+                <div class="box_menu_player new">
+                    <!--
+                    <div class="user_upload">
+                        
+                            <span id="NCTWG_AM_71" ic="userImageNowplaying"></span>
+                            Cung cấp bởi:<br/>
+                            <div style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><span id="NCTWG_D_71"></span></div>
+                            <script type="text/javascript">pushOneWGD("71"); pushOneWGAM("71");</script>
+                        
+                        
+                    </div>
+                    -->
+                    <ul>
+                        
+                            
+                            <li><a id="btnShowBoxPlaylist_9fu0THzHzAXw" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','add_playlist']); return NCTAddPlaylist.showBox('9fu0THzHzAXw');" href="javascript:;" key="9fu0THzHzAXw"><span class="icon_add_to_heart_new"></span>Thêm vào</a>
+                            
+                        
+                        <li><a id="btnDownloadBox" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','donwload']);" href="javascript:;"><span class="icon_download_new"></span>Tải nhạc</a></li>
+                        <li class="active shareButtonNowplaying">
+                            <a id="btnShareNowPlaying" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','share']); trackingSmarty.item_share('song','9fu0THzHzAXw');" href="javascript:;"><span class="icon_share_new"></span>Chia sẻ</a>
+                        </li>
+                        
+                            <li class="tooltip_p">
+                                <a id="nhacchobutton" onclick="trackingSmarty.item_add_ringtone('song','9fu0THzHzAXw');" href="javascript:;"><span class="icon_ringtone_new"></span>Nhạc chờ</a>
+<!--                                <div class="tooltip_text">
+                                    <div class="tooltip_c">Nhạc chờ</div>
+                                    <div class="tooltip_d">▾</div>
+                                </div>-->
+                            </li>
+                        
+                        <li>
+                            <a title="Khác" class="more-main-menu new_header" href="javascript:;" rel="follow"></a>
+<!--                            <script type="text/javascript">
+                                document.write('<ul class="submenu" style="width: 130px;"><div class="sub_other"><li><ul class="sub_other_menu"><li><a id="artist-menu" rel="follow" href="https://www.nhaccuatui.com/nghe-si.html" title="Nghệ sĩ">Nghệ sĩ</a></li><li><a rel="follow" href="https://www.nhaccuatui.com/su-kien.html" id="su-kien-menu" title="Sự Kiện - TV">Sự Kiện - TV</a></li><li><a rel="follow" href="https://www.nhaccuatui.com/tin-tuc-am-nhac.html" id="tin-tuc-menu" title="Tin Tức Âm Nhạc">Tin Tức Âm Nhạc</a></li></ul></li></div></ul>');
+                            </script>-->
+                            <ul class="submenu hideShowCase">
+                                <div class="sub_other">
+                                    <li>
+                                        <ul class="sub_other_menu">
+                                            <li class="tooltip_p"><a id="btnStatus" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','thong_ke_bai_hat']);" href="javascript:;"><span class="iconicon_statistics_new"></span>Thống kê</a>
+<!--                                            <div class="tooltip_text">
+                                                <div class="tooltip_c">Thống kê</div>
+                                                <div class="tooltip_d">▾</div>
+                                            </div>-->
+                                            </li>
+                                            <li class="tooltip_p">
+                                                <a id="btnReportError" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','report']);" href="javascript:;"><span class="icon_report_new"></span>Báo lỗi</a>
+<!--                                                <div class="tooltip_text">
+                                                    <div class="tooltip_c">Báo lỗi</div>
+                                                    <div class="tooltip_d">▾</div>
+                                                </div>-->
+                                            </li>
+                                            <li class="tooltip_p">
+                                                <a id="btnInfo" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','info']);" href="javascript:;"><span class="icon_info_autone_new"></span>Thông tin</a>
+<!--                                                <div class="tooltip_text">
+                                                    <div class="tooltip_c">Thông tin</div>
+                                                    <div class="tooltip_d">▾</div>
+                                                </div>-->
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+<!--                        <li class="tooltip_p"><a href="javascript:;" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','thong_ke_bai_hat']);" id="btnStatus" title="Thống kê về Bài hát"><span class="icon_statistics"></span></a>
+                            <div class="tooltip_text">
+                                <div class="tooltip_c">Thống kê</div>
+                                <div class="tooltip_d">▾</div>
+                            </div>
+                        </li>
+                        <li class="tooltip_p">
+                            <a href="javascript:;" id="btnReportError" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','report']);" title="Báo lỗi"><span class="icon_report"></span></a>
+                            <div class="tooltip_text">
+                                <div class="tooltip_c">Báo lỗi</div>
+                                <div class="tooltip_d">▾</div>
+                            </div>
+                        </li>
+                        <li class="box-share-like-new">
+                            
+                                <div id="fb-root"></div>
+                                <iframe id="iframe-share-facebook-new"  src="https://www.nhaccuatui.com/sharefacebook.html?Id=9fu0THzHzAXw&fbApp=414296278689656&type=5&userID="></iframe>
+                                <script type="text/javascript">
+                                    document.write('<div class="fb-like" data-href="' + top.window.location.href.replace("https://www.nhaccuatui.com/", "http://www.nhaccuatui.com/") + '" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false" style="float: left;"></div>');
+                                    var _id = '9fu0THzHzAXw';
+                                    var fbApp = '414296278689656';
+                                    var user_id = '';
+                                    var page_like_callback = function (url, html_element) {
+                                    var _uid = 0;
+                                    var _type = 5;
+                                    FB.getLoginStatus(function (response) {
+                                        if (response.status === 'connected') {
+                                            _uid = response.authResponse.userID;
+                                        }
+                                    });
+                                    var postForm = "song";
+                                    parent.trackingSmarty.item_fb_like(postForm, _id, "True");
+                                    var _url = "https://www.nhaccuatui.com/ajax/scribelog";
+                                    var _data = {like: 1, url: url, type: _type, itemid: _id, uid: _uid};
+                                    $.post(_url, _data, function (result) {}, "json");
+                                };
+                                var page_unlike_callback = function (url, html_element) {
+                                    var _uid = 0;
+                                    FB.getLoginStatus(function (response) {
+                                        if (response.status === 'connected') {
+                                            _uid = response.authResponse.userID;
+                                        }
+                                    });
+                                    var postForm = "song";
+                                    parent.trackingSmarty.item_fb_like(postForm, _id, "False");
+                                    var _url = "https://www.nhaccuatui.com/ajax/scribelog";
+                                    var _data = {like: 0, url: url, type: _type, itemid: _id, uid: _uid};
+                                    $.post(_url, _data, function (result) {}, "json");
+                                };
+                                window.fbAsyncInit = function () {
+                                    FB.Event.subscribe('edge.create', page_like_callback);
+                                    FB.Event.subscribe('edge.remove', page_unlike_callback);
+                                    FB.init({
+                                        appId: fbApp,
+                                        xfbml: true,
+                                        status: true,
+                                        version: 'v3.3'
+                                    });
+                                };
+                                (function (d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id))
+                                        return;
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.async = true;
+                                    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&status=1&version=v3.3";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));
+                                </script>
+                            
+                            <a href="javascript:;" style="padding:0;margin: 0px ;display: block; float: left; z-index: 1000; width: 50px; margin-left: 5px;" onclick="window.open('https://www.facebook.com/dialog/share?app_id=414296278689656&caption=www.nhaccuatui.com&href=https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html&redirect_uri=https://www.nhaccuatui.com/');trackingSmarty.item_fb_share('song','9fu0THzHzAXw');"><img title="Share facebook" alt="share facebook" src="https://stc-id.nixcdn.com/v11/images/share_fb.png"  width="50" height="20"/></a>
+                        </li>-->
+                    </ul>
+                </div>
+                <!--end box menu player-->
+                
+                
+                <div class="clr"></div>
+                <div class="boxOptionNowplaying">
+                    <div class="boxshowcase hideShowCaseNoneHeight" id="error_not_login_add"><div class="alert error" style="border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;"><span class="icon"></span><div class="content_alert" style="border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;">Vui lòng đăng nhập trước khi thêm vào playlist!</div></div></div>
+                    <div class="box_report_error boxshowcase hideShowCaseNoneHeight" id="divBoxReport"><a class="close-big" onclick="$('#divBoxReport').addClass('hideShowCaseNoneHeight');$('#btnReportError').removeClass('active');" href="javascript:;"></a><div class="loader-inner line-scale-pulse-out"><div></div><div></div><div></div><div></div><div></div></div></div>
+                    
+                    <!--begin box_share_data-->
+<!--                    <div id="divShowShare" class="box_share_data boxshowcase hideShowCaseNoneHeight" style="border: #dbdbdb solid 1px; margin-bottom: 10px;">
+                        <a href="javascript:;" onclick="$('#divShowShare').addClass('hideShowCaseNoneHeight');$('#btnShareNowPlaying').removeClass('active');" class="close-big"></a>
+                        <div class="row_share">
+                            <label class="lb">Embed</label>
+                            <input id="urlEmbedBlog" readonly="readonly" type="text" value='<iframe src="https://www.nhaccuatui.com/mh/auto/9fu0THzHzAXw" width="620" height="382" frameborder="0" allowfullscreen allow="autoplay"></iframe>' class="input input_data input_link1" />
+                            <div class="share_allb">
+                                <span class="box-checkbox"><input type="radio" id="radioNormal" key="9fu0THzHzAXw" rel="song" name="type_embed"><label for="radioNormal">Bình thường&nbsp;&nbsp;</label></span>
+                                <span class="box-checkbox"><input type="radio" id="radioAuto" key="9fu0THzHzAXw" rel="song" name="type_embed" checked><label for="radioAuto">Tự động play&nbsp;&nbsp;</label></span>
+                                <span class="box-checkbox"><input type="radio" id="radioBackground" key="9fu0THzHzAXw" rel="song" name="type_embed"><label for="radioBackground">Nhạc nền</label></span>
+                                <br class="clr">
+                            </div>
+                            <br class="clr">
+                        </div>
+                        <div class="title_note">
+                        Soạn: <b>CAI [tên bài hát]</b> gởi <b>8336</b> (3000đ) để được hướng dẫn làm nhạc chờ cho ĐTDĐ.
+                        
+                        </div>
+                    </div>-->
+                    <!--end box_share_data-->
+                    <!--@begin div box_download_music-->
+                    
+                    <div class="box_download_music boxshowcase hideShowCaseNoneHeight" id="divDownloadBox" style="padding: 0px 0px 25px; border: 1px solid rgb(219, 219, 219); border-image: none; margin-bottom: 10px;">
+                        <a class="close-big" style="margin: 10px 10px 0px 0px;" onclick="$('#divDownloadBox').addClass('hideShowCaseNoneHeight');$('#btnDownloadBox').removeClass('active');" href="javascript:;"></a>
+                        <ul>
+                            
+                            <li>
+                                <a title="Tải nhạc" class="btn btnDownload download" onclick="trackingSmarty.item_download('song','9fu0THzHzAXw', '128');" href="javascript:;" rel="nofollow" key="9fu0THzHzAXw" download="128">Tải Nhạc 128 Kbps</a>
+                            </li>
+                            
+                            
+                            
+                            <li>
+                                <a title="Tải nhạc" class="btn download losslessdeny" onclick="_gaq.push(['_trackEvent', 'Tracking download', '320kbps', '9fu0THzHzAXw']);NCTAdv.annouceOffAdv('download320');trackingSmarty.item_download('song','9fu0THzHzAXw', '320');" href="javascript:;" rel="nofollow" quality="q320">Tải Nhạc 320 Kbps</a>
+                            </li>
+                            
+                            
+                            
+                            <li>
+                                <a title="Tải nhạc" class="btn download losslessdeny" onclick="_gaq.push(['_trackEvent', 'Tracking download', 'Lossless', '9fu0THzHzAXw']);NCTAdv.annouceOffAdv('downloadLossless');trackingSmarty.item_download('song','9fu0THzHzAXw', 'lossless');" href="javascript:;" rel="nofollow" quality="lossless">Tải Nhạc Lossless</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <!--@end div box_download_music-->
+                    <div class="box_add_playlist_detail boxshowcase hideShowCaseNoneHeight" id="divUserPlaylistNowplaying">
+                        <div class="alert success hide" id="divContentAddToPlaylistSucc"><span class="icon"></span><div class="content_alert" id="contentAddToPlaylistSucc">Thêm bài hát vào playlist thành công</div><a class="close" onclick="$('#divContentAddToPlaylistSucc').addClass('hide');" href="javascript:;"></a></div>
+                        <div class="alert error hide" id="divContentAddToPlaylistErr"><span class="icon"></span><div class="content_alert" id="contentAddToPlaylistErr"></div><a class="close" onclick="$('#divContentAddToPlaylistErr').addClass('hide');" href="javascript:;"></a></div>
+                        <p>Thêm bài hát này vào danh sách Playlist
+                            <a class="close-big" onclick="$('#divUserPlaylistNowplaying').addClass('hideShowCaseNoneHeight');$('#btnAddPlaylistNowPlaying').removeClass('active');" href="javascript:;"></a>
+                        </p>
+                        <div class="box_show_playlist">
+                            <div id="idScrllListPlaylist"><div class="loader-inner line-scale-pulse-out"><div></div><div></div><div></div><div></div><div></div></div></div>
+                        </div>
+                        <div class="box_form_add">
+                            <input class="input input_data input_playlist" id="inpPlaylistNameNowplaying" onfocus="if (this.value == 'Nhập tên playlist mới cần tạo') {this.value = ''; }" onblur="if ($.trim($(this).val()) == '') {this.value = 'Nhập tên playlist mới cần tạo'; }" type="text" value="Nhập tên playlist mới cần tạo">
+                            <a title="Tạo Playlist mới" class="btn btn_create_playlist" id="btnCreatePlaylistNowplaying" href="javascript:;">Tạo Playlist mới</a>
+                        </div>
+                    </div>
+                    <div class="lyricSEO">
+                        Bài hát co phong do ca sĩ Ho Quang Hieu, Huynh Van thuộc thể loại Nhac Tre.
+                        Tìm <b>loi bai hat co phong</b> - Ho Quang Hieu, Huynh Van ngay trên Nhaccuatui. Nghe bài hát Cô Phòng chất lượng cao 320 kbps lossless miễn phí.
+                        
+                    </div>
+                    <div class="boxshowcase hideShowCaseNoneHeight" id="divBoxChart"></div>
+                    
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+                <!--begin box content layer-->
+                <div class="box-content-player new boxshowcase hideShowCaseNoneHeight" id="divBoxContentPlayer">
+                    <a class="close-big" onclick="$('#divBoxContentPlayer').addClass('hideShowCaseNoneHeight');" href="javascript:;"></a>
+                    <div class="album_info">
+                        <div class="detail_info_playing_now">
+<!--                           <span class="logo-official"></span>
+                           
+                           
+                           
+                           
+                           -->
+                            <!--
+                            <div class="user_create">
+                                <span id="NCTWG_AM_10626359" ic="userImageNowplaying"></span>
+                                <div class="upload_by">Đăng tải bởi</div>
+                                <div style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><span id="NCTWG_D_10626359"></span></div>
+                                <script type="text/javascript">pushOneWGD("10626359"); pushOneWGAM("10626359");</script>
+                            </div>
+                            -->
+                           
+                           Ca khúc <b>Cô Phòng</b> do ca sĩ <span><b><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Huỳnh Văn trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank">Huỳnh Văn</a></b></span> thể hiện, thuộc thể loại <b><a title="Bài hát Nhạc Trẻ" href="https://www.nhaccuatui.com/bai-hat/nhac-tre-moi.html" target="_blank" alt="Bài hát nhac tre">Nhạc Trẻ</a></b>. Các bạn có thể nghe, download (tải nhạc) bài hát <i>co phong</i> mp3, playlist/album, MV/Video co phong miễn phí tại NhacCuaTui.com.
+                           
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nqc-zone" id="S_Comment" style="margin: 20px auto; width: 100%; height: auto; clear: both; display: none;"></div>
+                <div class="nqc-zone" id="S_LEADER_BOARD" style="margin: 20px auto; width: 100%; height: auto; clear: both; display: none;"></div>
+                
+                <!--end box content player-->
+                <!-- ADS TVC -->
+                <div id="banner-itvc"></div>
+                
+                <div class="clr"></div>
+                <!--begin box lyric-->
+                
+                <div class="lyric" id="_divLyricHtml">
+                    <div class="pd_name_lyric">
+                        <div class="box_btn_lyric">
+                            <!--<button class="btn_lyric chord">Hợp âm</button>-->
+                            
+                            
+                            <div id="copyLyricBox">
+                                <button class="btn_lyric" id="copyLyric"><img alt="" src="https://stc-id.nixcdn.com/v11/images/ic_copy_lyric.png">Sao chép</button>
+                                <!--<span class="tooltipcopyLyric" hidden="" style="display: inline;">Sao chép thành công</span>-->
+                            </div>
+                            
+                        </div>
+                        <h2 class="name_lyric"><b>Lời bài hát: Cô Phòng</b></h2>
+                        
+                        
+                        <p class="name_post">
+                            
+                            
+                        </p>
+                        
+                        <p class="name_post">Lời đăng bởi: <a title="hoanganh120990" href="https://www.nhaccuatui.com/user/hoanganh120990.html" rel="nofollow">hoanganh120990</a></p>
+                    </div>
+                    
+                    
+                    <!--<div class="ads_300_250">
+                        
+                        <div id="S_Lyrics" class="adv_home_300_250 nqc-zone checkcodeshowads" style="width: 300px; height: 250px; margin: 0 10px 10px 0; display:none;"></div>
+                        
+                    </div>-->
+                    <div id="lyrics">
+                        <p class="pd_lyric trans" id="divLyric" style="height: auto; overflow: hidden; max-height: 255px;">
+                            [Verse:]
+<br>Níu ngàn lời cũng không ngăn được
+<br>Bàn chân bước đi không báo trước
+<br>Có những điều cất riêng trong lòng
+<br>Giờ bốn vách ngăn cùng cô phòng
+<br>Trốn chạy rồi hàn huyên với men
+<br>Cứ thế kết thân cùng ánh đèn
+<br>Lối mòn ngày nào trên phố quen
+<br>Vẫn đó dáng hình ngày người đến
+<br>
+<br>[Pre:]
+<br>Rời xa, lòng đau, chết trong cơn u sầu
+<br>Liệu rằng tình đời ai sẽ thấu
+<br>Dĩ vãng xưa vẫn in sâu trong đầu
+<br>(Hah a hah)
+<br>
+<br>[Chorus:]
+<br>Thời gian không thể xóa nhòa đôi ta
+<br>Có chăng chỉ là mờ phai đi theo tháng năm
+<br>Rồi khi tỉnh giấc mới chợt nhận ra
+<br>Thật quá khó để quên đi một người
+<br>Màn đêm u tối bao trùm không gian
+<br>Nói thay tiếng lòng này từ lâu đã vỡ tan
+<br>Thì ra duyên kiếp để mình gặp nhau
+<br>Dạy nhau tốt hơn xong dành lại cho người sau.
+                            
+                        </p>
+                        <div class="more_add" id="divMoreAddLyric">
+                            <a title="Xem toàn bộ" class="btn_view_more" id="seeMoreLyric" href="javascript:;">Xem toàn bộ<span class="down"></span></a>
+                            <a title="Thu gọn" class="btn_view_hide hide" id="hideMoreLyric" href="javascript:;">Thu gọn<span class="up"></span></a>
+                        </div>
+                    </div>
+
+                    <script src="https://stc-id.nixcdn.com/v11/js/dev/nct.chord.0.1.js" type="text/javascript"></script>
+                    <link href="https://stc-id.nixcdn.com/v11/css/nct.chord.0.1.css" rel="stylesheet" type="text/css" media="screen, print, projection">
+                    
+<!--                    <div class="more_add" id="divMoreAddLyric">
+                        <a href="javascript:;" id="seeMoreLyric" title="Xem toàn bộ" class="btn_view_more hide">Xem toàn bộ<span class="down"></span></a>
+                        <a href="javascript:;" id="hideMoreLyric" title="Thu gọn" class="btn_view_hide hide">Thu gọn<span class="up"></span></a>
+                    </div>-->
+                    <div class="hide" id="divEditLyric">
+                        <div class="pd_lyric">
+                            <textarea class="txt-add" id="txtEditLyric" style="width: 475px; text-indent: 0px;" rows="10"></textarea>
+                        </div>
+                        <div class="more-add-lyric">
+                            <a title="Hủy bỏ" class="btn btn_add_cannel" id="btnCancelEditLyric" style="font-weight: bold;" href="javascript:;">Hủy bỏ</a>
+                            <a title="Đồng ý" class="btn btn_add_action" id="btnEditLyric" style="font-weight: bold;" href="javascript:;" action="song">Đồng ý</a>
+                            <br class="clr">
+                        </div>
+                    </div>
+                    <input id="inpLyricId" type="hidden" value="1851934">
+                </div>
+                
+                
+                <div class="clr"></div>
+                
+                <div class="list_album listPlaylistAlbum">
+                <div class="fram_select">
+                        <div class="tile_box_key">
+                            <h3><a title="Playlist | Album" onclick="lt(['nowplaying_song','relation_playlist','click','title','TitleRelationBox','','title']);" href="https://www.nhaccuatui.com/tim-kiem/playlist?q=Hồ Quang Hiếu, Huỳnh Văn&amp;b=singer">Playlist | Album</a></h3>
+                        </div>
+                        <ul class="four_col">
+                            
+                            <li>
+                                <div class="box-left-album">
+                                    <a class="box_absolute" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','g7Z5z7YfchU0','','thumb']);" href="https://www.nhaccuatui.com/playlist/nhac-co-phong-trung-quoc-hay-nhat-2019-va.g7Z5z7YfchU0.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">
+                                        <div class="bg_action_info">
+                                            <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_62385939">0</span></span>-->
+                                            <span class="icon_play"></span>
+                                        </div>
+                                        <span class="avatar"><img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" src="https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg" data-src="https://avatar-ex-swe.nixcdn.com/playlist/2019/05/21/7/e/3/8/1558408169345.jpg"></span>
+                                    </a>
+                                </div>
+                                <div class="info_album">
+                                    <a class="name_song" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','g7Z5z7YfchU0','','title']);" href="https://www.nhaccuatui.com/playlist/nhac-co-phong-trung-quoc-hay-nhat-2019-va.g7Z5z7YfchU0.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">Nhạc Cổ Phong Trung Quốc Hay Nhất 2019</a>
+                                    <p><a title="Tìm các bài hát, playlist, mv do ca sĩ V.A trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-va.html" target="_blank">V.A</a></p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="box-left-album">
+                                    <a class="box_absolute" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','cztgb0Vbhr1b','','thumb']);" href="https://www.nhaccuatui.com/playlist/co-phong-hi-kich-vol-4-va.cztgb0Vbhr1b.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">
+                                        <div class="bg_action_info">
+                                            <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_73323488">0</span></span>-->
+                                            <span class="icon_play"></span>
+                                        </div>
+                                        <span class="avatar"><img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" src="https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg" data-src="https://avatar-ex-swe.nixcdn.com/playlist/2021/04/23/0/c/d/c/1619153618705.jpg"></span>
+                                    </a>
+                                </div>
+                                <div class="info_album">
+                                    <a class="name_song" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','cztgb0Vbhr1b','','title']);" href="https://www.nhaccuatui.com/playlist/co-phong-hi-kich-vol-4-va.cztgb0Vbhr1b.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">Cổ Phong Hí Kịch (Vol. 4)</a>
+                                    <p><a title="Tìm các bài hát, playlist, mv do ca sĩ V.A trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-va.html" target="_blank">V.A</a></p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="box-left-album">
+                                    <a class="box_absolute" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','p8pUpx93WSid','','thumb']);" href="https://www.nhaccuatui.com/playlist/nhac-co-phong-trung-quoc-hay-nhat-va.p8pUpx93WSid.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">
+                                        <div class="bg_action_info">
+                                            <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_62869497">0</span></span>-->
+                                            <span class="icon_play"></span>
+                                        </div>
+                                        <span class="avatar"><img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" src="https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg" data-src="https://avatar-ex-swe.nixcdn.com/playlist/2024/05/22/2/d/3/1/1716370175863.jpg"></span>
+                                    </a>
+                                </div>
+                                <div class="info_album">
+                                    <a class="name_song" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','p8pUpx93WSid','','title']);" href="https://www.nhaccuatui.com/playlist/nhac-co-phong-trung-quoc-hay-nhat-va.p8pUpx93WSid.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">Nhạc Cổ Phong Trung Quốc Hay Nhất</a>
+                                    <p><a title="Tìm các bài hát, playlist, mv do ca sĩ V.A trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-va.html" target="_blank">V.A</a></p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="box-left-album">
+                                    <a class="box_absolute" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','MERwGFRcRtO4','','thumb']);" href="https://www.nhaccuatui.com/playlist/phong-van-single-huy-le-ft-minh-ca-ri.MERwGFRcRtO4.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">
+                                        <div class="bg_action_info">
+                                            <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_57552522">0</span></span>-->
+                                            <span class="icon_play"></span>
+                                        </div>
+                                        <span class="avatar"><img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" src="https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg" data-src="https://avatar-ex-swe.nixcdn.com/playlist/2018/08/15/c/e/8/3/1534319280257.jpg"></span>
+                                    </a>
+                                </div>
+                                <div class="info_album">
+                                    <a class="name_song" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','MERwGFRcRtO4','','title']);" href="https://www.nhaccuatui.com/playlist/phong-van-single-huy-le-ft-minh-ca-ri.MERwGFRcRtO4.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">Phỏng Vấn (Single)</a>
+                                    <p><a title="Tìm các bài hát, playlist, mv do ca sĩ Huy Le trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Huy+Le&amp;b=singer" target="_blank">Huy Le</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Minh Cà Ri trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-minh-ca-ri.html" target="_blank">Minh Cà Ri</a></p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="box-left-album">
+                                    <a class="box_absolute" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','qoxXXzEqh6bb','','thumb']);" href="https://www.nhaccuatui.com/playlist/phong-khoi-lac-duong-ost-va.qoxXXzEqh6bb.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">
+                                        <div class="bg_action_info">
+                                            <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_76724157">0</span></span>-->
+                                            <span class="icon_play"></span>
+                                        </div>
+                                        <span class="avatar"><img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" src="https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg" data-src="https://avatar-ex-swe.nixcdn.com/playlist/2022/03/21/f/7/7/1/1647871463620.jpg"></span>
+                                    </a>
+                                </div>
+                                <div class="info_album">
+                                    <a class="name_song" onclick="lt(['nowplaying_song','relation_playlist','click','playlist','qoxXXzEqh6bb','','title']);" href="https://www.nhaccuatui.com/playlist/phong-khoi-lac-duong-ost-va.qoxXXzEqh6bb.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Playlist - Album Lien Quan']);">Phong Khởi Lạc Dương OST</a>
+                                    <p><a title="Tìm các bài hát, playlist, mv do ca sĩ V.A trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-va.html" target="_blank">V.A</a></p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                </div>
+                </div>
+                
+                <div class="playlist-hero-recommend" id="playlist-hero-recommend"></div>
+                
+                <div class="list_video">
+                    <div class="fram_select">
+                        <div class="tile_box_key">
+                            <h3 class="title_of_box_video"><a title="Video | MV" onclick="lt(['nowplaying_song','relation_video','click','title','TitleRelationBox','','title']);" href="https://www.nhaccuatui.com/tim-kiem/mv?q=Hồ Quang Hiếu, Huỳnh Văn&amp;b=singer">Video | MV</a></h3>
+                        </div><!--@end div tile_box_key-->
+                        <ul>
+                            
+                            <li>
+                                <div class="box_absolute">
+                                    <a class="img" onclick="lt(['nowplaying_song','relation_video','click','video','ilt8673oZr','','thumb']);" href="https://www.nhaccuatui.com/video/fan-cuo-co-phong-gu-feng-ft-tu-cam-cao-le-si-qin-gao-li.ilt8673oZr.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);"><span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_1211129" wgct="1">147</span></span>
+                                        <span class="icon_play"></span>
+                                        <img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/video-default.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/video-default.jpg', '');" src="https://avatar-ex-swe.nixcdn.com/mv/2011/09/03/ilt8673oZr_268.jpg" data-src="https://avatar-ex-swe.nixcdn.com/mv/2011/09/03/ilt8673oZr_268.jpg">
+                                    </a>
+                                    <span class="icon_time_video">03:15</span>
+                                </div>
+                                <a title="Fan Cuo - Cố Phong (Gu Feng), Tư Cầm Cao Lệ (Si Qin Gao Li)" class="name_song" onclick="lt(['nowplaying_song','relation_video','click','video','ilt8673oZr','','newwindow']);" href="https://www.nhaccuatui.com/video/fan-cuo-co-phong-gu-feng-ft-tu-cam-cao-le-si-qin-gao-li.ilt8673oZr.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);">Fan Cuo</a>
+                                <p><a title="Tìm các bài hát, playlist, mv do ca sĩ Cố Phong (Gu Feng) trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=C%E1%BB%91+Phong+%28Gu+Feng%29&amp;b=singer" target="_blank">Cố Phong (Gu Feng)</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Tư Cầm Cao Lệ (Si Qin Gao Li) trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=T%C6%B0+C%E1%BA%A7m+Cao+L%E1%BB%87+%28Si+Qin+Gao+Li%29&amp;b=singer" target="_blank">Tư Cầm Cao Lệ (Si Qin Gao Li)</a></p>
+                            </li>
+                            
+                            <li>
+                                <div class="box_absolute">
+                                    <a class="img" onclick="lt(['nowplaying_song','relation_video','click','video','A3xNSbgJROD5a','','thumb']);" href="https://www.nhaccuatui.com/video/mot-bai-co-phong-nghi-khong-thong-vietsub-kara-ngai-than-ft-yeu-buc-sama-ft-bach-sac-bai-se-ft-hi-bao-xi-bao-ft-va.A3xNSbgJROD5a.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);"><span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_7047954" wgct="1">966</span></span>
+                                        <span class="icon_play"></span>
+                                        <img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/video-default.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/video-default.jpg', '');" src="https://avatar-ex-swe.nixcdn.com/mv/2021/07/13/0/e/c/7/1626169020684_268.jpg" data-src="https://avatar-ex-swe.nixcdn.com/mv/2021/07/13/0/e/c/7/1626169020684_268.jpg">
+                                    </a>
+                                    <span class="icon_time_video">04:08</span>
+                                </div>
+                                <a title="Một Bài Cổ Phong Nghĩ Không Thông / 一首想不通的古风 (Vietsub, Kara)&#9; - Ngải Thần, Yêu Bức Sama, Bạch Sắc (Bai Se), Hi Bảo (Xi Bao), V.A" class="name_song" onclick="lt(['nowplaying_song','relation_video','click','video','A3xNSbgJROD5a','','newwindow']);" href="https://www.nhaccuatui.com/video/mot-bai-co-phong-nghi-khong-thong-vietsub-kara-ngai-than-ft-yeu-buc-sama-ft-bach-sac-bai-se-ft-hi-bao-xi-bao-ft-va.A3xNSbgJROD5a.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);">Một Bài Cổ Phong Nghĩ Không Thông / 一首想不通的古风 (Vietsub, Kara)	</a>
+                                <p><a title="Tìm các bài hát, playlist, mv do ca sĩ Ngải Thần trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Ng%E1%BA%A3i+Th%E1%BA%A7n&amp;b=singer" target="_blank">Ngải Thần</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Yêu Bức Sama trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Y%C3%AAu+B%E1%BB%A9c+Sama&amp;b=singer" target="_blank">Yêu Bức Sama</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Bạch Sắc (Bai Se) trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=B%E1%BA%A1ch+S%E1%BA%AFc+%28Bai+Se%29&amp;b=singer" target="_blank">Bạch Sắc (Bai Se)</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Hi Bảo (Xi Bao) trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Hi+B%E1%BA%A3o+%28Xi+Bao%29&amp;b=singer" target="_blank">Hi Bảo (Xi Bao)</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ V.A trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-va.html" target="_blank">V.A</a></p>
+                            </li>
+                            
+                            <li>
+                                <div class="box_absolute">
+                                    <a class="img" onclick="lt(['nowplaying_song','relation_video','click','video','fNmHEOcG1ZWg4','','thumb']);" href="https://www.nhaccuatui.com/video/co-em-trong-doi-chau-khai-phong.fNmHEOcG1ZWg4.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);"><span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_4046822" wgct="1">582.805</span></span>
+                                        <span class="icon_play"></span>
+                                        <img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/video-default.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/video-default.jpg', '');" src="https://avatar-ex-swe.nixcdn.com/mv/2014/03/25/5/3/6/d/1395712673940_268.jpg" data-src="https://avatar-ex-swe.nixcdn.com/mv/2014/03/25/5/3/6/d/1395712673940_268.jpg">
+                                    </a>
+                                    <span class="icon_time_video">05:25</span>
+                                </div>
+                                <a title="Có Em Trong Đời - Châu Khải Phong" class="name_song" onclick="lt(['nowplaying_song','relation_video','click','video','fNmHEOcG1ZWg4','','newwindow']);" href="https://www.nhaccuatui.com/video/co-em-trong-doi-chau-khai-phong.fNmHEOcG1ZWg4.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);">Có Em Trong Đời</a>
+                                <p><a title="Tìm các bài hát, playlist, mv do ca sĩ Châu Khải Phong trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-chau-khai-phong.html" target="_blank">Châu Khải Phong</a></p>
+                            </li>
+                            
+                            <li>
+                                <div class="box_absolute">
+                                    <a class="img" onclick="lt(['nowplaying_song','relation_video','click','video','NhA8VZySO42mx','','thumb']);" href="https://www.nhaccuatui.com/video/em-la-co-dau-dep-nhat-chau-khai-phong.NhA8VZySO42mx.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);"><span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_4577806" wgct="1">464.462</span></span>
+                                        <span class="icon_play"></span>
+                                        <img onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/video-default.jpg', 'fail');" onload="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/video-default.jpg', '');" src="https://avatar-ex-swe.nixcdn.com/mv/2016/09/12/d/4/1/3/1473653451223_268.jpg" data-src="https://avatar-ex-swe.nixcdn.com/mv/2016/09/12/d/4/1/3/1473653451223_268.jpg">
+                                    </a>
+                                    <span class="icon_time_video">04:18</span>
+                                </div>
+                                <a title="Em Là Cô Dâu Đẹp Nhất - Châu Khải Phong" class="name_song" onclick="lt(['nowplaying_song','relation_video','click','video','NhA8VZySO42mx','','newwindow']);" href="https://www.nhaccuatui.com/video/em-la-co-dau-dep-nhat-chau-khai-phong.NhA8VZySO42mx.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Video Lien Quan']);">Em Là Cô Dâu Đẹp Nhất</a>
+                                <p><a title="Tìm các bài hát, playlist, mv do ca sĩ Châu Khải Phong trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-chau-khai-phong.html" target="_blank">Châu Khải Phong</a></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div><!--@end div list_video-->
+                
+                
+                <div class="list_music_full">
+                <div class="fram_select">
+                        <div class="tile_box_key">
+                            <h3><a title="Bài hát" onclick="lt(['nowplaying_song','relation_song','click','title','TitleRelationBox','','title']);" href="https://www.nhaccuatui.com/tim-kiem/bai-hat?q=Hồ Quang Hiếu, Huỳnh Văn&amp;b=singer">Bài hát</a></h3>
+                        </div>
+                        <ul class="list_item_music">
+                            
+                            <li>
+                                <div class="item_content"><a class="name_song" onclick="lt(['nowplaying_song','relation_song','click','song','z9rkOqHFdqXm','','title']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ver-ho-quang-hieu.z9rkOqHFdqXm.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);">Cô Phòng (Lofi Ver.)</a> - <a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></div>
+                                <div class="list_mark">
+                                    
+                                    
+                                    <span title="High Quality (Chất Lượng Cao)" class="icon-tag-hd">HQ</span>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_14408915" class="icon_listen">0</span>-->
+                                <a title="Nghe bài hát Cô Phòng (Lofi Ver.) - Hồ Quang Hiếu ở cửa sổ mới" class="button_new_window" onclick="lt(['nowplaying_song','relation_song','click','song','z9rkOqHFdqXm','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ver-ho-quang-hieu.z9rkOqHFdqXm.html" target="_blank"></a>
+                                <div class="fright_button_add_playlist"><a title="Thêm bài hát Cô Phòng (Lofi Ver.) - Hồ Quang Hiếu vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_z9rkOqHFdqXm" onclick="lt(['nowplaying','relation_song','click','song','z9rkOqHFdqXm','','add-song-playlist']); return NCTAddPlaylist.showBox('z9rkOqHFdqXm');" href="javascript:;"></a> </div>
+                                <a title="Nghe bài hát Cô Phòng (Lofi Ver.) - Hồ Quang Hiếu này" class="button_playing" onclick="lt(['nowplaying_song','relation_song','click','song','z9rkOqHFdqXm','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ver-ho-quang-hieu.z9rkOqHFdqXm.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);"></a>
+                            </li>
+                            
+                            <li>
+                                <div class="item_content"><a class="name_song" onclick="lt(['nowplaying_song','relation_song','click','song','imRG2TDwrKwD','','title']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-tay-lau-biet-tu-cover-loi-viet-tieu-muoi-man-thau-tieu-muoi-man-thau.imRG2TDwrKwD.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);">[Cổ Phong] Tây Lâu Biệt Tự | 西樓別序 - [Cover lời Việt] - Tiểu Muội Màn Thầu</a> - <a title="Tìm các bài hát, playlist, mv do ca sĩ Tiểu Muội Màn Thầu trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Ti%E1%BB%83u+Mu%E1%BB%99i+M%C3%A0n+Th%E1%BA%A7u&amp;b=singer" target="_blank">Tiểu Muội Màn Thầu</a></div>
+                                <div class="list_mark">
+                                    
+                                    <span title="Super Quality (Lossless)" class="icon-tag-lossless">SQ</span>
+                                    
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_9380272" class="icon_listen">0</span>-->
+                                <a title="Nghe bài hát [Cổ Phong] Tây Lâu Biệt Tự | 西樓別序 - [Cover lời Việt] - Tiểu Muội Màn Thầu - Tiểu Muội Màn Thầu ở cửa sổ mới" class="button_new_window" onclick="lt(['nowplaying_song','relation_song','click','song','imRG2TDwrKwD','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-tay-lau-biet-tu-cover-loi-viet-tieu-muoi-man-thau-tieu-muoi-man-thau.imRG2TDwrKwD.html" target="_blank"></a>
+                                <div class="fright_button_add_playlist"><a title="Thêm bài hát [Cổ Phong] Tây Lâu Biệt Tự | 西樓別序 - [Cover lời Việt] - Tiểu Muội Màn Thầu - Tiểu Muội Màn Thầu vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_imRG2TDwrKwD" onclick="lt(['nowplaying','relation_song','click','song','imRG2TDwrKwD','','add-song-playlist']); return NCTAddPlaylist.showBox('imRG2TDwrKwD');" href="javascript:;"></a> </div>
+                                <a title="Nghe bài hát [Cổ Phong] Tây Lâu Biệt Tự | 西樓別序 - [Cover lời Việt] - Tiểu Muội Màn Thầu - Tiểu Muội Màn Thầu này" class="button_playing" onclick="lt(['nowplaying_song','relation_song','click','song','imRG2TDwrKwD','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-tay-lau-biet-tu-cover-loi-viet-tieu-muoi-man-thau-tieu-muoi-man-thau.imRG2TDwrKwD.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);"></a>
+                            </li>
+                            
+                            <li>
+                                <div class="item_content"><a class="name_song" onclick="lt(['nowplaying_song','relation_song','click','song','2mK6TaqKWvTO','','title']);" href="https://www.nhaccuatui.com/bai-hat/phong-cach-nguoi-choi-dj-lam-cham-muzik-remix-chau-viet-cuong.2mK6TaqKWvTO.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);">Phong Cách Người Chơi (DJ Lâm Châm Muzik Remix)</a> - <a title="Tìm các bài hát, playlist, mv do ca sĩ Châu Việt Cường trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-chau-viet-cuong.html" target="_blank">Châu Việt Cường</a></div>
+                                <div class="list_mark">
+                                    
+                                    
+                                    
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_4769109" class="icon_listen">0</span>-->
+                                <a title="Nghe bài hát Phong Cách Người Chơi (DJ Lâm Châm Muzik Remix) - Châu Việt Cường ở cửa sổ mới" class="button_new_window" onclick="lt(['nowplaying_song','relation_song','click','song','2mK6TaqKWvTO','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/phong-cach-nguoi-choi-dj-lam-cham-muzik-remix-chau-viet-cuong.2mK6TaqKWvTO.html" target="_blank"></a>
+                                <div class="fright_button_add_playlist"><a title="Thêm bài hát Phong Cách Người Chơi (DJ Lâm Châm Muzik Remix) - Châu Việt Cường vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_2mK6TaqKWvTO" onclick="lt(['nowplaying','relation_song','click','song','2mK6TaqKWvTO','','add-song-playlist']); return NCTAddPlaylist.showBox('2mK6TaqKWvTO');" href="javascript:;"></a> </div>
+                                <a title="Nghe bài hát Phong Cách Người Chơi (DJ Lâm Châm Muzik Remix) - Châu Việt Cường này" class="button_playing" onclick="lt(['nowplaying_song','relation_song','click','song','2mK6TaqKWvTO','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/phong-cach-nguoi-choi-dj-lam-cham-muzik-remix-chau-viet-cuong.2mK6TaqKWvTO.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);"></a>
+                            </li>
+                            
+                            <li>
+                                <div class="item_content"><a class="name_song" onclick="lt(['nowplaying_song','relation_song','click','song','ZxrTuiuNnG','','title']);" href="https://www.nhaccuatui.com/bai-hat/fan-cuo-co-phong-gu-feng.ZxrTuiuNnG.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);">Fan Cuo</a> - <a title="Tìm các bài hát, playlist, mv do ca sĩ Cố Phong (Gu Feng) trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=C%E1%BB%91+Phong+%28Gu+Feng%29&amp;b=singer" target="_blank">Cố Phong (Gu Feng)</a></div>
+                                <div class="list_mark">
+                                    
+                                    
+                                    
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_635959" class="icon_listen">0</span>-->
+                                <a title="Nghe bài hát Fan Cuo - Cố Phong (Gu Feng) ở cửa sổ mới" class="button_new_window" onclick="lt(['nowplaying_song','relation_song','click','song','ZxrTuiuNnG','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/fan-cuo-co-phong-gu-feng.ZxrTuiuNnG.html" target="_blank"></a>
+                                <div class="fright_button_add_playlist"><a title="Thêm bài hát Fan Cuo - Cố Phong (Gu Feng) vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_ZxrTuiuNnG" onclick="lt(['nowplaying','relation_song','click','song','ZxrTuiuNnG','','add-song-playlist']); return NCTAddPlaylist.showBox('ZxrTuiuNnG');" href="javascript:;"></a> </div>
+                                <a title="Nghe bài hát Fan Cuo - Cố Phong (Gu Feng) này" class="button_playing" onclick="lt(['nowplaying_song','relation_song','click','song','ZxrTuiuNnG','','newwindow']);" href="https://www.nhaccuatui.com/bai-hat/fan-cuo-co-phong-gu-feng.ZxrTuiuNnG.html" ga="_gaq.push(['_trackEvent', 'Now Playing', 'Click', 'Bai Hat Lien Quan']);"></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </div>
+                
+                
+                
+                <div class="clr" style="width: 100%; height: 30px;"></div>
+                <!--<div class="box-comment">
+                    <div class="tile_box_key">
+                        <h3>Bình luận</h3>
+                    </div>
+                     
+                     <iframe id="iframe-comment" style="width: 100%; height: 50px;" src="https://stc-id.nixcdn.com/v11/loading.html"></iframe>
+                     <script>
+                         var checkInView = function(id){
+                            var elementTop = $(id).offset().top;
+                            var elementBottom = elementTop + $(id).outerHeight();
+                            var viewportTop = $(window).scrollTop();
+                            var viewportBottom = viewportTop + $(window).height();
+                            return elementBottom > viewportTop && elementTop < viewportBottom - 100;
+                         };
+                         var urlFacebookComment = 'https://www.nhaccuatui.com/comment.html?Id=14382919&type=5&fbApp=414296278689656';
+                         var checkIframeComment = true;
+                         window.onscroll = function() {
+                             console.log(checkIframeComment);
+                             if (checkIframeComment) {
+                                if (checkInView("#iframe-comment")) {
+                                    console.log(urlFacebookComment);
+                                    $("#iframe-comment").attr("src", urlFacebookComment);
+                                    checkIframeComment = false;
+                                }
+                            }
+                         };
+                     </script>
+                     
+                </div>-->
+                
+                <div class="box_adv_620" id="banner-container-bottom">
+                    <div class="fram_select_hiden">
+                        <div class="nqc-zone" id="S_Balloon" style="display: none;"></div>
+                    </div>
+                </div>
+                
+                <div class="nqc-genre" id="5015" style="display: none;"></div>
+            </div>
+            <div class="box-right">
+<!--                
+                <link rel="stylesheet" type="text/css" media="screen, print, projection" href="https://stc-id.nixcdn.com/v11/css/discovery_playlist.css"/>
+                <div class="discovery_playlist_non">
+                    <div class="image_discovery_playlist hidden-display">
+                        <div class="image_box">
+                            <img class="thumb_cover one" src="" alt=""/>
+                            <img class="thumb_cover two" src="" alt=""/>
+                            <img class="thumb_cover three" src="" alt=""/>
+                        </div>
+                    </div>
+                        <a  id="weeklyDiscoveryLink" onclick="_gaq.push(['_trackEvent', 'DiscoveryWeekly', 'Click', 'Nghe bai hat']); lt(['home','discovery-weekly','click','kham-pha','hang-tuan','','banner']);" href="javascript:;">
+                                <div class="bg_discovery_playlist" style="background-image: url('https://stc-id.nixcdn.com/v11/images/bg_web.png')"></div>
+                    <div class="content_playlist">
+                        <h2>GỢI Ý DÀNH CHO BẠN</h2>
+                        <p class="text_detail">Thưởng thức những ca khúc phù hợp nhất với bạn</p>
+                            <p class="btn_playlist">
+                                <span class="ic_play_normal"></span>
+                                <span class="btn_text">Nghe bài hát</span>
+                            </p>
+                    </div>
+                        </a>
+                </div>
+                
+                
+                      <script type="text/javascript">
+                        $("#weeklyDiscoveryLink").click(function() {
+                           window.location.replace("https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html?popup=dang-nhap&r=kham-pha");
+                        });
+                      </script>
+                -->
+                <!--@begin div box_chart_music-->
+                <div class="box_music_recommended">
+                    <div class="tile_box_key">
+                        <h3><a class="nomore fontsmall" onclick="lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','nghe_tiep']);">Nghe tiếp</a></h3>
+                        <div class="auto-box">
+                            Autoplay
+                            <div>
+                                <input id="autoplayInput" type="checkbox" checked="checked">
+                                <label id="autoplayLabel" for="autoplayInput"></label>
+                            </div>
+                            <span class="icon-info-auto">i</span>
+                            <div class="show-info-auto hideShowCase">Khi bật tính năng Autoplay, Bài hát được đề xuất sẽ tự động phát tiếp.</div>
+                        </div>
+                    </div>
+                    <div class="list_item_music" id="divListItemRecommend"><ul id="recommendZone" style="height: 300px; overflow: hidden;">
+    
+    <li>
+        
+        <a title="Cô Phòng - Hồ Quang Hiếu, Huỳnh Văn" class="name_song" onclick="rl(['','9fu0THzHzAXw']);lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','recommend']);trackingSmarty.box_music_recommended_collapse('9fu0THzHzAXw');" href="https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html" alt="co phong - ho quang hieu, huynh van"><span class="icon-music"></span></a>
+        
+        
+        <div class="info_data">
+            
+            <h3><a title="Cô Phòng - Hồ Quang Hiếu, Huỳnh Văn" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_collapse('9fu0THzHzAXw');rl(['','9fu0THzHzAXw']);lt(['nowplaying_song','button','click','song','9fu0THzHzAXw','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html" alt="co phong - ho quang hieu, huynh van" sk="9fu0THzHzAXw" csk="">Cô Phòng</a></h3>
+            
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Huỳnh Văn trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank">Huỳnh Văn</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14382919" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        <a title="Cô Phòng (Lofi Ver.) - Hồ Quang Hiếu" class="name_song" onclick="rl(['','z9rkOqHFdqXm']);lt(['nowplaying_song','button','click','song','z9rkOqHFdqXm','','recommend']);trackingSmarty.box_music_recommended_collapse('z9rkOqHFdqXm');" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ver-ho-quang-hieu.z9rkOqHFdqXm.html" alt="co phong (lofi ver.) - ho quang hieu"><span class="icon-music"></span></a>
+        
+        
+        <div class="info_data">
+            
+            <h3><a title="Cô Phòng (Lofi Ver.) - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_collapse('z9rkOqHFdqXm');rl(['','z9rkOqHFdqXm']);lt(['nowplaying_song','button','click','song','z9rkOqHFdqXm','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ver-ho-quang-hieu.z9rkOqHFdqXm.html" alt="co phong (lofi ver.) - ho quang hieu" sk="z9rkOqHFdqXm" csk="">Cô Phòng (Lofi Ver.)</a></h3>
+            
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14408915" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        <a title="Không Cảm Xúc - Hồ Quang Hiếu" class="name_song" onclick="rl(['','nDhNnvThiEHv']);lt(['nowplaying_song','button','click','song','nDhNnvThiEHv','','recommend']);trackingSmarty.box_music_recommended_collapse('nDhNnvThiEHv');" href="https://www.nhaccuatui.com/bai-hat/khong-cam-xuc-ho-quang-hieu.nDhNnvThiEHv.html" alt="khong cam xuc - ho quang hieu"><span class="icon-music"></span></a>
+        
+        
+        <div class="info_data">
+            
+            <h3><a title="Không Cảm Xúc - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_collapse('nDhNnvThiEHv');rl(['','nDhNnvThiEHv']);lt(['nowplaying_song','button','click','song','nDhNnvThiEHv','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/khong-cam-xuc-ho-quang-hieu.nDhNnvThiEHv.html" alt="khong cam xuc - ho quang hieu" sk="nDhNnvThiEHv" csk="">Không Cảm Xúc</a></h3>
+            
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_2447069" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        <a title="Em Là Của Anh - Hồ Việt Trung, Hồ Quang Hiếu" class="name_song" onclick="rl(['','kiw4uzBokN60']);lt(['nowplaying_song','button','click','song','kiw4uzBokN60','','recommend']);trackingSmarty.box_music_recommended_collapse('kiw4uzBokN60');" href="https://www.nhaccuatui.com/bai-hat/em-la-cua-anh-ho-viet-trung-ft-ho-quang-hieu.kiw4uzBokN60.html" alt="em la cua anh - ho viet trung, ho quang hieu"><span class="icon-music"></span></a>
+        
+        
+        <div class="info_data">
+            
+            <h3><a title="Em Là Của Anh - Hồ Việt Trung, Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_collapse('kiw4uzBokN60');rl(['','kiw4uzBokN60']);lt(['nowplaying_song','button','click','song','kiw4uzBokN60','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/em-la-cua-anh-ho-viet-trung-ft-ho-quang-hieu.kiw4uzBokN60.html" alt="em la cua anh - ho viet trung, ho quang hieu" sk="kiw4uzBokN60" csk="">Em Là Của Anh</a></h3>
+            
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Việt Trung trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-viet-trung.html" target="_blank">Hồ Việt Trung</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_3773956" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Bạn Lòng - Hồ Quang Hiếu" class="name_song" onclick="rl(['','4J5yMa8cDDkQ']);lt(['nowplaying_song','button','click','song','4J5yMa8cDDkQ','','recommend']);trackingSmarty.box_music_recommended_expand('4J5yMa8cDDkQ');" href="https://www.nhaccuatui.com/bai-hat/ban-long-ho-quang-hieu.4J5yMa8cDDkQ.html" alt="ban long - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Bạn Lòng - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('4J5yMa8cDDkQ');rl(['','4J5yMa8cDDkQ']);lt(['nowplaying_song','button','click','song','4J5yMa8cDDkQ','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/ban-long-ho-quang-hieu.4J5yMa8cDDkQ.html" alt="ban long - ho quang hieu" sk="4J5yMa8cDDkQ" csk="">Bạn Lòng</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_5098395" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Cô Phòng (Mike.N Remix) - Hồ Quang Hiếu" class="name_song" onclick="rl(['','I1ekeA9lQVKG']);lt(['nowplaying_song','button','click','song','I1ekeA9lQVKG','','recommend']);trackingSmarty.box_music_recommended_expand('I1ekeA9lQVKG');" href="https://www.nhaccuatui.com/bai-hat/co-phong-miken-remix-ho-quang-hieu.I1ekeA9lQVKG.html" alt="co phong (mike.n remix) - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Cô Phòng (Mike.N Remix) - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('I1ekeA9lQVKG');rl(['','I1ekeA9lQVKG']);lt(['nowplaying_song','button','click','song','I1ekeA9lQVKG','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-miken-remix-ho-quang-hieu.I1ekeA9lQVKG.html" alt="co phong (mike.n remix) - ho quang hieu" sk="I1ekeA9lQVKG" csk="">Cô Phòng (Mike.N Remix)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14537920" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Nỗi Sầu Tương Tư - Ngọc Hải, Thạch Thảo" class="name_song" onclick="rl(['','dcIihctDxAo7']);lt(['nowplaying_song','button','click','song','dcIihctDxAo7','','recommend']);trackingSmarty.box_music_recommended_expand('dcIihctDxAo7');" href="https://www.nhaccuatui.com/bai-hat/noi-sau-tuong-tu-ngoc-hai-ft-thach-thao.dcIihctDxAo7.html" alt="noi sau tuong tu - ngoc hai, thach thao"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Nỗi Sầu Tương Tư - Ngọc Hải, Thạch Thảo" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('dcIihctDxAo7');rl(['','dcIihctDxAo7']);lt(['nowplaying_song','button','click','song','dcIihctDxAo7','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/noi-sau-tuong-tu-ngoc-hai-ft-thach-thao.dcIihctDxAo7.html" alt="noi sau tuong tu - ngoc hai, thach thao" sk="dcIihctDxAo7" csk="">Nỗi Sầu Tương Tư</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Ngọc Hải trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Ng%E1%BB%8Dc+H%E1%BA%A3i&amp;b=singer" target="_blank">Ngọc Hải</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Thạch Thảo trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-Thach-Thao.html" target="_blank">Thạch Thảo</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_1915050" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Chưa Hết Giặc Ta Chưa Về - Tình Ca Việt" class="name_song" onclick="rl(['','C9DM75TCvI7U']);lt(['nowplaying_song','button','click','song','C9DM75TCvI7U','','recommend']);trackingSmarty.box_music_recommended_expand('C9DM75TCvI7U');" href="https://www.nhaccuatui.com/bai-hat/chua-het-giac-ta-chua-ve-tinh-ca-viet.C9DM75TCvI7U.html" alt="chua het giac ta chua ve - tinh ca viet"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Chưa Hết Giặc Ta Chưa Về - Tình Ca Việt" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('C9DM75TCvI7U');rl(['','C9DM75TCvI7U']);lt(['nowplaying_song','button','click','song','C9DM75TCvI7U','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/chua-het-giac-ta-chua-ve-tinh-ca-viet.C9DM75TCvI7U.html" alt="chua het giac ta chua ve - tinh ca viet" sk="C9DM75TCvI7U" csk="">Chưa Hết Giặc Ta Chưa Về</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Tình Ca Việt trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=T%C3%ACnh+Ca+Vi%E1%BB%87t&amp;b=singer" target="_blank">Tình Ca Việt</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_7211323" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Đổi Thay - Hồ Quang Hiếu" class="name_song" onclick="rl(['','AlcPcingAXpA']);lt(['nowplaying_song','button','click','song','AlcPcingAXpA','','recommend']);trackingSmarty.box_music_recommended_expand('AlcPcingAXpA');" href="https://www.nhaccuatui.com/bai-hat/doi-thay-ho-quang-hieu.AlcPcingAXpA.html" alt="doi thay - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Đổi Thay - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('AlcPcingAXpA');rl(['','AlcPcingAXpA']);lt(['nowplaying_song','button','click','song','AlcPcingAXpA','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/doi-thay-ho-quang-hieu.AlcPcingAXpA.html" alt="doi thay - ho quang hieu" sk="AlcPcingAXpA" csk="">Đổi Thay</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_4563803" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Ngã Tư Đường - Hồ Quang Hiếu" class="name_song" onclick="rl(['','chTrURUwKpxp']);lt(['nowplaying_song','button','click','song','chTrURUwKpxp','','recommend']);trackingSmarty.box_music_recommended_expand('chTrURUwKpxp');" href="https://www.nhaccuatui.com/bai-hat/nga-tu-duong-ho-quang-hieu.chTrURUwKpxp.html" alt="nga tu duong - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Ngã Tư Đường - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('chTrURUwKpxp');rl(['','chTrURUwKpxp']);lt(['nowplaying_song','button','click','song','chTrURUwKpxp','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/nga-tu-duong-ho-quang-hieu.chTrURUwKpxp.html" alt="nga tu duong - ho quang hieu" sk="chTrURUwKpxp" csk="">Ngã Tư Đường</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_2447073" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Không Cảm Xúc (H2O Remix) - Hồ Quang Hiếu" class="name_song" onclick="rl(['','cao1y6b6zsy5']);lt(['nowplaying_song','button','click','song','cao1y6b6zsy5','','recommend']);trackingSmarty.box_music_recommended_expand('cao1y6b6zsy5');" href="https://www.nhaccuatui.com/bai-hat/khong-cam-xuc-h2o-remix-ho-quang-hieu.cao1y6b6zsy5.html" alt="khong cam xuc (h2o remix) - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Không Cảm Xúc (H2O Remix) - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('cao1y6b6zsy5');rl(['','cao1y6b6zsy5']);lt(['nowplaying_song','button','click','song','cao1y6b6zsy5','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/khong-cam-xuc-h2o-remix-ho-quang-hieu.cao1y6b6zsy5.html" alt="khong cam xuc (h2o remix) - ho quang hieu" sk="cao1y6b6zsy5" csk="">Không Cảm Xúc (H2O Remix)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_13513098" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Tìm Em - Hồ Quang Hiếu" class="name_song" onclick="rl(['','o8YHFAcNO4uP']);lt(['nowplaying_song','button','click','song','o8YHFAcNO4uP','','recommend']);trackingSmarty.box_music_recommended_expand('o8YHFAcNO4uP');" href="https://www.nhaccuatui.com/bai-hat/tim-em-ho-quang-hieu.o8YHFAcNO4uP.html" alt="tim em - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Tìm Em - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('o8YHFAcNO4uP');rl(['','o8YHFAcNO4uP']);lt(['nowplaying_song','button','click','song','o8YHFAcNO4uP','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/tim-em-ho-quang-hieu.o8YHFAcNO4uP.html" alt="tim em - ho quang hieu" sk="o8YHFAcNO4uP" csk="">Tìm Em</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_2997280" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Hoài Mong - Hồ Quang Hiếu" class="name_song" onclick="rl(['','IEPxgtuQQx0g']);lt(['nowplaying_song','button','click','song','IEPxgtuQQx0g','','recommend']);trackingSmarty.box_music_recommended_expand('IEPxgtuQQx0g');" href="https://www.nhaccuatui.com/bai-hat/hoai-mong-ho-quang-hieu.IEPxgtuQQx0g.html" alt="hoai mong - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Hoài Mong - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('IEPxgtuQQx0g');rl(['','IEPxgtuQQx0g']);lt(['nowplaying_song','button','click','song','IEPxgtuQQx0g','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/hoai-mong-ho-quang-hieu.IEPxgtuQQx0g.html" alt="hoai mong - ho quang hieu" sk="IEPxgtuQQx0g" csk="">Hoài Mong</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_3609624" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Cánh Hồng Phai - Hồ Quang Hiếu" class="name_song" onclick="rl(['','FWTJBDqt54bH']);lt(['nowplaying_song','button','click','song','FWTJBDqt54bH','','recommend']);trackingSmarty.box_music_recommended_expand('FWTJBDqt54bH');" href="https://www.nhaccuatui.com/bai-hat/canh-hong-phai-ho-quang-hieu.FWTJBDqt54bH.html" alt="canh hong phai - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Cánh Hồng Phai - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('FWTJBDqt54bH');rl(['','FWTJBDqt54bH']);lt(['nowplaying_song','button','click','song','FWTJBDqt54bH','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/canh-hong-phai-ho-quang-hieu.FWTJBDqt54bH.html" alt="canh hong phai - ho quang hieu" sk="FWTJBDqt54bH" csk="">Cánh Hồng Phai</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_5104555" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="I see you - Mika" class="name_song" onclick="rl(['','Qoka0pHH2M']);lt(['nowplaying_song','button','click','song','Qoka0pHH2M','','recommend']);trackingSmarty.box_music_recommended_expand('Qoka0pHH2M');" href="https://www.nhaccuatui.com/bai-hat/i-see-you-mika.Qoka0pHH2M.html" alt="i see you - mika"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="I see you - Mika" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('Qoka0pHH2M');rl(['','Qoka0pHH2M']);lt(['nowplaying_song','button','click','song','Qoka0pHH2M','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/i-see-you-mika.Qoka0pHH2M.html" alt="i see you - mika" sk="Qoka0pHH2M" csk="">I see you</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Mika trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-mika.html" target="_blank">Mika</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_470042" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Say Đắm Cả Thanh Xuân / 沉醉的青丝 - Lâm Bảo Hinh" class="name_song" onclick="rl(['','rXCTPtuYhmuS']);lt(['nowplaying_song','button','click','song','rXCTPtuYhmuS','','recommend']);trackingSmarty.box_music_recommended_expand('rXCTPtuYhmuS');" href="https://www.nhaccuatui.com/bai-hat/say-dam-ca-thanh-xuan-lam-bao-hinh.rXCTPtuYhmuS.html" alt="say dam ca thanh xuan / 沉醉的青丝 - lam bao hinh"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Say Đắm Cả Thanh Xuân / 沉醉的青丝 - Lâm Bảo Hinh" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('rXCTPtuYhmuS');rl(['','rXCTPtuYhmuS']);lt(['nowplaying_song','button','click','song','rXCTPtuYhmuS','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/say-dam-ca-thanh-xuan-lam-bao-hinh.rXCTPtuYhmuS.html" alt="say dam ca thanh xuan / 沉醉的青丝 - lam bao hinh" sk="rXCTPtuYhmuS" csk="">Say Đắm Cả Thanh Xuân / 沉醉的青丝</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Lâm Bảo Hinh trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=L%C3%A2m+B%E1%BA%A3o+Hinh&amp;b=singer" target="_blank">Lâm Bảo Hinh</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_6812314" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Một Tình Yêu Đúng Nghĩa - Hồ Quang Hiếu" class="name_song" onclick="rl(['','NRk5LjMLRUMK']);lt(['nowplaying_song','button','click','song','NRk5LjMLRUMK','','recommend']);trackingSmarty.box_music_recommended_expand('NRk5LjMLRUMK');" href="https://www.nhaccuatui.com/bai-hat/mot-tinh-yeu-dung-nghia-ho-quang-hieu.NRk5LjMLRUMK.html" alt="mot tinh yeu dung nghia - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Một Tình Yêu Đúng Nghĩa - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('NRk5LjMLRUMK');rl(['','NRk5LjMLRUMK']);lt(['nowplaying_song','button','click','song','NRk5LjMLRUMK','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/mot-tinh-yeu-dung-nghia-ho-quang-hieu.NRk5LjMLRUMK.html" alt="mot tinh yeu dung nghia - ho quang hieu" sk="NRk5LjMLRUMK" csk="">Một Tình Yêu Đúng Nghĩa</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_3203962" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Tìm Em (Remix) - VinZ, Exclusive Music, Hồ Quang Hiếu" class="name_song" onclick="rl(['','pUy85hF684AY']);lt(['nowplaying_song','button','click','song','pUy85hF684AY','','recommend']);trackingSmarty.box_music_recommended_expand('pUy85hF684AY');" href="https://www.nhaccuatui.com/bai-hat/tim-em-remix-vinz-ft-exclusive-music-ft-ho-quang-hieu.pUy85hF684AY.html" alt="tim em (remix) - vinz, exclusive music, ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Tìm Em (Remix) - VinZ, Exclusive Music, Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('pUy85hF684AY');rl(['','pUy85hF684AY']);lt(['nowplaying_song','button','click','song','pUy85hF684AY','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/tim-em-remix-vinz-ft-exclusive-music-ft-ho-quang-hieu.pUy85hF684AY.html" alt="tim em (remix) - vinz, exclusive music, ho quang hieu" sk="pUy85hF684AY" csk="">Tìm Em (Remix)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ VinZ trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=VinZ&amp;b=singer" target="_blank">VinZ</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Exclusive Music trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Exclusive+Music&amp;b=singer" target="_blank">Exclusive Music</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_13871702" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Nơi Ấy Con Tìm Về  - Hồ Quang Hiếu" class="name_song" onclick="rl(['','0nPCruDhpvoU']);lt(['nowplaying_song','button','click','song','0nPCruDhpvoU','','recommend']);trackingSmarty.box_music_recommended_expand('0nPCruDhpvoU');" href="https://www.nhaccuatui.com/bai-hat/noi-ay-con-tim-ve-ho-quang-hieu.0nPCruDhpvoU.html" alt="noi ay con tim ve  - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Nơi Ấy Con Tìm Về  - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('0nPCruDhpvoU');rl(['','0nPCruDhpvoU']);lt(['nowplaying_song','button','click','song','0nPCruDhpvoU','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/noi-ay-con-tim-ve-ho-quang-hieu.0nPCruDhpvoU.html" alt="noi ay con tim ve  - ho quang hieu" sk="0nPCruDhpvoU" csk="">Nơi Ấy Con Tìm Về </a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_13443549" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Khi Nào Em Mới Biết - Hồ Quang Hiếu" class="name_song" onclick="rl(['','o63lWuP16g1g']);lt(['nowplaying_song','button','click','song','o63lWuP16g1g','','recommend']);trackingSmarty.box_music_recommended_expand('o63lWuP16g1g');" href="https://www.nhaccuatui.com/bai-hat/khi-nao-em-moi-biet-ho-quang-hieu.o63lWuP16g1g.html" alt="khi nao em moi biet - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Khi Nào Em Mới Biết - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('o63lWuP16g1g');rl(['','o63lWuP16g1g']);lt(['nowplaying_song','button','click','song','o63lWuP16g1g','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/khi-nao-em-moi-biet-ho-quang-hieu.o63lWuP16g1g.html" alt="khi nao em moi biet - ho quang hieu" sk="o63lWuP16g1g" csk="">Khi Nào Em Mới Biết</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_4563811" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Cô Phòng (Đại Mèo Remix) - Hồ Quang Hiếu, Đại Mèo" class="name_song" onclick="rl(['','jnXKlYfNbTqW']);lt(['nowplaying_song','button','click','song','jnXKlYfNbTqW','','recommend']);trackingSmarty.box_music_recommended_expand('jnXKlYfNbTqW');" href="https://www.nhaccuatui.com/bai-hat/co-phong-dai-meo-remix-ho-quang-hieu-ft-dai-meo.jnXKlYfNbTqW.html" alt="co phong (dai meo remix) - ho quang hieu, dai meo"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Cô Phòng (Đại Mèo Remix) - Hồ Quang Hiếu, Đại Mèo" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('jnXKlYfNbTqW');rl(['','jnXKlYfNbTqW']);lt(['nowplaying_song','button','click','song','jnXKlYfNbTqW','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-dai-meo-remix-ho-quang-hieu-ft-dai-meo.jnXKlYfNbTqW.html" alt="co phong (dai meo remix) - ho quang hieu, dai meo" sk="jnXKlYfNbTqW" csk="">Cô Phòng (Đại Mèo Remix)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Đại Mèo trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=%C4%90%E1%BA%A1i+M%C3%A8o&amp;b=singer" target="_blank">Đại Mèo</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14545544" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Còn Lại Gì Sau Cơn Mưa - Hồ Quang Hiếu" class="name_song" onclick="rl(['','cLnNqTGGFkZP']);lt(['nowplaying_song','button','click','song','cLnNqTGGFkZP','','recommend']);trackingSmarty.box_music_recommended_expand('cLnNqTGGFkZP');" href="https://www.nhaccuatui.com/bai-hat/con-lai-gi-sau-con-mua-ho-quang-hieu.cLnNqTGGFkZP.html" alt="con lai gi sau con mua - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Còn Lại Gì Sau Cơn Mưa - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('cLnNqTGGFkZP');rl(['','cLnNqTGGFkZP']);lt(['nowplaying_song','button','click','song','cLnNqTGGFkZP','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/con-lai-gi-sau-con-mua-ho-quang-hieu.cLnNqTGGFkZP.html" alt="con lai gi sau con mua - ho quang hieu" sk="cLnNqTGGFkZP" csk="">Còn Lại Gì Sau Cơn Mưa</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_2445995" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Canh Ba (Orinn Remix) - Nguyễn Trần Trung Quân" class="name_song" onclick="rl(['','O8u52L2hZYro']);lt(['nowplaying_song','button','click','song','O8u52L2hZYro','','recommend']);trackingSmarty.box_music_recommended_expand('O8u52L2hZYro');" href="https://www.nhaccuatui.com/bai-hat/canh-ba-orinn-remix-nguyen-tran-trung-quan.O8u52L2hZYro.html" alt="canh ba (orinn remix) - nguyen tran trung quan"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Canh Ba (Orinn Remix) - Nguyễn Trần Trung Quân" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('O8u52L2hZYro');rl(['','O8u52L2hZYro']);lt(['nowplaying_song','button','click','song','O8u52L2hZYro','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/canh-ba-orinn-remix-nguyen-tran-trung-quan.O8u52L2hZYro.html" alt="canh ba (orinn remix) - nguyen tran trung quan" sk="O8u52L2hZYro" csk="">Canh Ba (Orinn Remix)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Nguyễn Trần Trung Quân trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-nguyen-tran-trung-quan.html" target="_blank">Nguyễn Trần Trung Quân</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_6199755" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Sahara (Slowed) - V.A" class="name_song" onclick="rl(['','xwxefATAY7J4']);lt(['nowplaying_song','button','click','song','xwxefATAY7J4','','recommend']);trackingSmarty.box_music_recommended_expand('xwxefATAY7J4');" href="https://www.nhaccuatui.com/bai-hat/sahara-slowed-va.xwxefATAY7J4.html" alt="sahara (slowed) - v.a"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Sahara (Slowed) - V.A" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('xwxefATAY7J4');rl(['','xwxefATAY7J4']);lt(['nowplaying_song','button','click','song','xwxefATAY7J4','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/sahara-slowed-va.xwxefATAY7J4.html" alt="sahara (slowed) - v.a" sk="xwxefATAY7J4" csk="">Sahara (Slowed)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ V.A trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-va.html" target="_blank">V.A</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_7216696" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Gượng Cười - Hồ Việt Trung, Hồ Quang Hiếu" class="name_song" onclick="rl(['','ItQiy4iJW0Oq']);lt(['nowplaying_song','button','click','song','ItQiy4iJW0Oq','','recommend']);trackingSmarty.box_music_recommended_expand('ItQiy4iJW0Oq');" href="https://www.nhaccuatui.com/bai-hat/guong-cuoi-ho-viet-trung-ft-ho-quang-hieu.ItQiy4iJW0Oq.html" alt="guong cuoi - ho viet trung, ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Gượng Cười - Hồ Việt Trung, Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('ItQiy4iJW0Oq');rl(['','ItQiy4iJW0Oq']);lt(['nowplaying_song','button','click','song','ItQiy4iJW0Oq','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/guong-cuoi-ho-viet-trung-ft-ho-quang-hieu.ItQiy4iJW0Oq.html" alt="guong cuoi - ho viet trung, ho quang hieu" sk="ItQiy4iJW0Oq" csk="">Gượng Cười</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Việt Trung trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-viet-trung.html" target="_blank">Hồ Việt Trung</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_3773957" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Đừng Buông Tay Anh - Hồ Quang Hiếu" class="name_song" onclick="rl(['','1KZRM463SyCo']);lt(['nowplaying_song','button','click','song','1KZRM463SyCo','','recommend']);trackingSmarty.box_music_recommended_expand('1KZRM463SyCo');" href="https://www.nhaccuatui.com/bai-hat/dung-buong-tay-anh-ho-quang-hieu.1KZRM463SyCo.html" alt="dung buong tay anh - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Đừng Buông Tay Anh - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('1KZRM463SyCo');rl(['','1KZRM463SyCo']);lt(['nowplaying_song','button','click','song','1KZRM463SyCo','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/dung-buong-tay-anh-ho-quang-hieu.1KZRM463SyCo.html" alt="dung buong tay anh - ho quang hieu" sk="1KZRM463SyCo" csk="">Đừng Buông Tay Anh</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_2453347" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Con Xin Sám Hối - Hồ Quang Hiếu" class="name_song" onclick="rl(['','kIO2CLxvC6EF']);lt(['nowplaying_song','button','click','song','kIO2CLxvC6EF','','recommend']);trackingSmarty.box_music_recommended_expand('kIO2CLxvC6EF');" href="https://www.nhaccuatui.com/bai-hat/con-xin-sam-hoi-ho-quang-hieu.kIO2CLxvC6EF.html" alt="con xin sam hoi - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Con Xin Sám Hối - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('kIO2CLxvC6EF');rl(['','kIO2CLxvC6EF']);lt(['nowplaying_song','button','click','song','kIO2CLxvC6EF','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/con-xin-sam-hoi-ho-quang-hieu.kIO2CLxvC6EF.html" alt="con xin sam hoi - ho quang hieu" sk="kIO2CLxvC6EF" csk="">Con Xin Sám Hối</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_3203975" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="ĐỔI THAY - HỒ QUANG HIẾU | OFFICIAL MV (4K) - Hồ Quang Hiếu" class="name_song" onclick="rl(['','3iNOimJGq6I7']);lt(['nowplaying_song','button','click','song','3iNOimJGq6I7','','recommend']);trackingSmarty.box_music_recommended_expand('3iNOimJGq6I7');" href="https://www.nhaccuatui.com/bai-hat/doi-thay-ho-quang-hieu-official-mv-4k-ho-quang-hieu.3iNOimJGq6I7.html" alt="doi thay - ho quang hieu | official mv (4k) - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="ĐỔI THAY - HỒ QUANG HIẾU | OFFICIAL MV (4K) - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('3iNOimJGq6I7');rl(['','3iNOimJGq6I7']);lt(['nowplaying_song','button','click','song','3iNOimJGq6I7','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/doi-thay-ho-quang-hieu-official-mv-4k-ho-quang-hieu.3iNOimJGq6I7.html" alt="doi thay - ho quang hieu | official mv (4k) - ho quang hieu" sk="3iNOimJGq6I7" csk="">ĐỔI THAY - HỒ QUANG HIẾU | OFFICIAL MV (4K)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_13465302" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Cô Phòng (Lofi) - Hồ Quang Hiếu, Huỳnh Văn" class="name_song" onclick="rl(['','Lm4qWyK3QDqO']);lt(['nowplaying_song','button','click','song','Lm4qWyK3QDqO','','recommend']);trackingSmarty.box_music_recommended_expand('Lm4qWyK3QDqO');" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ho-quang-hieu-ft-huynh-van.Lm4qWyK3QDqO.html" alt="co phong (lofi) - ho quang hieu, huynh van"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Cô Phòng (Lofi) - Hồ Quang Hiếu, Huỳnh Văn" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('Lm4qWyK3QDqO');rl(['','Lm4qWyK3QDqO']);lt(['nowplaying_song','button','click','song','Lm4qWyK3QDqO','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-lofi-ho-quang-hieu-ft-huynh-van.Lm4qWyK3QDqO.html" alt="co phong (lofi) - ho quang hieu, huynh van" sk="Lm4qWyK3QDqO" csk="">Cô Phòng (Lofi)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Huỳnh Văn trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Hu%E1%BB%B3nh+V%C4%83n&amp;b=singer" target="_blank">Huỳnh Văn</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14613714" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Đổi Lấy Sự Mập Mờ - Hồ Quang Hiếu" class="name_song" onclick="rl(['','LyKHZqD3EfNk']);lt(['nowplaying_song','button','click','song','LyKHZqD3EfNk','','recommend']);trackingSmarty.box_music_recommended_expand('LyKHZqD3EfNk');" href="https://www.nhaccuatui.com/bai-hat/doi-lay-su-map-mo-ho-quang-hieu.LyKHZqD3EfNk.html" alt="doi lay su map mo - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Đổi Lấy Sự Mập Mờ - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('LyKHZqD3EfNk');rl(['','LyKHZqD3EfNk']);lt(['nowplaying_song','button','click','song','LyKHZqD3EfNk','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/doi-lay-su-map-mo-ho-quang-hieu.LyKHZqD3EfNk.html" alt="doi lay su map mo - ho quang hieu" sk="LyKHZqD3EfNk" csk="">Đổi Lấy Sự Mập Mờ</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14757024" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="I don't care  - 2NE1" class="name_song" onclick="rl(['','05C8V8Zq0p']);lt(['nowplaying_song','button','click','song','05C8V8Zq0p','','recommend']);trackingSmarty.box_music_recommended_expand('05C8V8Zq0p');" href="https://www.nhaccuatui.com/bai-hat/i-dont-care-2ne1.05C8V8Zq0p.html" alt="i don't care  - 2ne1"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="I don't care  - 2NE1" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('05C8V8Zq0p');rl(['','05C8V8Zq0p']);lt(['nowplaying_song','button','click','song','05C8V8Zq0p','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/i-dont-care-2ne1.05C8V8Zq0p.html" alt="i don't care  - 2ne1" sk="05C8V8Zq0p" csk="">I don't care </a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ 2NE1 trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-2ne1.html" target="_blank">2NE1</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_336442" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Trung Thu Em Mơ - Đỗ Tuyết Nhi" class="name_song" onclick="rl(['','T1doFhDIqmD3']);lt(['nowplaying_song','button','click','song','T1doFhDIqmD3','','recommend']);trackingSmarty.box_music_recommended_expand('T1doFhDIqmD3');" href="https://www.nhaccuatui.com/bai-hat/trung-thu-em-mo-do-tuyet-nhi.T1doFhDIqmD3.html" alt="trung thu em mo - do tuyet nhi"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Trung Thu Em Mơ - Đỗ Tuyết Nhi" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('T1doFhDIqmD3');rl(['','T1doFhDIqmD3']);lt(['nowplaying_song','button','click','song','T1doFhDIqmD3','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/trung-thu-em-mo-do-tuyet-nhi.T1doFhDIqmD3.html" alt="trung thu em mo - do tuyet nhi" sk="T1doFhDIqmD3" csk="">Trung Thu Em Mơ</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Đỗ Tuyết Nhi trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=%C4%90%E1%BB%97+Tuy%E1%BA%BFt+Nhi&amp;b=singer" target="_blank">Đỗ Tuyết Nhi</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_7211327" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Khóc Vì Lời Chia Tay - Hồ Quang Hiếu" class="name_song" onclick="rl(['','4bncKSLwjC73']);lt(['nowplaying_song','button','click','song','4bncKSLwjC73','','recommend']);trackingSmarty.box_music_recommended_expand('4bncKSLwjC73');" href="https://www.nhaccuatui.com/bai-hat/khoc-vi-loi-chia-tay-ho-quang-hieu.4bncKSLwjC73.html" alt="khoc vi loi chia tay - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Khóc Vì Lời Chia Tay - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('4bncKSLwjC73');rl(['','4bncKSLwjC73']);lt(['nowplaying_song','button','click','song','4bncKSLwjC73','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/khoc-vi-loi-chia-tay-ho-quang-hieu.4bncKSLwjC73.html" alt="khoc vi loi chia tay - ho quang hieu" sk="4bncKSLwjC73" csk="">Khóc Vì Lời Chia Tay</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14432455" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Vết Thương Chưa Lành - Hồ Quang Hiếu" class="name_song" onclick="rl(['','61NdT3D7Jw4Z']);lt(['nowplaying_song','button','click','song','61NdT3D7Jw4Z','','recommend']);trackingSmarty.box_music_recommended_expand('61NdT3D7Jw4Z');" href="https://www.nhaccuatui.com/bai-hat/vet-thuong-chua-lanh-ho-quang-hieu.61NdT3D7Jw4Z.html" alt="vet thuong chua lanh - ho quang hieu"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Vết Thương Chưa Lành - Hồ Quang Hiếu" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('61NdT3D7Jw4Z');rl(['','61NdT3D7Jw4Z']);lt(['nowplaying_song','button','click','song','61NdT3D7Jw4Z','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/vet-thuong-chua-lanh-ho-quang-hieu.61NdT3D7Jw4Z.html" alt="vet thuong chua lanh - ho quang hieu" sk="61NdT3D7Jw4Z" csk="">Vết Thương Chưa Lành</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_2437945" class="icon_listen">0</span>-->
+    </li>
+    
+    <li>
+        
+        
+        <a title="Cô Phòng (DJ Trang Moon X Mike.N Remix) - Hồ Quang Hiếu, DJ Trang Moon" class="name_song" onclick="rl(['','tQ6ofucEvqWa']);lt(['nowplaying_song','button','click','song','tQ6ofucEvqWa','','recommend']);trackingSmarty.box_music_recommended_expand('tQ6ofucEvqWa');" href="https://www.nhaccuatui.com/bai-hat/co-phong-dj-trang-moon-x-miken-remix-ho-quang-hieu-ft-dj-trang-moon.tQ6ofucEvqWa.html" alt="co phong (dj trang moon x mike.n remix) - ho quang hieu, dj trang moon"><span class="icon-music"></span></a>
+        
+        <div class="info_data">
+            
+            
+            <h3><a title="Cô Phòng (DJ Trang Moon X Mike.N Remix) - Hồ Quang Hiếu, DJ Trang Moon" class="name_song listAutonext" onclick="trackingSmarty.box_music_recommended_expand('tQ6ofucEvqWa');rl(['','tQ6ofucEvqWa']);lt(['nowplaying_song','button','click','song','tQ6ofucEvqWa','','recommend']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-dj-trang-moon-x-miken-remix-ho-quang-hieu-ft-dj-trang-moon.tQ6ofucEvqWa.html" alt="co phong (dj trang moon x mike.n remix) - ho quang hieu, dj trang moon" sk="tQ6ofucEvqWa" csk="">Cô Phòng (DJ Trang Moon X Mike.N Remix)</a></h3>
+            
+            <h4 style="color: rgb(162, 162, 162); white-space: nowrap; -ms-text-overflow: ellipsis;"><a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ho-quang-hieu.html" target="_blank">Hồ Quang Hiếu</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ DJ Trang Moon trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-dj-trang-moon.html" target="_blank">DJ Trang Moon</a></h4>
+        </div>
+        <!--<span id="NCTCounter_sg_14664678" class="icon_listen">0</span>-->
+    </li>
+    
+</ul>
+
+<p class="btn_more_item">
+    <a class="btn_viewall" id="showMoreRecommend" href="javascript:;">xem thêm</a>
+    <a class="btn_viewall hide" id="hideMoreRecommend" href="javascript:;">rút gọn</a>
+</p>
+
+</div>
+                </div>
+                
+                <div class="adv_home_300_250 nqc-zone" id="S_R01" style="margin: 0px 0px 10px; width: 300px; height: 250px;"><div class="loadingAdss">Đang tải...</div></div>
+                <div class="adv_home_300_250 nqc-zone" id="S_R02" style="margin: 0px 0px 10px; width: 300px; height: 250px;"><div class="loadingAdss">Đang tải...</div></div>
+                <div class="adv_home_300_250 nqc-zone" id="S_R12" style="margin: 0px 0px 10px; width: 300px; height: 600px; display: none;"><div class="loadingAdss" style="height: 480px;">Đang tải...</div></div>
+                
+                <div class="clr"></div>
+                
+                <div class="clr"></div>
+                
+                <div class="adv_home_300_250 nqc-zone" id="S_R03" style="margin: 0px 0px 10px; width: 300px; height: 250px;"><div class="loadingAdss">Đang tải...</div></div>
+                <div class="adv_home_300_250 nqc-zone" id="S_R04" style="margin: 0px 0px 10px; width: 300px; height: 250px;"><div class="loadingAdss">Đang tải...</div></div>
+                <div class="adv_home_300_250 nqc-zone" id="S_R34" style="margin: 0px 0px 10px; width: 300px; height: 600px; display: none;"><div class="loadingAdss" style="height: 480px;">Đang tải...</div></div>
+                
+                <div class="clr"></div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock nghe1_content %}

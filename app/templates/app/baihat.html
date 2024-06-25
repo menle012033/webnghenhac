@@ -1,0 +1,124 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% comment %} {% block playlist %}
+<div class="box-content">
+    <div class="wrap">
+        <div class="content-wrap">
+            <div class="box-left">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock playlist %} {% endcomment %}
+
+{% block baihat_content %}
+<div class="baihat box-content">
+    <div class="wrap">
+        <div class="content-wrap">
+            <div class="box-left">
+                <div class="box_cata_control" style="margin-bottom: 10px;">
+                    <ul class="detail_menu_browsing_dashboard baihat">
+                        <!-- VIỆT NAM -->
+                        <li class="cate baihat"><h3><a title="VIỆT NAM" rel="dofollow">VIỆT NAM</a></h3></li>
+                        <li class="baihat"><a title="Nhạc Trẻ" href="https://www.nhaccuatui.com/playlist/nhac-tre-moi.html" rel="dofollow" pr="list_vn">Nhạc Trẻ</a></li>
+                        <li class="baihat"><a title="Trữ Tình" href="https://www.nhaccuatui.com/playlist/tru-tinh-moi.html" rel="dofollow" pr="list_vn">Trữ Tình</a></li>
+                        <li class="baihat"><a title="Remix Việt" href="https://www.nhaccuatui.com/playlist/remix-viet-moi.html" rel="dofollow" pr="list_vn">Remix Việt</a></li>
+                        <li class="baihat"><a title="Rap Việt" href="https://www.nhaccuatui.com/playlist/rap-viet-moi.html" rel="dofollow" pr="list_vn">Rap Việt</a></li>
+                        <li class="baihat"><a title="Tiền Chiến" href="https://www.nhaccuatui.com/playlist/tien-chien-moi.html" rel="dofollow" pr="list_vn">Tiền Chiến</a></li>
+                        <li class="baihat"><a title="Nhạc Trịnh" href="https://www.nhaccuatui.com/playlist/nhac-trinh-moi.html" rel="dofollow" pr="list_vn">Nhạc Trịnh</a></li>
+                        <li class="baihat"><a title="Rock Việt" href="https://www.nhaccuatui.com/playlist/rock-viet-moi.html" rel="dofollow" pr="list_vn">Rock Việt</a></li>
+                        <li class="baihat"><a title="Cách Mạng" href="https://www.nhaccuatui.com/playlist/cach-mang-moi.html" rel="dofollow" pr="list_vn">Cách Mạng</a></li>
+                        
+                        <!-- ÂU MỸ -->
+                        <li class="line baihat"></li>
+                        <li class="cate baihat"><h3><a title="ÂU MỸ" rel="dofollow">ÂU MỸ</a></h3></li>
+                        <li class="baihat"><a title="Pop" href="https://www.nhaccuatui.com/playlist/pop-moi.html" rel="dofollow" pr="list_aumy">Pop</a></li>
+                        <li class="baihat"><a title="Rock" href="https://www.nhaccuatui.com/playlist/rock-moi.html" rel="dofollow" pr="list_aumy">Rock</a></li>
+                        <li class="baihat"><a title="Electronica/Dance" href="https://www.nhaccuatui.com/playlist/electronicadance-moi.html" rel="dofollow" pr="list_aumy">Electronica/Dance</a></li>
+                        <li class="baihat"><a title="R&amp;B/Hip Hop/Rap" href="https://www.nhaccuatui.com/playlist/rbhip-hoprap-moi.html" rel="dofollow" pr="list_aumy">R&amp;B/Hip Hop/Rap</a></li>
+                        <li class="baihat"><a title="Blues/Jazz" href="https://www.nhaccuatui.com/playlist/bluesjazz-moi.html" rel="dofollow" pr="list_aumy">Blues/Jazz</a></li>
+                        <li class="baihat"><a title="Country" href="https://www.nhaccuatui.com/playlist/country-moi.html" rel="dofollow" pr="list_aumy">Country</a></li>
+                        <li class="baihat"><a title="Latin" href="https://www.nhaccuatui.com/playlist/latin-moi.html" rel="dofollow" pr="list_aumy">Latin</a></li>
+                        <li class="view_more_list baihat" style="z-index: 1000;">
+                            <div class="dot_more baihat"><span class="dot_cricle baihat"></span><span class="dot_cricle baihat"></span><span class="dot_cricle baihat"></span> <span id="listchild_aumy" class="baihat">Xem thêm</span></div>
+                            <ul class="baihat">
+                                <li class="baihat"><a title="Indie" href="https://www.nhaccuatui.com/playlist/indie-moi.html" rel="dofollow" pr="listchild_aumy">Indie</a></li>
+                                <li class="baihat"><a title="Âu Mỹ khác" href="https://www.nhaccuatui.com/playlist/au-my-khac-moi.html" rel="dofollow" pr="listchild_aumy">Âu Mỹ khác</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- CHÂU Á -->
+                        <li class="line baihat"></li>
+                        <li class="cate baihat" style="height: 34px;"><h3><a title="CHÂU Á" rel="dofollow">CHÂU Á</a></h3></li>
+                        <li class="baihat"><a title="Nhạc Hàn" href="https://www.nhaccuatui.com/playlist/nhac-han-moi.html" rel="dofollow" pr="list_chaua">Nhạc Hàn</a></li>
+                        <li class="baihat"><a title="Nhạc Hoa" href="https://www.nhaccuatui.com/playlist/nhac-hoa-moi.html" rel="dofollow" pr="list_chaua">Nhạc Hoa</a></li>
+                        <li class="baihat"><a title="Nhạc Nhật" href="https://www.nhaccuatui.com/playlist/nhac-nhat-moi.html" rel="dofollow" pr="list_chaua">Nhạc Nhật</a></li>
+                        <li class="baihat"><a title="Nhạc Thái" href="https://www.nhaccuatui.com/playlist/nhac-thai-moi.html" rel="dofollow" pr="list_chaua">Nhạc Thái</a></li>
+                        
+                        <!-- KHÁC -->
+                        <li class="line baihat"></li>
+                        <li class="cate baihat" style="height: 34px;"><h3><a title="KHÁC" rel="dofollow">KHÁC</a></h3></li>
+                        <li class="baihat"><a title="Thiếu Nhi" href="https://www.nhaccuatui.com/playlist/thieu-nhi-moi.html" rel="dofollow" pr="list_khac">Thiếu Nhi</a></li>
+                        <li class="baihat"><a title="Không Lời" href="https://www.nhaccuatui.com/playlist/khong-loi-moi.html" rel="dofollow" pr="list_khac">Không Lời</a></li>
+                        <li class="baihat"><a title="Nhạc Phim" href="https://www.nhaccuatui.com/playlist/nhac-phim-moi.html" rel="dofollow" pr="list_khac">Nhạc Phim</a></li>
+                        <li class="baihat"><a title="Thể Loại Khác" href="https://www.nhaccuatui.com/playlist/the-loai-khac-moi.html" rel="dofollow" pr="list_khac">Thể Loại Khác</a></li>
+                    </ul>
+                    {% comment %} <script type="text/javascript">
+                        $("#playlist-hot-nhat").addClass("active");
+                        if ($("a[href*=playlist-hot-nhat][pr*=list_]").size() > 0) {
+                            $("a[href*=playlist-hot-nhat][pr*=list_]").addClass("active");
+                        } else {
+                            var mn_title = $("a[href*=playlist-hot-nhat][pr*=listchild_].html();
+                            var mn_pr = $("a[href*=playlist-hot-nhat][pr*=listchild_]").attr("pr");
+                            $("#" + mn_pr).html(mn_title);
+                            $("#" + mn_pr).parent().addClass("active");
+                        }
+                    </script> {% endcomment %}
+                </div>
+``              <div class="tile_box_key">
+                    <h2><a title="Album Hot" href="#">BÀI HÁT MỚI</a></h2>
+                </div>
+                <div id="song-list" class="baihat">
+                    {% for baihat in baihats %}
+                    <div class="song" onclick="loadTrack({{ baihat.id }}, '{{ baihat.ten }}', '{{ baihat.casi }}', '{{ baihat.ImageURL }}', '{{ baihat.AudioURL }}')">
+                        <img src="{{ baihat.ImageURL }}" alt="{{ baihat.ten }}" width="50">
+                        <div>{{ baihat.ten }} - {{ baihat.casi }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% comment %} <div id="song-list" class="baihat">
+                    {% for baihat in baihats %}
+                    <div class="song" onclick="playTrack({{ baihat.id }}, '{{ baihat.ten }}', '{{ baihat.casi }}', '{{ baihat.ImageURL }}', '{{ baihat.AudioURL }}')">
+                        <img src="{{ baihat.ImageURL }}" alt="{{ baihat.ten }}" width="50">
+                        <div>{{ baihat.ten }} - {{ baihat.casi }}</div>
+                    </div>
+                    {% endfor %}
+                </div> {% endcomment %}
+            </div>
+
+            
+
+            <div class="box-right baihat">
+                <div class="box_chart_music baihat">
+                    <div class="tile_box_key baihat">
+                        <h3><a title="BXH Bài Hát" class="nomore baihat" onclick="lt(['home','BXH','click','song','bai-hat-top-20','','url']);" href="https://www.nhaccuatui.com/bai-hat/top-20.html">BXH Bài Hát</a></h3>
+                        <!-- <a id="aUrlTop20" onclick="lt(['home','BXH','click','song','play-all','','url']);" href="" title="BXH Bài Hát" class="play_all" id="play_all"></a> -->
+                    </div>
+                    
+                    <div class="adv_home_300_250 nqc-zone baihat" id="HR02" style="margin: 0px 0px 10px; width: 300px; height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br /><br /><br />
+
+
+
+{% endblock baihat_content %}
+

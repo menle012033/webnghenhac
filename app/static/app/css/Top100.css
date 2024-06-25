@@ -1,0 +1,375 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, th, td {
+	margin: 0;
+	padding: 0;
+}
+.box-content {
+	float: left;
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+.box-content {
+	margin-top: 70px !important;
+}
+body {
+	margin: 0;
+	background-color: #ffffff;
+	color: #333;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13px;
+	font-family: "NhacCuaTui",sans-serif;
+	line-height: 1.4;
+	min-width: 1018px;
+	min-width: 1009px;
+}
+body {
+	overflow-y: scroll;
+}
+body {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+html {
+	color: #000;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	font-stretch: condensed;
+	-webkit-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+.wrap {
+	position: relative;
+}
+body .wrap .content-wrap {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 10px;
+}
+.box-content .box-left {
+	padding: 0px 0;
+	width: 840px;
+	float: left;
+}
+.box-content .box-right {
+	float: right;
+	width: 300px;
+	height: auto;
+	overflow: hidden;
+}
+.box-right .adv_home_300_250 {
+	float: left;
+	width: 300px;
+	margin-bottom: 20px;
+}
+.box_prospect_singer {
+	float: left;
+	width: 300px;
+	padding: 0 0 10px 0;
+}
+.clr {
+	clear: both;
+}
+.tile_box_key {
+	width: 100%;
+	float: left;
+}
+.box_prospect_singer .list_singer_music {
+	float: left;
+	width: 300px;
+}
+li {
+	list-style: none;
+}
+.box_prospect_singer .list_singer_music li {
+	float: left;
+	width: 300px;
+	margin: 0px 0 10px 0;
+	border-bottom: #f3f3f3 solid 1px;
+	padding: 0 0 10px 0;
+}
+.box_prospect_singer .list_singer_music li .info_data {
+	float: left;
+	width: 300px;
+}
+a, a:hover, a:active, a:focus {
+	outline: 0;
+}
+a {
+	color: rgba(0, 0, 0, 0.88);
+	text-decoration: none;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.box_prospect_singer .list_singer_music li .img {
+	float: left;
+	margin-right: 10px;
+	height: 60px;
+}
+.box_prospect_singer .list_singer_music li .info_data .name_song {
+	font-size: 14px;
+	display: block;
+	line-height: 18px;
+	overflow: hidden;
+	display: block;
+	margin: 0 0 3px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+fieldset, img {
+	border: 0;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+.box_prospect_singer .list_singer_music li .img img {
+	height: 60px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+.tile_box_key h1, .tile_box_key h2, .tile_box_key h3 {
+	float: left;
+	display: block;
+	width: auto;
+	color: #212121;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 36px;
+	margin: 0 0 10px 0;
+	color: #23262d;
+}
+.tile_box_key h3 {
+	color: #2daaed;
+}
+.tile_box_key h1 a, .tile_box_key h2 a, .tile_box_key h3 a {
+	color: #2daaed;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) right -155px no-repeat;
+	text-transform: uppercase;
+	padding: 0 20px 0 0;
+	font-weight: 300 !important;
+}
+.descriptionBXH {
+	padding-top: 20px;
+	line-height: 1.5;
+	font-size: 14px;
+	color: #5d5b5b;
+	text-align: justify;
+	padding-bottom: 5px;
+}
+.box-content .box_cata_control {
+	width: 840px;
+	float: left;
+	margin: 0px 0px 0 0;
+}
+.box-content .list_chart_page {
+	width: 840px;
+	float: left;
+	margin-bottom: 10px;
+}
+.box-content .list_chart_page .box_view_week {
+	float: left;
+	width: 820px;
+	height: 40px;
+	margin: 10px 0 0 0;
+	background: #1abc9c;
+	padding: 0 10px;
+}
+.box_resource_slide {
+	float: left;
+	width: 840px;
+	overflow: hidden;
+}
+.box-content .list_chart_page ul.list_show_chart {
+	width: 840px;
+	float: left;
+}
+.box-content .list_chart_page ul.list_show_chart li {
+	width: 840px;
+	float: left;
+	margin-right: 0px;
+	padding: 15px 0px;
+	border-top: #dfdfdf solid 1px;
+}
+.box-content .list_chart_page ul.list_show_chart li:nth-child(1) {
+	border-top: #dfdfdf solid 0px;
+}
+.box-content .list_chart_page ul.list_show_chart li span.chart_tw {
+	float: left;
+	width: 40px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	margin: 0px 0 0 0;
+	font-size: 22px;
+	color: #333333;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.box-content .list_chart_page ul.list_show_chart li .box_info_field {
+	float: left;
+	width: 540px;
+	height: 80px;
+	margin-left: 10px;
+	border-left: #dfdfdf solid 0px;
+	padding-left: 0px;
+}
+.box-content .list_chart_page .box_song_action {
+	float: right;
+	width: auto;
+	height: 20px;
+	margin: 10px 10px 0px 0px;
+}
+.box-content .list_chart_page .box_song_action .button_add_playlist {
+	width: 16px;
+	height: 14px;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -44px top no-repeat;
+	display: block;
+	float: left;
+	margin: 20px 12px 0px 0px;
+}
+.box-content .list_chart_page .box_song_action .button_playing {
+	width: 10px;
+	height: 14px;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -30px top no-repeat;
+	display: block;
+	float: right;
+	margin: 20px 0px 0px 0px;
+}
+.box-content .list_chart_page ul.list_show_chart li .box_info_field .list_name_singer {
+	display: block;
+	color: #666666;
+	width: 530px;
+	margin: 5px 0 0 0;
+}
+.name_singer {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+.box-content .list_chart_page ul.list_show_chart li .box_info_field .list_name_singer .name_singer {
+	color: #a2a2a2;
+	font-size: 12px;
+}
+.box-content .list_chart_page ul.list_show_chart li .box_info_field h3 .name_song {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	display: block;
+	margin-top: 3px;
+	padding-top: 10px;
+}
+.box-content .list_chart_page ul.list_show_chart li .box_info_field img {
+	float: left;
+	margin-right: 10px;
+	height: 80px;
+	width: auto !important;
+}
+.box-content .list_chart_page ul.list_show_chart li span.chart_tw.special-3 {
+	width: 40px;
+	height: 40px;
+	color: #f39c12;
+}
+.box-content .list_chart_page ul.list_show_chart li span.chart_tw.special-2 {
+	width: 40px;
+	height: 40px;
+	color: #1abc9c;
+}
+.box-content .list_chart_page ul.list_show_chart li span.chart_tw.special-1 {
+	width: 40px;
+	height: 40px;
+	color: #e74c3c;
+}
+.box-content .list_chart_page .box_view_week h2 {
+	float: left;
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	line-height: 40px;
+}
+.box-content .list_chart_page .active_play {
+	float: right;
+	padding: 0px;
+	margin: 8px 9px 0 0;
+	line-height: 24px;
+	color: #ffffff;
+	font-weight: bold;
+}
+.box-content .list_chart_page .active_play .icon_playall {
+	width: 24px;
+	height: 24px;
+	float: left;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon.png) -147px -76px no-repeat;
+	display: block;
+	padding: 0px;
+	margin-right: 3px;
+}
+.top100_btn_sort {
+	background: url(https://stc-id.nixcdn.com/v11/images/icon_sort.png) no-repeat;
+	float: left;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	padding: 6px 0px 0px 10px;
+	margin: 12px 0 0 10px;
+}
+.detail_menu_browsing_dashboard {
+	width: 840px;
+	float: left;
+	margin-bottom: 10px;
+}
+.detail_menu_browsing_dashboard li {
+	width: 160px;
+	float: left;
+	padding: 1px 0 2px 0;
+	margin: 0 8px 0 0;
+}
+.detail_menu_browsing_dashboard li a {
+	font-size: 14px;
+	color: #333333;
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 0px -2002px no-repeat;
+	background-size: 17px auto;
+	margin: 2px 0 2px -6px;
+	padding: 3px 10px  2px 20px;
+	line-height: 22px;
+	float: left;
+	width: auto;
+	cursor: pointer;
+	transition: background 0s;
+	-webkit-transition: background 0s;
+	-moz-transition: background 0s;
+}
+.detail_menu_browsing_dashboard li a.active {
+	background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 0px -2025px no-repeat #e74c3c;
+	background-size: 17px auto;
+	color: #fff;
+	border-radius: 5px;
+	width: auto;
+	padding-right: 10px;
+	margin-left: -6px;
+	padding-left: 20px;
+	transition: background 0s;
+	-webkit-transition: background 0s;
+	-moz-transition: background 0s;
+}
+.tile_box_key h1 a.nomore, .tile_box_key h2 a.nomore, .tile_box_key h3 a.nomore {
+	padding: 0 5px 0 0;
+	background: none;
+}
+.wpage {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 10px;
+}

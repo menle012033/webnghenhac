@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block cart_content %}
+<div class="row">
+	<div class="col-lg-12">
+		<div class="box-element">
+			<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Continue Music</a>
+			<table class="table">
+				<tr>
+					<th>
+						<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Tui Upload</a>
+					</th>
+				</tr>
+			</table>
+		</div>
+		
+		<br>
+		<div class="box-element">
+			<div class="cart-row">
+				<div style="flex:2"><strong><a href="{% url 'home' %}">Home</strong></div>
+				<div style="flex:2"><strong><a href="{% url 'home' %}">Playlist</strong></div>
+				<div style="flex:1"><strong><a href="{% url 'home' %}">Video</strong></div>
+				<div style="flex:1"><strong><a href="{% url 'checkout' %}">Tui Upload</strong></div>
+				<div style="flex:1"><strong><a href="{% url 'home' %}">Bạn bè</strong></div>
+			</div>
+			
+			<div class="cart-row">
+				<li>
+					<div class="box-left-album">
+						<a href="{% url 'home' %}" class="box_absolute">
+							<div class="bg_action_info">
+								<!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_83391889">0</span></span>-->
+								<span class="icon_play"></span>
+							</div>
+							<span class="avatar"><img src="https://avatar-ex-swe.nixcdn.com/playlist/2016/09/09/4/c/6/e/1473409265946.jpg" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');"></span>
+						</a>
+					</div>
+					<div class="info_album">
+						<a href="{% url 'home' %}" class="name_song">Bài hát yêu thích</a>
+						<p>Đang Cập Nhật</p>
+					</div>
+				</li>
+			</div>
+			
+		</div>
+	</div>
+</div>
+{% endblock cart_content %}

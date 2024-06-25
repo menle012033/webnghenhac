@@ -1,0 +1,801 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block banner_slider %}
+<div id="slider">
+  <a href="#" class="control_next">></a>
+  <a href="#" class="control_prev"><</a>
+  <ul>
+    <li ><img  src="{% static 'app/images/banner/h5.jpg' %}"></li>
+    <li ><img  src="{% static 'app/images/banner/h1.jpg' %}"></li>
+    <li ><img  src="{% static 'app/images/banner/h2.jpg' %}"></li>
+    <li ><img  src="{% static 'app/images/banner/h3.jpg' %}"></li>
+    <li ><img  src="{% static 'app/images/banner/h4.jpg' %}"></li>
+  </ul>  
+</div>
+
+{% endblock banner_slider %}
+{% block main-content %}
+<div class="box-content">
+    <div class="wrap">
+    <div class="content-wrap">
+        <div class="box-left">  
+            <!--Topic Event-->
+            {% comment %} {% for chude in chudes %}
+                <div class="list_album">
+                    <div class="fram_select">
+                        <div class="tile_box_key">
+                            <h2><a title="{{ chude.name }}" style="background: none;" href="{% url 'nghe' %}?chude={{ chude.id }}">{{ chude.name }}</a></h2>
+                        </div>
+                        <ul style="padding-left: 0;">
+                            {% for baihat in chude.baihats %}
+                            <li style="height: auto;">
+                                <div class="box-left-album">
+                                    <a href="{% url 'nghe' %}?theloai={{ baihat.theloai }}">
+                                        <div class="bg_action_info">
+                                            <span class="icon_play"></span>
+                                        </div>
+                                        <span class="avatar"><img src="{{ baihat.image.url }}"></span>
+                                    </a>
+                                </div>
+                                <div class="info_album">
+                                    <h3 class="h3seo"><a href="{% url 'nghe' %}?theloai={{ baihat.theloai }}">{{ baihat.ten }}</a></h3>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %} {% endcomment %}
+            
+            {% comment %} {% for chude in chudes %}
+                <div class="list_album">
+                    <div class="fram_select">
+                        <div class="tile_box_key">
+                            <h2><a title="{{ chude.name }}" style="background: none;" href="{% url 'nghe' %}">{{ chude.name }}</a></h2>
+                        </div>
+                        <ul style="padding-left: 0;">
+                            {% for baihat in baihats %}
+                                {% if baihat.chude == chude.name %}
+                                    <li style="height: auto;">
+                                        <div class="box-left-album">
+                                            <a href="{% url 'nghe' %}?theloai={{ baihat.theloai }}">
+                                                <div class="bg_action_info">
+                                                    <span class="icon_play"></span>
+                                                </div>
+                                                <span class="avatar"><img src="{{ baihat.image.url }}"></span>
+                                            </a>
+                                        </div>
+                                        <div class="info_album">
+                                            <h3 class="h3seo"><a href="{% url 'nghe' %}">{{ baihat.theloai }}</a></h3>
+                                        </div>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %} {% endcomment %}
+            <!-- Đoạn mã HTML trong home.html -->
+
+            <div class="list_album">
+                <div class="fram_select">
+                    {% for chude in chudes %}
+                    <div class="tile_box_key">
+                        <h2><a title="Vũ Trụ Nhạc {{ chude.name }}" style="background: none;" href="{% url 'nghe' %}?chude={{ chude.id }}">{{ chude.name }}</a></h2>
+                    </div>
+                    <ul style="padding-left: 0;">
+                        {% for theloai in theloais %}
+                        {% if theloai.chude == chude %}
+                        <li style="height: auto;">
+                            <div class="box-left-album">
+                                <a href="{% url 'nghe' %}?theloai={{ theloai.id }}">
+                                    <div class="bg_action_info">
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    {% if theloai.image %}
+                                    <span class="avatar"><img src="{{ theloai.image.url }}"></span>
+                                    {% else %}
+                                    <span class="avatar"><img src="{{ theloai.ImageURL }}"></span>
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a href="{% url 'nghe' %}?theloai={{ theloai.id }}">{{ theloai.name }}</a></h3>
+                            </div>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+{% comment %} 
+<!-- Danh sách album -->
+<div class="list_album">
+    <h2>Albums</h2>
+    <ul>
+        {% for album in albums %}
+        <li>{{ album.ten }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- Danh sách playlist -->
+<div class="list_album">
+    <h2>Playlists</h2>
+    <ul>
+        {% for playlist in playlists %}
+        <li>{{ playlist.ten }}</li>
+        {% endfor %}
+    </ul>
+</div> {% endcomment %}
+            
+            {% comment %} <div class="list_album">
+                <div class="fram_select">
+                    {% for chude in chudes %}
+                    <div class="tile_box_key">
+                        <h2><a title="Vũ Trụ Nhạc Việt" style="background: none;" href="{% url 'nghe' %}">{{ chude.name }}</a></h2>
+                    </div>
+                    <ul style="padding-left:0 ">
+                        {% for theloai in theloais %}
+                        <li style="height: auto;">
+                            <div class="box-left-album">
+                                <a href="{% url 'nghe' %}?theloai={{ theloai.baihat }}">
+                                    <div class="bg_action_info">
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    {% if theloai.image %}
+                                        <span class="avatar"><img src="{{ theloai.image.url }}"></span>
+                                    {% else %}
+                                        <span class="avatar"><img src="{{ theloai.ImageURL }}"></span>
+                                        {# or display a message #}
+                                        <span class="avatar">No image available</span>
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a href="{% url 'nghe' %}">{{ theloai.name }}</a></h3>
+                            </div>
+                        </li>
+                        {% endfor %}   
+                             
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div> {% endcomment %}
+
+            <div class="list_album albumHot">
+                <div class="fram_select">
+                    <div class="tile_box_key">
+                        <h2><a title="Album Hot" href="{% url 'nghe' %}">MỚI PHÁT HÀNH</a></h2>
+                    </div>
+                    <ul style="padding-left:0 ">
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="nhạt-fine (feat. 52Hz) - GREY D" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','','','thumb']);" href="{% url 'nghe' %}">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_sg_14469981">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    <span class="avatar"><img title="nhạt-fine (feat. 52Hz) - GREY D" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="nhat-fine (feat. 52hz) - grey d" src="https://avatar-ex-swe.nixcdn.com/song/2024/04/18/9/8/b/0/1713439843722_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="nhạt-fine (feat. 52Hz) - GREY D" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','song','CP9WQHAND67r','','title']);" href="{% url 'nghe' %}">nhạt-fine (feat. 52Hz)</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ GREY D trình bày" class="name_singer" href="{% url 'nghe' %}" target="_blank">GREY D</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="Cô Phòng - Hồ Quang Hiếu, Huỳnh Văn" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','','','thumb']);" href="{% url 'nghe' %}">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_sg_14382919">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    <span class="avatar"><img title="Cô Phòng - Hồ Quang Hiếu, Huỳnh Văn" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="co phong - ho quang hieu, huynh van" src="https://avatar-ex-swe.nixcdn.com/song/2024/04/16/4/7/c/b/1713253101033_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="Cô Phòng - Hồ Quang Hiếu, Huỳnh Văn" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','song','9fu0THzHzAXw','','title']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-ft-huynh-van.9fu0THzHzAXw.html">Cô Phòng</a></h3>
+                                <h4>
+                                    <a title="Tìm các bài hát, playlist, mv do ca sĩ Hồ Quang Hiếu trình bày" class="name_singer" href="{% url 'nghe' %}" target="_blank">Hồ Quang Hiếu</a>,
+                                    <a title="Tìm các bài hát, playlist, mv do ca sĩ Huỳnh Văn trình bày" class="name_singer" href="{% url 'nghe' %}" target="_blank">Huỳnh Văn</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="Em Yêu Cô Ấy (Prod. Hải Ma) - Double2T" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','','','thumb']);" href="{% url 'nghe' %}">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_sg_14400700">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    <span class="avatar"><img title="Em Yêu Cô Ấy (Prod. Hải Ma) - Double2T" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="em yeu co ay (prod. hai ma) - double2t" src="https://avatar-ex-swe.nixcdn.com/song/2024/04/14/2/9/3/0/1713064262610_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="Em Yêu Cô Ấy (Prod. Hải Ma) - Double2T" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','song','3glujzaO4xFn','','title']);" href="{% url 'nghe' %}">Em Yêu Cô Ấy (Prod. Hải Ma)</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ Double2T trình bày" class="name_singer" href="{% url 'nghe' %}" target="_blank">Double2T</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="Coi Như Mù - Phúc" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','','','thumb']);" href="https://www.nhaccuatui.com/bai-hat/coi-nhu-mu-phuc.MOgO1yiFd0kf.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_sg_13284429">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    <span class="avatar"><img title="Coi Như Mù - Phúc" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="coi nhu mu - phuc" src="https://avatar-ex-swe.nixcdn.com/song/2024/01/05/c/3/d/8/1704429517255_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="Coi Như Mù - Phúc" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','song','MOgO1yiFd0kf','','title']);" href="https://www.nhaccuatui.com/bai-hat/coi-nhu-mu-phuc.MOgO1yiFd0kf.html">Coi Như Mù</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ Phúc trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-ly-phuc.html" target="_blank">Phúc</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="Trên Bàn Nhậu Dưới Bàn Mưu (From Trên Bàn Nhậu Dưới Bàn Mưu) - Vũ Thảo My, Lăng LD" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','','','thumb']);" href="https://www.nhaccuatui.com/bai-hat/tren-ban-nhau-duoi-ban-muu-from-tren-ban-nhau-duoi-ban-muu-vu-thao-my-ft-lang-ld.IVbpbvk18bmg.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_sg_13043316">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                    </div>
+                                    <span class="avatar"><img title="Trên Bàn Nhậu Dưới Bàn Mưu (From Trên Bàn Nhậu Dưới Bàn Mưu) - Vũ Thảo My, Lăng LD" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="tren ban nhau duoi ban muu (from tren ban nhau duoi ban muu) - vu thao my, lang ld" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/19/0/d/8/7/1702977455677_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="Trên Bàn Nhậu Dưới Bàn Mưu (From Trên Bàn Nhậu Dưới Bàn Mưu) - Vũ Thảo My, Lăng LD" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','song','IVbpbvk18bmg','','title']);" href="https://www.nhaccuatui.com/bai-hat/tren-ban-nhau-duoi-ban-muu-from-tren-ban-nhau-duoi-ban-muu-vu-thao-my-ft-lang-ld.IVbpbvk18bmg.html">Trên Bàn Nhậu Dưới Bàn Mưu (From "Trên Bàn Nhậu Dưới Bàn Mưu")</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ Vũ Thảo My trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-vu-thao-my.html" target="_blank">Vũ Thảo My</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Lăng LD trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-lang-LD.html" target="_blank">Lăng LD</a></h4>
+                            </div>
+                        </li>
+                        
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="ba kiểu khó chịu - Anh Tú Atus" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','2HeB5PkEYQPZ','','thumb']);" href="https://www.nhaccuatui.com/playlist/ba-kieu-kho-chiu-anh-tu-atus.2HeB5PkEYQPZ.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_82675519">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                        
+                                    </div>
+                                    <span class="avatar"><img title="ba kiểu khó chịu - Anh Tú Atus" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="ba kieu kho chiu - anh tu atus" src="https://avatar-ex-swe.nixcdn.com/playlist/2023/11/14/a/c/f/a/1699934971983_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="ba kiểu khó chịu - Anh Tú Atus" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','2HeB5PkEYQPZ','','title']);" href="https://www.nhaccuatui.com/playlist/ba-kieu-kho-chiu-anh-tu-atus.2HeB5PkEYQPZ.html">ba kiểu khó chịu</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ Anh Tú Atus trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-anh-tu.html" target="_blank">Anh Tú Atus</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="Angel Face - Stephen Sanchez" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','2Ss3qGRZMpS0','','thumb']);" href="https://www.nhaccuatui.com/playlist/angel-face-stephen-sanchez.2Ss3qGRZMpS0.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_82502395">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                        
+                                    </div>
+                                    <span class="avatar"><img title="Angel Face - Stephen Sanchez" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="angel face - stephen sanchez" src="https://avatar-ex-swe.nixcdn.com/playlist/2023/09/21/1/8/1/e/1695261330711_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="Angel Face - Stephen Sanchez" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','2Ss3qGRZMpS0','','title']);" href="https://www.nhaccuatui.com/playlist/angel-face-stephen-sanchez.2Ss3qGRZMpS0.html">Angel Face</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ Stephen Sanchez trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-stephen-sanchez.html" target="_blank">Stephen Sanchez</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="HIDDEN LUV - 16 Typh" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','WNosJICBOeao','','thumb']);" href="https://www.nhaccuatui.com/playlist/hidden-luv-16-typh.WNosJICBOeao.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_82310738">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                        
+                                    </div>
+                                    <span class="avatar"><img title="HIDDEN LUV - 16 Typh" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="hidden luv - 16 typh" src="https://avatar-ex-swe.nixcdn.com/playlist/2023/09/14/d/6/6/b/1694680131219_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="HIDDEN LUV - 16 Typh" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','WNosJICBOeao','','title']);" href="https://www.nhaccuatui.com/playlist/hidden-luv-16-typh.WNosJICBOeao.html">HIDDEN LUV</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ 16 Typh trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-16-typh.html" target="_blank">16 Typh</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="Silence Between Songs - Madison Beer" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','cGdRqAqpoVq6','','thumb']);" href="https://www.nhaccuatui.com/playlist/silence-between-songs-madison-beer.cGdRqAqpoVq6.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_82314930">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                        
+                                    </div>
+                                    <span class="avatar"><img title="Silence Between Songs - Madison Beer" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="silence between songs - madison beer" src="https://avatar-ex-swe.nixcdn.com/playlist/2023/09/15/7/1/1/5/1694779558070_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="Silence Between Songs - Madison Beer" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','cGdRqAqpoVq6','','title']);" href="https://www.nhaccuatui.com/playlist/silence-between-songs-madison-beer.cGdRqAqpoVq6.html">Silence Between Songs</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ Madison Beer trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-madison-beer.html" target="_blank">Madison Beer</a></h4>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-left-album">
+                                <a title="LOVElution <ↀ> - tripleS" class="box_absolute" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','8LwZhrCEIdho','','thumb']);" href="https://www.nhaccuatui.com/playlist/lovelution-triples.8LwZhrCEIdho.html">
+                                    <div class="bg_action_info">
+                                        <!--<span class="view_listen"><span class="icon_listen"></span><span id="NCTCounter_pl_82118111">0</span></span>-->
+                                        <span class="icon_play"></span>
+                                        
+                                    </div>
+                                    <span class="avatar"><img title="LOVElution <ↀ> - tripleS" onerror="common.handleErrorImage(this,'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/img-plist-full.jpg', '');" alt="lovelution <ↀ> - triples" src="https://avatar-ex-swe.nixcdn.com/playlist/2023/08/18/9/1/4/8/1692376267445_300.jpg"></span>
+                                </a>
+                            </div>
+                            <div class="info_album">
+                                <h3 class="h3seo"><a title="LOVElution <ↀ> - tripleS" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Album - Hot']);lt(['home','album-hot','click','playlist','8LwZhrCEIdho','','title']);" href="https://www.nhaccuatui.com/playlist/lovelution-triples.8LwZhrCEIdho.html">LOVElution &lt;ↀ&gt;</a></h3>
+                                <h4><a title="Tìm các bài hát, playlist, mv do ca sĩ tripleS trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=tripleS&amp;b=singer" target="_blank">tripleS</a></h4>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="list_music listSong">
+                <div class="fram_select">
+                    <div class="tile_box_key">
+                        <h2><span class="icon_song"></span><a title="Bài Hát" href="https://www.nhaccuatui.com/bai-hat/bai-hat-moi-nhat.html">Bài Hát</a></h2>
+                    </div>
+                    <ul>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Cánh Sen Cô Độc? - Ngọc Mai" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','i7VI7QSkn7Rk','','title']);" href="https://www.nhaccuatui.com/bai-hat/canh-sen-co-doc-ngoc-mai.i7VI7QSkn7Rk.html">
+                                        <img title="Cánh Sen Cô Độc? - Ngọc Mai" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="canh sen co doc? - ngoc mai" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/27/e/8/a/0/1703666817803.jpg">
+                                    </a>
+                                    <h3><a title="Cánh Sen Cô Độc? - Ngọc Mai" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','i7VI7QSkn7Rk','','title']);" href="https://www.nhaccuatui.com/bai-hat/canh-sen-co-doc-ngoc-mai.i7VI7QSkn7Rk.html">Cánh Sen Cô Độc?</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Ngọc Mai trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-Ngoc-Mai.html" target="_blank">Ngọc Mai</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_13192257" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Cánh Sen Cô Độc? - Ngọc Mai vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_i7VI7QSkn7Rk" onclick="return NCTAddPlaylist.showBox('i7VI7QSkn7Rk');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Cánh Sen Cô Độc? - Ngọc Mai" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','i7VI7QSkn7Rk','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/canh-sen-co-doc-ngoc-mai.i7VI7QSkn7Rk.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Theo em về nhà - Ngọc Mai" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','gOjZibO0QaLl','','title']);" href="https://www.nhaccuatui.com/bai-hat/theo-em-ve-nha-ngoc-mai.gOjZibO0QaLl.html">
+                                        <img title="Theo em về nhà - Ngọc Mai" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="theo em ve nha - ngoc mai" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/06/4/e/b/7/1701843103796.jpg">
+                                    </a>
+                                    <h3><a title="Theo em về nhà - Ngọc Mai" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','gOjZibO0QaLl','','title']);" href="https://www.nhaccuatui.com/bai-hat/theo-em-ve-nha-ngoc-mai.gOjZibO0QaLl.html">Theo em về nhà</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Ngọc Mai trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-Ngoc-Mai.html" target="_blank">Ngọc Mai</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_12748537" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Theo em về nhà - Ngọc Mai vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_gOjZibO0QaLl" onclick="return NCTAddPlaylist.showBox('gOjZibO0QaLl');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Theo em về nhà - Ngọc Mai" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','gOjZibO0QaLl','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/theo-em-ve-nha-ngoc-mai.gOjZibO0QaLl.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Hoài mong - Kha, Nguyễn Trọng Tài" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','sAOypXi3KnBJ','','title']);" href="https://www.nhaccuatui.com/bai-hat/hoai-mong-kha-ft-nguyen-trong-tai.sAOypXi3KnBJ.html">
+                                        <img title="Hoài mong - Kha, Nguyễn Trọng Tài" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="hoai mong - kha, nguyen trong tai" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/01/b/f/c/b/1701406908702.jpg">
+                                    </a>
+                                    <h3><a title="Hoài mong - Kha, Nguyễn Trọng Tài" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','sAOypXi3KnBJ','','title']);" href="https://www.nhaccuatui.com/bai-hat/hoai-mong-kha-ft-nguyen-trong-tai.sAOypXi3KnBJ.html">Hoài mong</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Kha trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Kha&amp;b=singer" target="_blank">Kha</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Nguyễn Trọng Tài trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-nguyen-trong-tai.html" target="_blank">Nguyễn Trọng Tài</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_12652247" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Hoài mong - Kha, Nguyễn Trọng Tài vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_sAOypXi3KnBJ" onclick="return NCTAddPlaylist.showBox('sAOypXi3KnBJ');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Hoài mong - Kha, Nguyễn Trọng Tài" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','sAOypXi3KnBJ','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/hoai-mong-kha-ft-nguyen-trong-tai.sAOypXi3KnBJ.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="KHÔNG YÊU ĐẾN THẾ ĐÂU - Ogenus, Pháp Kiều" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','kcFnYhjrGeuH','','title']);" href="https://www.nhaccuatui.com/bai-hat/khong-yeu-den-the-dau-ogenus-ft-phap-kieu.kcFnYhjrGeuH.html">
+                                        <img title="KHÔNG YÊU ĐẾN THẾ ĐÂU - Ogenus, Pháp Kiều" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="khong yeu den the dau - ogenus, phap kieu" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/05/4/7/6/c/1701780505166.jpg">
+                                    </a>
+                                    <h3><a title="KHÔNG YÊU ĐẾN THẾ ĐÂU - Ogenus, Pháp Kiều" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','kcFnYhjrGeuH','','title']);" href="https://www.nhaccuatui.com/bai-hat/khong-yeu-den-the-dau-ogenus-ft-phap-kieu.kcFnYhjrGeuH.html">KHÔNG YÊU ĐẾN THẾ ĐÂU</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Ogenus trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Ogenus&amp;b=singer" target="_blank">Ogenus</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Pháp Kiều trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-phap-kieu.html" target="_blank">Pháp Kiều</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_pn_12730880" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát KHÔNG YÊU ĐẾN THẾ ĐÂU - Ogenus, Pháp Kiều vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_kcFnYhjrGeuH" onclick="return NCTAddPlaylist.showBox('kcFnYhjrGeuH');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát KHÔNG YÊU ĐẾN THẾ ĐÂU - Ogenus, Pháp Kiều" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','kcFnYhjrGeuH','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/khong-yeu-den-the-dau-ogenus-ft-phap-kieu.kcFnYhjrGeuH.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Psychic - Lay" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','YjnbcV05bvtn','','title']);" href="https://www.nhaccuatui.com/bai-hat/psychic-lay.YjnbcV05bvtn.html">
+                                        <img title="Psychic - Lay" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="psychic - lay" src="https://avatar-ex-swe.nixcdn.com/song/2024/04/14/2/9/3/0/1713072704675.jpg">
+                                    </a>
+                                    <h3><a title="Psychic - Lay" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','YjnbcV05bvtn','','title']);" href="https://www.nhaccuatui.com/bai-hat/psychic-lay.YjnbcV05bvtn.html">Psychic</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Lay trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Lay&amp;b=singer" target="_blank">Lay</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_14406739" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Psychic - Lay vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_YjnbcV05bvtn" onclick="return NCTAddPlaylist.showBox('YjnbcV05bvtn');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Psychic - Lay" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','YjnbcV05bvtn','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/psychic-lay.YjnbcV05bvtn.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Fortnight - Taylor Swift, Post Malone" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','ZoeenFXBxEtz','','title']);" href="https://www.nhaccuatui.com/bai-hat/fortnight-taylor-swift-ft-post-malone.ZoeenFXBxEtz.html">
+                                        <img title="Fortnight - Taylor Swift, Post Malone" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="fortnight - taylor swift, post malone" src="https://avatar-ex-swe.nixcdn.com/song/2024/04/19/9/f/8/5/1713502935428.jpg">
+                                    </a>
+                                    <h3><a title="Fortnight - Taylor Swift, Post Malone" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','ZoeenFXBxEtz','','title']);" href="https://www.nhaccuatui.com/bai-hat/fortnight-taylor-swift-ft-post-malone.ZoeenFXBxEtz.html">Fortnight</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Taylor Swift trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-taylor-swift.html" target="_blank">Taylor Swift</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Post Malone trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-post-malone.html" target="_blank">Post Malone</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_pn_14480432" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Fortnight - Taylor Swift, Post Malone vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_ZoeenFXBxEtz" onclick="return NCTAddPlaylist.showBox('ZoeenFXBxEtz');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Fortnight - Taylor Swift, Post Malone" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','ZoeenFXBxEtz','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/fortnight-taylor-swift-ft-post-malone.ZoeenFXBxEtz.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Standing Next to You - Jung Kook (BTS)" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','DyPjsTCYXWVi','','title']);" href="https://www.nhaccuatui.com/bai-hat/standing-next-to-you-jung-kook-bts.DyPjsTCYXWVi.html">
+                                        <img title="Standing Next to You - Jung Kook (BTS)" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="standing next to you - jung kook (bts)" src="https://avatar-ex-swe.nixcdn.com/song/2023/11/03/f/d/e/0/1698985076355.jpg">
+                                    </a>
+                                    <h3><a title="Standing Next to You - Jung Kook (BTS)" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','DyPjsTCYXWVi','','title']);" href="https://www.nhaccuatui.com/bai-hat/standing-next-to-you-jung-kook-bts.DyPjsTCYXWVi.html">Standing Next to You</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Jung Kook (BTS) trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Jung+Kook+%28BTS%29&amp;b=singer" target="_blank">Jung Kook (BTS)</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_12184936" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Standing Next to You - Jung Kook (BTS) vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_DyPjsTCYXWVi" onclick="return NCTAddPlaylist.showBox('DyPjsTCYXWVi');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Standing Next to You - Jung Kook (BTS)" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','DyPjsTCYXWVi','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/standing-next-to-you-jung-kook-bts.DyPjsTCYXWVi.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Merry Go Round - Clinton Kane" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','6QH6UJll5wYD','','title']);" href="https://www.nhaccuatui.com/bai-hat/merry-go-round-clinton-kane.6QH6UJll5wYD.html">
+                                        <img title="Merry Go Round - Clinton Kane" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="merry go round - clinton kane" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/06/4/e/b/7/1701853473547.jpg">
+                                    </a>
+                                    <h3><a title="Merry Go Round - Clinton Kane" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','6QH6UJll5wYD','','title']);" href="https://www.nhaccuatui.com/bai-hat/merry-go-round-clinton-kane.6QH6UJll5wYD.html">Merry Go Round</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Clinton Kane trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Clinton+Kane&amp;b=singer" target="_blank">Clinton Kane</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_pn_12750763" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Merry Go Round - Clinton Kane vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_6QH6UJll5wYD" onclick="return NCTAddPlaylist.showBox('6QH6UJll5wYD');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Merry Go Round - Clinton Kane" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','6QH6UJll5wYD','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/merry-go-round-clinton-kane.6QH6UJll5wYD.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="run for the hills - Tate McRae" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','Z8PCifdVNVD9','','title']);" href="https://www.nhaccuatui.com/bai-hat/run-for-the-hills-tate-mcrae.Z8PCifdVNVD9.html">
+                                        <img title="run for the hills - Tate McRae" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="run for the hills - tate mcrae" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/05/4/7/6/c/1701722708193.jpg">
+                                    </a>
+                                    <h3><a title="run for the hills - Tate McRae" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','Z8PCifdVNVD9','','title']);" href="https://www.nhaccuatui.com/bai-hat/run-for-the-hills-tate-mcrae.Z8PCifdVNVD9.html">run for the hills</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Tate McRae trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Tate+McRae&amp;b=singer" target="_blank">Tate McRae</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_pn_12716315" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát run for the hills - Tate McRae vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_Z8PCifdVNVD9" onclick="return NCTAddPlaylist.showBox('Z8PCifdVNVD9');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát run for the hills - Tate McRae" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','Z8PCifdVNVD9','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/run-for-the-hills-tate-mcrae.Z8PCifdVNVD9.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Delilah - Delilah, Thanh Duy" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','2zGJCJg9PNV2','','title']);" href="https://www.nhaccuatui.com/bai-hat/delilah-delilah-ft-thanh-duy.2zGJCJg9PNV2.html">
+                                        <img title="Delilah - Delilah, Thanh Duy" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="delilah - delilah, thanh duy" src="https://avatar-ex-swe.nixcdn.com/song/2023/07/27/9/3/c/7/1690455667161.jpg">
+                                    </a>
+                                    <h3><a title="Delilah - Delilah, Thanh Duy" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','2zGJCJg9PNV2','','title']);" href="https://www.nhaccuatui.com/bai-hat/delilah-delilah-ft-thanh-duy.2zGJCJg9PNV2.html">Delilah</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Delilah trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Delilah&amp;b=singer" target="_blank">Delilah</a>, <a title="Tìm các bài hát, playlist, mv do ca sĩ Thanh Duy trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-thanh-duy.html" target="_blank">Thanh Duy</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_10310623" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Delilah - Delilah, Thanh Duy vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_2zGJCJg9PNV2" onclick="return NCTAddPlaylist.showBox('2zGJCJg9PNV2');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Delilah - Delilah, Thanh Duy" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','2zGJCJg9PNV2','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/delilah-delilah-ft-thanh-duy.2zGJCJg9PNV2.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Ngập Ngừng - Pay" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','aKu9m9jmXPHg','','title']);" href="https://www.nhaccuatui.com/bai-hat/ngap-ngung-pay.aKu9m9jmXPHg.html">
+                                        <img title="Ngập Ngừng - Pay" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="ngap ngung - pay" src="https://avatar-ex-swe.nixcdn.com/song/2023/12/01/b/f/c/b/1701406626880.jpg">
+                                    </a>
+                                    <h3><a title="Ngập Ngừng - Pay" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','aKu9m9jmXPHg','','title']);" href="https://www.nhaccuatui.com/bai-hat/ngap-ngung-pay.aKu9m9jmXPHg.html">Ngập Ngừng</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Pay trình bày" class="name_singer" href="https://www.nhaccuatui.com/tim-kiem?q=Pay&amp;b=singer" target="_blank">Pay</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_12652204" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Ngập Ngừng - Pay vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_aKu9m9jmXPHg" onclick="return NCTAddPlaylist.showBox('aKu9m9jmXPHg');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Ngập Ngừng - Pay" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','aKu9m9jmXPHg','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/ngap-ngung-pay.aKu9m9jmXPHg.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="box-content-music-list home">
+                                <div class="info_song" style="color: rgb(153, 153, 153);">
+                                    <a title="Đừng Khóc - Chi Dân" class="avatar_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','4kTVY9KDxjNG','','title']);" href="https://www.nhaccuatui.com/bai-hat/dung-khoc-chi-dan.4kTVY9KDxjNG.html">
+                                        <img title="Đừng Khóc - Chi Dân" onerror="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', 'fail');" onload="common.handleErrorImage(this, 'https://stc-id.nixcdn.com/v11/images/avatar_default.jpg', '');" alt="dung khoc - chi dan" src="https://avatar-ex-swe.nixcdn.com/song/2023/09/28/7/7/9/b/1695892525182.jpg">
+                                    </a>
+                                    <h3><a title="Đừng Khóc - Chi Dân" class="name_song" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','4kTVY9KDxjNG','','title']);" href="https://www.nhaccuatui.com/bai-hat/dung-khoc-chi-dan.4kTVY9KDxjNG.html">Đừng Khóc</a></h3>
+                                    <div class="name_sing_under"><a title="Tìm các bài hát, playlist, mv do ca sĩ Chi Dân trình bày" class="name_singer" href="https://www.nhaccuatui.com/nghe-si-chi-dan.html" target="_blank">Chi Dân</a></div>
+                                </div>
+                                
+                                <!--<span id="NCTCounter_sg_11809293" class="icon_listen">0</span>-->
+                                <div class="box_song_action">
+                                    <a title="Thêm bài hát Đừng Khóc - Chi Dân vào playlist yêu thích" class="button_add_playlist" id="btnShowBoxPlaylist_4kTVY9KDxjNG" onclick="return NCTAddPlaylist.showBox('4kTVY9KDxjNG');" href="javascript:;"></a>
+                                    <a title="Nghe bài hát Đừng Khóc - Chi Dân" class="button_playing" onclick=" _gaq.push(['_trackEvent', 'Home', 'Click', 'Bai Hat Moi']);lt(['home','bai-hat-moi','click','song','4kTVY9KDxjNG','','icon-play']);" href="https://www.nhaccuatui.com/bai-hat/dung-khoc-chi-dan.4kTVY9KDxjNG.html"></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+               
+        <div class="box-right">
+            <div class="box_chart_music">
+                <div class="tile_box_key">
+                    <h3><a title="BXH Bài Hát" class="nomore" onclick="lt(['home','BXH','click','song','bai-hat-top-20','','url']);" href="{% url 'nghe' %}">BXH Bài Hát</a></h3>
+<!--                        <a id="aUrlTop20" onclick="lt(['home','BXH','click','song','play-all','','url']);" href="" title="BXH Bài Hát" class="play_all" id="play_all"></a>-->
+                </div>
+                <div class="btn_tab_select">
+                    <a title="Việt Nam" class="active" id="top20__nhac-viet" href="javascript:;">Việt Nam</a>
+                    <span></span>
+                    <a title="Âu Mỹ" id="top20__au-my" href="javascript:;">Âu Mỹ</a>
+                    <span></span>
+                    <a title="Hàn Quốc" id="top20__nhac-han" href="javascript:;">Hàn Quốc</a>
+                </div>
+                <div class="list_chart_music" id="top20-content">
+                    <ul>
+                        
+                        <li class="one">
+                            
+                            <div class="info_data">
+                                <a title="Khóa Ly Biệt" class="img" onclick="lt(['home','BXH','click','song','4TTDL1BIR4XN','','Nhac Viet']);" href="{% url 'nghe' %}" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);"> <span class="number special-1">1</span><img src="https://image-cdn.nct.vn/song/2023/11/03/f/d/e/0/1699029204532.jpg"></a>
+                                <h3><a title="Khóa Ly Biệt" class="name_song" onclick="lt(['home','BXH','click','song','4TTDL1BIR4XN','','Nhac Viet']);" href="{% url 'nghe' %}" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Khóa Ly Biệt</a></h3>
+                                <h6 style="size/font:12px">The Masked Singer, Voi Bản Đôn</h6>
+                                <!--span id="NCTCounter__4TTDL1BIR4XN" class="icon_listen">0</span-->
+                            </div>
+                            
+                        </li>
+                        
+                        <li>
+                            <span class="number special-2">2</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Thuyền Không Bến Đợi" class="name_song" onclick="lt(['home','BXH','click','song','DmokfwgHT58C','','Nhac Viet']);" href="{% url 'nghe' %}" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Thuyền Không Bến Đợi</a></h3>
+                                <h6>Trungg I.U, CZEE</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__DmokfwgHT58C" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-3">3</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Lệ Cay 3" class="name_song" onclick="lt(['home','BXH','click','song','7D65UVEb7Mkp','','Nhac Viet']);" href="{% url 'nghe' %}" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Lệ Cay 3</a></h3>
+                                <h6>Du Thiên</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__7D65UVEb7Mkp" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-4">4</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Rồi Em Sẽ Gặp Một Chàng Trai Khác" class="name_song" onclick="lt(['home','BXH','click','song','DCEdaAfER9UV','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/roi-em-se-gap-mot-chang-trai-khac-the-masked-singer-hippohappy.DCEdaAfER9UV.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Rồi Em Sẽ Gặp Một Chàng Trai Khác</a></h3>
+                                <h6>The Masked Singer, Hippohappy</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__DCEdaAfER9UV" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-5">5</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Hoa Nở Bên Đường" class="name_song" onclick="lt(['home','BXH','click','song','hBpCJRKiP8Zk','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/hoa-no-ben-duong-quang-dang-tran-acv.hBpCJRKiP8Zk.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Hoa Nở Bên Đường</a></h3>
+                                <h6>Quang Đăng Trần, ACV</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__hBpCJRKiP8Zk" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-6">6</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Cô Phòng" class="name_song" onclick="lt(['home','BXH','click','song','9fu0THzHzAXw','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/co-phong-ho-quang-hieu-huynh-van.9fu0THzHzAXw.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Cô Phòng</a></h3>
+                                <h6>Hồ Quang Hiếu, Huỳnh Văn</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__9fu0THzHzAXw" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-7">7</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Cá Bơi Ngược Dòng" class="name_song" onclick="lt(['home','BXH','click','song','bIEFfAqMAFRt','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/ca-boi-nguoc-dong-vuong-anh-tu.bIEFfAqMAFRt.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Cá Bơi Ngược Dòng</a></h3>
+                                <h6>Vương Anh Tú</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__bIEFfAqMAFRt" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-8">8</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Những Lời Hứa Bỏ Quên" class="name_song" onclick="lt(['home','BXH','click','song','cJ6lXsQLONjC','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/nhung-loi-hua-bo-quen-vu-dear-jane.cJ6lXsQLONjC.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Những Lời Hứa Bỏ Quên</a></h3>
+                                <h6>Vũ, Dear Jane</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__cJ6lXsQLONjC" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-9">9</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Từng Là" class="name_song" onclick="lt(['home','BXH','click','song','4AKBh3gxNOI0','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/tung-la-vu-cat-tuong.4AKBh3gxNOI0.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Từng Là</a></h3>
+                                <h6>Vũ Cát Tường</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__4AKBh3gxNOI0" class="icon_listen">0</span-->
+                        </li>
+                        
+                        <li>
+                            <span class="number special-10">10</span>
+                            <div class="info_data">
+                                
+                                <h3><a title="Thiên Lý Ơi" class="name_song" onclick="lt(['home','BXH','click','song','PaEnlH03XKjm','','Nhac Viet']);" href="https://www.nhaccuatui.com/bai-hat/thien-ly-oi-jack-j97.PaEnlH03XKjm.html" ga="_gaq.push(['_trackEvent', 'TOP 20', 'Click', 'Top 20 Bai Hat Trang Chu Nhac Viet']);">Thiên Lý Ơi</a></h3>
+                                <h6>Jack - J97</h6>
+                                
+                            </div>
+                            <!--span id="NCTCounter__PaEnlH03XKjm" class="icon_listen">0</span-->
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            
+            
+            <link href="https://stc-id.nixcdn.com/v11/css/discovery_playlist.css" rel="stylesheet" type="text/css" media="screen, print, projection">
+            <div class="discovery_playlist_non">
+                <div class="image_discovery_playlist hidden-display">
+                    <div class="image_box">
+                        <img class="thumb_cover one" alt="" src="">
+                        <img class="thumb_cover two" alt="" src="">
+                        <img class="thumb_cover three" alt="" src="">
+                    </div>
+                </div>
+                    <a id="weeklyDiscoveryLink" onclick="_gaq.push(['_trackEvent', 'DiscoveryWeekly', 'Click', 'Nghe bai hat']); lt(['home','discovery-weekly','click','kham-pha','hang-tuan','','banner']);" href="javascript:;">
+                            <div class="bg_discovery_playlist" style='background-image: url("https://stc-id.nixcdn.com/v11/images/bg_web.png");'></div>
+                <div class="content_playlist">
+                    <h2>GỢI Ý DÀNH CHO BẠN</h2>
+                    <p class="text_detail">Thưởng thức những ca khúc phù hợp nhất với bạn</p>
+                        <p class="btn_playlist">
+                            <span class="ic_play_normal"></span>
+                            <span class="btn_text">Nghe bài hát</span>
+                        </p>
+                </div>
+                    </a>
+            </div>
+            
+            
+                  <script type="text/javascript">
+                    $("#weeklyDiscoveryLink").click(function() {
+                       window.location.replace("https://www.nhaccuatui.com/?popup=dang-nhap&r=kham-pha");
+                    });
+                  </script>
+            
+            
+            
+            
+            <!--<div id="HR01" class="adv_home_300_250 nqc-zone" style="width: 300px; height: 250px; margin: 0 0 10px 0;"></div>-->
+            
+            <div class="box_topic_music">
+                <div class="tile_box_key">
+                    <h3><a title="Chủ Đề Hot" href="https://www.nhaccuatui.com/chu-de.html">Chủ Đề Hot</a></h3>
+                </div>
+                <ul>
+                    
+                    <li>
+                        <a title="Du Lịch" onclick="_gaq.push(['_trackEvent', 'Home', 'Click', 'Chu De Hot']);lt(['home','Chu-de-hot','click','topic','78','','']);" href="https://www.nhaccuatui.com/chu-de/du-lich.wepqryibo.html" target="target"><img alt="du lich" src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/06/17/7/d/8/9/1592361216469_org.jpg">
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="Motivation" onclick="_gaq.push(['_trackEvent', 'Home', 'Click', 'Chu De Hot']);lt(['home','Chu-de-hot','click','topic','213','','']);" href="https://www.nhaccuatui.com/chu-de/motivation.wraadpkon.html" target="target"><img alt="motivation" src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/09/04/d/0/3/2/1599203330714_org.jpg">
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="Lofi" onclick="_gaq.push(['_trackEvent', 'Home', 'Click', 'Chu De Hot']);lt(['home','Chu-de-hot','click','topic','151','','']);" href="https://www.nhaccuatui.com/chu-de/lofi.wrayiedhg.html" target="target"><img alt="lofi" src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/06/15/b/1/e/6/1592214676121_org.jpg">
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="Song Ca" onclick="_gaq.push(['_trackEvent', 'Home', 'Click', 'Chu De Hot']);lt(['home','Chu-de-hot','click','topic','45','','']);" href="https://www.nhaccuatui.com/chu-de/song-ca.weinhqvpz.html" target="target"><img alt="song ca" src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/06/18/9/5/f/7/1592450065128_org.jpg">
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="V-Rap" onclick="_gaq.push(['_trackEvent', 'Home', 'Click', 'Chu De Hot']);lt(['home','Chu-de-hot','click','topic','22','','']);" href="https://www.nhaccuatui.com/chu-de/v-rap.weiyslqrl.html" target="target"><img alt="v-rap" src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2024/04/16/6/0/8/d/1713237575226_org.jpg">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            
+            <div class="clr"></div>
+            <div class="clr"></div>
+            
+            
+                
+                
+                <div class="adv_home_300_250 nqc-zone" id="HR02" style="margin: 0px 0px 10px; width: 300px; height: 250px;"></div>
+                
+            
+        </div>
+    </div>
+</div>
+</div>
+
+
+<br /><br /><br />
+{% endblock main-content %}
+
+
+
+
+
+
+
+
+
